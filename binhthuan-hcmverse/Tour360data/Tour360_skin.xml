@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.20.10">
+
+    
+  <!-- Spot Style - Location -->
+
+
+  <style name="IconLocation"
+         url="%FIRSTXML%/spots/bthcm_10_user_defaultpoint0.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="bottom" ox="0" oy="0"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconLocation"
+         onout="onoutIconLocation"
+
+         height="48"
+         width="48"
+         />
+  <action name="onhoverIconLocation">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconLocation">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Go Spot -->
+
+
+  <style name="IconGoSpot"
+         url="%FIRSTXML%/spots/bthcm_01_user_defaultpoint01.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconGoSpot"
+         onout="onoutIconGoSpot"
+
+         height="38"
+         width="66"
+         />
+  <action name="onhoverIconGoSpot">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconGoSpot">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+  
+  <!-- Spot Style - Show Image -->
+  <style name="PolygonShowImage"
+           subdiv="true"
+           visible="false"
+           bordercolor="0xb80000"
+           fillcolor="0xb80000"
+           borderwidth="2"
+           borderalpha="1"
+           fillalpha="0.20000000000000001"
+           capture="false"
+           onhover="onhoverPolygonShowImage"
+           onover="onoverPolygonShowImage"
+           onout="onoutPolygonShowImage"
+           />
+  <action name="onhoverPolygonShowImage">
+    showTooltip('hotspot');
+  </action>
+
+  <action name="onoverPolygonShowImage">
+    set(bordercolor, 0x9a0000);
+    set(fillcolor, 0xffffff);
+    set(borderalpha, 1);
+    set(fillalpha, 0.59999999999999998);
+    set(borderwidth, 3);
+  </action>
+
+  <action name="onoutPolygonShowImage">
+
+    set(bordercolor, 0xb80000);
+    set(fillcolor, 0xb80000);
+    set(borderalpha, 1);
+    set(fillalpha, 0.20000000000000001);
+
+    set(borderwidth, 2);
+    hideTooltip();
+  </action>
+
+
+
+    
+  <!-- Spot Style - Flycam 360 -->
+
+
+  <style name="IconFlycam360"
+         url="%FIRSTXML%/spots/bthcm_13_user_defaultpoint41.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconFlycam360"
+         onout="onoutIconFlycam360"
+
+         height="52"
+         width="52"
+         />
+  <action name="onhoverIconFlycam360">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconFlycam360">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Arrow Right -->
+
+
+  <style name="IconArrowRight"
+         url="%FIRSTXML%/spots/bthcm_04_user_defaultpoint1.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconArrowRight"
+         onout="onoutIconArrowRight"
+
+         height="42"
+         width="42"
+         />
+  <action name="onhoverIconArrowRight">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconArrowRight">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Arrow Left -->
+
+
+  <style name="IconArrowLeft"
+         url="%FIRSTXML%/spots/bthcm_03_user_defaultpoint2.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconArrowLeft"
+         onout="onoutIconArrowLeft"
+
+         height="42"
+         width="42"
+         />
+  <action name="onhoverIconArrowLeft">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconArrowLeft">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Arrow Up -->
+
+
+  <style name="IconArrowUp"
+         url="%FIRSTXML%/spots/bthcm_02_user_defaultpoint3.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconArrowUp"
+         onout="onoutIconArrowUp"
+
+         height="42"
+         width="42"
+         />
+  <action name="onhoverIconArrowUp">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconArrowUp">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Arrow Left Down -->
+
+
+  <style name="IconArrowLeftDown"
+         url="%FIRSTXML%/spots/bthcm_07_user_defaultpoint4.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconArrowLeftDown"
+         onout="onoutIconArrowLeftDown"
+
+         height="42"
+         width="42"
+         />
+  <action name="onhoverIconArrowLeftDown">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconArrowLeftDown">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Arrow Right Up -->
+
+
+  <style name="IconArrowRightUp"
+         url="%FIRSTXML%/spots/bthcm_06_user_defaultpoint6.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconArrowRightUp"
+         onout="onoutIconArrowRightUp"
+
+         height="42"
+         width="42"
+         />
+  <action name="onhoverIconArrowRightUp">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconArrowRightUp">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Arrow Right Down -->
+
+
+  <style name="IconArrowRightDown"
+         url="%FIRSTXML%/spots/bthcm_08_user_defaultpoint7.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconArrowRightDown"
+         onout="onoutIconArrowRightDown"
+
+         height="42"
+         width="42"
+         />
+  <action name="onhoverIconArrowRightDown">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconArrowRightDown">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Next -->
+
+
+  <style name="IconNext"
+         url="%FIRSTXML%/spots/bthcm_01_user_defaultpoint8.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconNext"
+         onout="onoutIconNext"
+
+         height="38"
+         width="66"
+         />
+  <action name="onhoverIconNext">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconNext">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+    
+  <!-- Spot Style - Prev -->
+
+
+  <style name="IconPrev"
+         url="%FIRSTXML%/spots/bthcm_01_user_defaultpoint9.png"
+         visible="false"
+         frame="0"
+         lastframe="9"
+         framewidth="66"
+         frameheight="66"
+         stopspotsequence="false"
+         crop="0|0|66|66"
+         edge="center"
+         onloaded="startspotanimation(0.1);"
+         onhover="onhoverIconPrev"
+         onout="onoutIconPrev"
+
+         height="38"
+         width="66"
+         />
+  <action name="onhoverIconPrev">
+    showtooltip('hotspot');
+  </action>
+  <action name="onoutIconPrev">
+    hideTooltip();
+
+
+
+  </action>
+
+
+
+<!-- ********** -->
+<!-- PanotourMaps -->
+<!-- id : panotourmaps -->
+<!-- ********** -->
+
+		
+		<ptplugin name="panotourmaps" lat="48.861023" lng="2.335859" zoom="12" maptypelayer="road" openatstart="false" state="false" bgcolor="f2f2f2" zorder="1" centeronspots="false" engine="KolorMap">
+	
+		<radar visible="false" radius="8000" linktozoom="true" quality="8" linecolor="cd3333" lineopacity="0.50000762951094835" linewidth="1" fillcolor="cd3333" fillopacity="0.30000762951094834" />
+		
+		<markers animation="false" />
+		
+		
+		<controls zoom="false" pan="false" scale="false" maptype="false" overview="false">
+			<ui draggable="false" scrollable="false" dblclick="false" />
+			<specific />
+		</controls>
+		
+		<markerSelected name="" heading="" fov="" />
+		
+		
+		
+
+
+		
+	</ptplugin>
+	
+	<action name="kolorMapJsReady_panotourmaps">
+		set(ptplugin[panotourmaps].jsready, true);
+	</action>
+	
+	<ptplugin name="panotourmapsArea" engine="kolorArea">
+	<settings>
+		<option name="position" value="top" type="string" />
+		<option name="start_position" value="top" type="string" />
+		<option name="margin_x" value="0" type="int" />
+		<option name="margin_y" value="0" type="int" />
+		<option name="background_color" value="f2f2f2" type="string" />
+		<option name="background_alpha" value="1" type="float" />
+		<option name="padding" value="0" type="int" />
+		<option name="topleft_radius" value="0" type="int" />
+		<option name="topright_radius" value="0" type="int" />
+		<option name="bottomleft_radius" value="0" type="int" />
+		<option name="bottomright_radius" value="0" type="int" />
+		<option name="area_border_width" value="5" type="int" />
+		<option name="area_border_color" value="cd3333" type="string" />
+		<option name="area_border_alpha" value="0.90000762951094837" type="float" />
+		<option name="display_title" value="false" type="bool" />
+		<option name="close_displayed" value="false" type="bool" />
+		<option name="close_text" value="panotourmapsdisplay_close_text" type="string" />
+
+		<option name="overlay_displayed" value="false" type="bool" />
+		<option name="overlay_color" value="000000" type="string" />
+		<option name="overlay_alpha" value="0.50000762951094835" type="float" />
+
+		<option name="area_width" value="580" type="int" />
+		<option name="area_height" value="380" type="int" />
+		<option name="area_width_unit" value="pixel" type="string" />
+		<option name="area_height_unit" value="pixel" type="string" />
+		<option name="animation" value="false" type="bool" />
+		<option name="animation_duration" value="300" type="int" />
+		<option name="close_on_click" value="false" type="bool" />
+		<option name="refresh_content" value="false" type="bool" />
+		<option name="open_callback" value="addKolorMap('panotourmaps', [['googlev3','AIzaSyAdD7JQlLHrlswfkFH4aER0rk7sed-YELg']], 'panotourmapsArea_mapDIV');" type="string" />
+		<option name="close_callback" value="invokeKrFunction('closeKolorAreaCallback_panotourmapsArea')" type="string" />
+		<option name="zorder" value="1" type="int" />
+		<option name="use_i18n" value="true" type="bool" />
+	</settings>
+	</ptplugin>
+	
+	<action name="kolorAreaJsReady_panotourmapsArea">
+		set(ptplugin[panotourmapsArea].jsready, true);
+
+	</action>
+	
+	<action name="openKolorArea_panotourmapsArea">
+		ifnot(ptplugin[panotourmapsArea].isOpen,
+			set(ptplugin[panotourmapsArea].isOpen, true);
+			
+			js(showKolorArea(panotourmapsArea, &lt;div id="panotourmapsArea_mapDIV"&gt;&lt;/div&gt;));
+			js(invokePluginFunction(panotourmaps, forceResizeMapLayer, panotourmapsArea_mapDIV));
+			events.dispatch(onremovedisplayedobject);
+		);
+	</action>
+	
+	<action name="closeKolorArea_panotourmapsArea">
+		if(ptplugin[panotourmapsArea].isOpen,
+			js(invokePluginFunction(panotourmapsArea, closeKolorArea));
+		);
+	</action>
+	
+	<action name="toggleKolorArea_panotourmapsArea">
+		if(ptplugin[panotourmapsArea].isOpen,
+			closeKolorArea_panotourmapsArea();
+		,
+			openKolorArea_panotourmapsArea();
+		);
+	</action>
+	
+	<action name="closeKolorAreaCallback_panotourmapsArea">
+		set(ptplugin[panotourmapsArea].isOpen, false);
+	</action>
+	
+	<action name="showKolorArea_panotourmapsArea">
+		set(ptplugin[panotourmapsArea].isOpen, true);
+		
+		js(invokePluginFunction(panotourmapsArea, showKolorArea, %1));
+		js(invokePluginFunction(panotourmaps, forceResizeMapLayer, panotourmapsArea_mapDIV));
+		events.dispatch(onremovedisplayedobject);
+	</action> 
+		
+	<action name="hideKolorArea_panotourmapsArea">
+		
+		set(ptplugin[panotourmapsArea].isOpen, false);
+		js(invokePluginFunction(panotourmapsArea, hideKolorArea, %1));
+	</action>
+	
+	
+	<action name="updateDefaultMarkerValues_panotourmapsArea">
+		if( ptplugin[panotourmaps].markerSelected.name != "",
+			set(ptplugin[panotourmaps].markerSelected.heading, get(view.hlookat));
+			set(ptplugin[panotourmaps].markerSelected.fov, get(view.hfov));
+		);
+		
+	</action>
+	
+	<action name="changeLanguage_panotourmaps">
+		if(ptplugin[panotourmaps].jsready,
+			stopdelayedcall(delay_panotourmaps);
+			js(invokePluginFunction(panotourmapsArea, changeLanguage, false));
+		,
+			delayedcall(delay_panotourmaps, 0.1, changeLanguage_panotourmaps(););
+		);
+	</action>
+	
+	<events name="kolorAreaEvents_panotourmapsArea" 
+		keep="true"
+		
+		onTourStart="updateDefaultMarkerValues_panotourmapsArea();"
+		changetourlanguage="changeLanguage_panotourmaps();"
+	/>
+	
+	
+	
+
+
+	
+	
+	
+	<!-- Begin PanotourMaps events and actions -->
+	<events name="panotourmapsEvents" 
+	onnewpano="panotourmapsActivateDefaultMarker();" 
+	onviewchanged="panotourmapsOnviewchange()" 
+	keep="true" />
+	
+	
+	<krpano panotourmapsMarkerDefaultSet="false" />
+	<krpano panotourmapsMapLoaded="false" />
+	
+	
+	
+	<action name="panotourmapsClosetourmap">
+		if(ptplugin[panotourmapsArea].isOpen,
+			closeKolorArea_panotourmapsArea();
+		);
+	</action>
+	
+	<action name="panotourmapsHidetourmap">
+		ifnot(ptplugin[panotourmapsArea].isOpen,
+			panotourmapsClosetourmap();
+		,
+			hideKolorArea_panotourmapsArea(false);
+		);
+	</action>
+	
+	<action name="panotourmapsOpentourmap">
+		ifnot(ptplugin[panotourmapsArea].isOpen,
+			openKolorArea_panotourmapsArea();
+		);
+	</action>
+	
+	<action name="panotourmapsShowtourmap">
+		ifnot(ptplugin[panotourmapsArea].isOpen,
+			panotourmapsOpentourmap();
+		,
+			showKolorArea_panotourmapsArea(false);
+		);
+	</action>
+	
+	<action name="panotourmapsChangescene">
+		mainloadscene(%1);if(xml.scene != %1,panotourmapsGoMarker(%2););
+	</action>
+	
+	<action name="panotourmapsOnviewchange">
+		if ( panotourmapsMapLoaded == true,
+			updateDefaultMarkerValues_panotourmapsArea();
+		);
+	</action>
+	
+	<action name="panotourmapsGoMarker">
+		if ( panotourmapsMapLoaded == true,
+			
+			set(ptplugin[panotourmaps].markerSelected.name, %1);
+			set(ptplugin[panotourmaps].markerSelected.heading, get(view.hlookat));
+			set(ptplugin[panotourmaps].markerSelected.fov, get(view.hfov));
+			js(invokePluginFunction(panotourmaps, changeCurrentMarker, %1, get(view.hlookat), get(view.hfov), get(ptplugin[panotourmaps].centeronspots)));
+			
+			if( panotourmapsMarkerDefaultSet == false,
+				js(setMapDefaultMarker(panotourmaps, %1, get(view.hlookat), get(view.hfov)));
+				set(panotourmapsMarkerDefaultSet,true);
+			);
+		);
+	</action>
+	
+	<action name="panotourmapsUnselectMarker">
+		set(ptplugin[panotourmaps].markerSelected.name, "");
+		js(invokePluginFunction(panotourmaps, unselectCurrentMarker));
+		
+		js(setMapDefaultMarker(panotourmaps, null, null, null));
+	</action>
+
+	<action name="panotourmapsActivateDefaultMarker">
+		set(panotourmapsMapLoaded, true);
+		
+		set(panotourmapsMapSpotFound, false);
+		for(set(defaultmarkerinc,0), defaultmarkerinc LT ptplugin[panotourmaps].marker.count , inc(defaultmarkerinc),
+                        if(ptplugin[panotourmaps].marker[get(defaultmarkerinc)].isscene == true,
+				if(panotourmapsMapSpotFound == false,
+					if(ptplugin[panotourmaps].marker[get(defaultmarkerinc)].scene == xml.scene,
+						ifnot(ptplugin[panotourmaps].marker[get(defaultmarkerinc)].name == ptplugin[panotourmaps].markerSelected.name,
+							panotourmapsGoMarker(get(ptplugin[panotourmaps].marker[get(defaultmarkerinc)].name));
+						);
+						set(panotourmapsMapSpotFound, true);
+					);
+				);
+			);
+		);
+		
+		if(panotourmapsMapSpotFound == false,
+			panotourmapsUnselectMarker();
+		);
+	</action>
+
+
+
+<!-- ********** -->
+<!-- Context menu -->
+<!-- id : contextmenu -->
+<!-- ********** -->
+  <contextmenu fullscreen="false" versioninfo="false" touch="true">
+    <item name="normal"        onclick="setViewNormal();
+" separator="true"/>
+    <item name="fisheye"       onclick="setViewFisheye();
+"/>
+    <item name="architectural" onclick="setViewArchitectural();
+"/>
+    <item name="littleplanet"  onclick="setViewLittlePlanet();
+"/>
+    <item name="fisheyeball"   onclick="setViewFisheyeBall();
+"/>
+    <item name="fullscreenentry" onclick="enterFullscreen();
+" separator="true"/>
+    <item name="vrmodeentry" onclick="if(scene[get(xml.scene)].full360 AND disableCurrentSceneVrConservation !== true,
+    js(accessWebVr(get(xml.scene),get(videoscenestarttime)));
+,
+    js(accessWebVr(null));
+);" />
+  </contextmenu>
+
+  <events name="contextmenuevents" keep="true" 
+    onenterfullscreen="updateContextMenu" onexitfullscreen="updateContextMenu" 
+    onxmlcomplete="updateContextMenu" 
+    changetourlanguage="updateContextMenu" 
+    />
+  <events name="contextmenuvrevents" keep="true" 
+    onvravailable="updateContextMenu();" onvrunavailable="updateContextMenu();"
+    devices="html5"
+    />
+  <action name="updateContextMenu">
+    getmessage(contextmenu.item[normal].caption, contextmenunormallabel);
+    getmessage(contextmenu.item[architectural].caption, contextmenuarchitecturallabel);
+    set(sceneisfull360, false);
+    if(scene[get(xml.scene)].full360,
+      sub(viewhfov, panoview.hmax, panoview.hmin);
+      if (viewhfov == 360,
+        sub(viewvfov, panoview.vmax, panoview.vmin);
+        if (viewvfov == 180,
+          set(sceneisfull360, true);
+        );
+      );
+    );
+    if (sceneisfull360 AND (device.webgl OR device.flash),
+      set(contextmenu.item[fisheye].visible, true);
+      getmessage(contextmenu.item[fisheye].caption, contextmenufisheyelabel);
+      set(contextmenu.item[littleplanet].visible, true);
+      getmessage(contextmenu.item[littleplanet].caption, contextmenulittleplanetlabel);
+      set(contextmenu.item[fisheyeball].visible, true);
+      getmessage(contextmenu.item[fisheyeball].caption, contextmenufisheyeballlabel);
+    ,
+      set(contextmenu.item[fisheye].visible, false);
+      set(contextmenu.item[littleplanet].visible, false);
+      set(contextmenu.item[fisheyeball].visible, false);
+    );
+    if (device.fullscreensupport,
+      if(tour_fullscreen,
+        getmessage(contextmenu.item[fullscreenentry].caption, contextmenucloseFsLabel);
+        set(contextmenu.item[fullscreenentry].onclick, exitFullscreen();
+);
+       ,
+        getmessage(contextmenu.item[fullscreenentry].caption, contextmenuopenFsLabel);
+        set(contextmenu.item[fullscreenentry].onclick, enterFullscreen();
+);
+      );
+     ,
+      set(contextmenu.item[fullscreenentry].visible, false);
+    );
+    if (device.html5 AND tour_vrdevices,
+      getmessage(contextmenu.item[vrmodeentry].caption, contextmenuopenVrLabel);
+      set(contextmenu.item[vrmodeentry].onclick, if(scene[get(xml.scene)].full360 AND disableCurrentSceneVrConservation !== true,
+    js(accessWebVr(get(xml.scene),get(videoscenestarttime)));
+,
+    js(accessWebVr(null));
+););
+     ,
+      set(contextmenu.item[vrmodeentry].visible, false);
+    );
+  </action>
+
+<action name="setViewFisheyeBall">
+	set(sceneisfull360, false);
+	if(scene[get(xml.scene)].full360,
+		sub(viewhfov, panoview.hmax, panoview.hmin);
+		if (viewhfov == 360,
+			sub(viewvfov, panoview.vmax, panoview.vmin);
+			if (viewvfov == 180,
+				set(sceneisfull360, true);
+			);
+		);
+	);
+	if (sceneisfull360 AND (device.webgl OR device.flash),
+		if(normalViewActivated,stopSetViewTweens(););
+		if(current_view_isflat === true,
+			setViewNonFlat(VFOV);
+		);
+		setViewFisheyeBallComplete();
+	);
+</action>
+
+<action name="setViewFisheyeBallComplete">
+	set(view.fisheyefovlink, 1.5);
+	tween(view.architectural, 0.0, distance(1.0, 0.30));
+	tween(view.pannini, 0.0, distance(1.0, 0.45), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
+	if(panoview.fovmax LE 179, set(view.fovmax, 179);, set(view.fovmax, get(panoview.fovmax)); );
+	tween(view.vlookat, get(panoview.v), distance(90, 0.45));
+	tween(view.fisheye, 1.0, distance(1.0, 0.45), easeOutQuad,
+		set(view.stereographic,false);
+		tween(view.fov, 179, 4.0);
+	);
+</action>
+
+<action name="setViewLittlePlanet">
+	set(sceneisfull360, false);
+	if(scene[get(xml.scene)].full360,
+		sub(viewhfov, panoview.hmax, panoview.hmin);
+		if (viewhfov == 360,
+			sub(viewvfov, panoview.vmax, panoview.vmin);
+			if (viewvfov == 180,
+				set(sceneisfull360, true);
+			);
+		);
+	);
+	if (sceneisfull360 AND (device.webgl OR device.flash),
+		if(normalViewActivated,stopSetViewTweens(););
+		if(current_view_isflat === true,
+			setViewNonFlat(VFOV);
+		);
+		setViewLittlePlanetComplete();
+	);
+</action>
+
+<action name="setViewLittlePlanetComplete">
+	set(backtonormalfirst,false);
+	if(view.pannini GE 1.0, set(backtonormalfirst,true));
+	if(view.stereographic == false, set(backtonormalfirst,true));
+	if(backtonormalfirst, hideTooltip();tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeOutQuad, WAIT); );
+	set(view.stereographic, true);
+	set(view.fisheyefovlink, 1.5);
+	tween(view.architectural, 0.0, 0.25);
+	tween(view.vlookat, 90, distance(179, 1.50));
+	tween(view.pannini, 0.0, distance(1.0, 0.75), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
+	if(panoview.fovmax LE 150, set(view.fovmax, 150); , set(view.fovmax, get(panoview.fovmax)); );
+	tween(view.fisheye, 1.0, distance(1.0, 0.75));
+	tween(view.fov, 150, distance(179, 0.75));
+</action>
+
+<action name="setViewFisheye">
+	set(sceneisfull360, false);
+	if(scene[get(xml.scene)].full360,
+		sub(viewhfov, panoview.hmax, panoview.hmin);
+		if (viewhfov == 360,
+			sub(viewvfov, panoview.vmax, panoview.vmin);
+			if (viewvfov == 180,
+				set(sceneisfull360, true);
+			);
+		);
+	);
+	if (sceneisfull360 AND (device.webgl OR device.flash),
+		if(normalViewActivated,stopSetViewTweens(););
+		if(current_view_isflat === true,
+			setViewNonFlat(VFOV);
+		);
+		setViewFisheyeComplete();
+	);
+</action>
+
+<action name="setViewFisheyeComplete">
+	set(view.fisheyefovlink, 1.5);
+	set(view.fovmax, get(panoview.fovmax));
+	tween(view.architectural, 0.0, distance(1.0, 0.30));
+	tween(view.fisheye, 0.0, distance(1.0, 0.30), easeOutQuad,
+		set(view.stereographic,false);
+		tween(view.fisheye, 0.45, distance(1.0, 0.75));
+		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
+	);
+	tween(view.pannini, 0.0, distance(1.0, 0.75), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
+	tween(view.fov, get(panoview.fov), distance(50, 0.45));
+</action>
+
+<action name="setViewNormal">
+	stopSetViewTweens();
+	if(current_view_isflat === true,
+		setViewNonFlat(VFOV);
+	);
+	setViewNormalComplete();
+</action>
+
+<action name="setViewNormalComplete">
+	set(view.fisheyefovlink, 0.5);
+	set(view.fovmax, get(panoview.fovmax));
+	tween(view.architectural, 0.0, distance(1.0, 0.45));
+	tween(view.pannini, 0.0, distance(1.0, 0.45), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
+	tween(view.vlookat, get(panoview.v), distance(90, 0.45));
+	tween(view.fov, get(panoview.fov), distance(50, 0.45));
+	tween(view.fisheye, 0.0, distance(1.0, 0.45),
+		set(view.stereographic,false);
+	);
+</action>
+
+<krpano normalViewActivated="true" />
+<action name="stopSetViewTweens">
+	stoptween(view.fov);
+	stoptween(view.vlookat);
+	stoptween(view.fisheye);
+	stoptween(view.architectural);
+	stoptween(view.pannini);
+</action>
+
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);js(setFullscreen(false));</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);js(setFullscreen(true));</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  <action name="enterFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,true);events.dispatch(onenterfullscreen);</action>
+  <action name="exitFullScreenFallback">set(fullscreen,false);</action>
+  <action name="enterFullScreenFallback">set(fullscreen,true);</action>
+  
+  <action name="resizeFullScreenEvent">delayedcall(0,updatescreen(););</action>
+
+<action name="setViewArchitectural">
+	if(normalViewActivated,stopSetViewTweens(););
+	if(current_view_isflat === true,
+		setViewNonFlat(VFOV);
+	);
+	setViewArchitecturalComplete();
+</action>
+
+<action name="setViewArchitecturalComplete">
+	set(view.fovmax, get(panoview.fovmax));
+	set(view.fisheyefovlink, 0.5);
+	tween(view.architectural, 1.0, distance(1.0, 0.45));
+	tween(view.pannini, 0.0, distance(1.0, 0.45), easeOutQuad, if(panniniViewActivated,restoreViewFromPannini();););
+	tween(view.fisheye, 0.0, distance(1.0, 0.45), easeOutQuad, 
+		set(view.stereographic,false);
+		tween(view.vlookat, get(panoview.v), distance(90, 0.45));
+	);
+	tween(view.fov, get(panoview.fov), distance(50, 0.45));
+</action>
+
+	<!-- WebVR plugin for VR availability tests -->
+
+	<plugin name="ptpvrmode" devices="html5" keep="true"
+		url="%FIRSTXML%/graphics/webvr.js"
+		mobilevr_support="true"
+		mobilevr_fake_support="false"
+		vr_cursor=""
+		vr_cursor_enabled="false"
+		onavailable="delayedcall(1, checkVrAvailability(););"
+		onunavailable="checkVrUnavailable();"
+		/>
+	<action name="checkVrAvailability">
+		if(plugin[ptpvrmode],
+			if (plugin[ptpvrmode].isavailable,
+				set(tour_vrdevices, true);
+				events.dispatch(onvravailable);
+			,
+				set(tour_vrdevices, false);
+			);
+		,
+			checkVrUnavailable();
+		);
+	</action>
+	<action name="checkVrUnavailable">
+		set(tour_vrdevices, false);
+		events.dispatch(onvrunavailable);
+	</action>
+</krpano>

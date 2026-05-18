@@ -1,0 +1,72 @@
+{
+	"token": {			
+		"Điều hướng":"Direction",
+		"Phóng to":"Zoom in",
+		"Thu nhỏ":"Zoom out",
+		"Lên":"Move up",
+		"Xuống":"Move down",
+		"Qua trái":"Move left",
+		"Qua phải":"Move right",
+		"Bật nhạc nền":"Play sound",
+		"Tắt nhạc nền":"Stop sound",
+		"Bật thuyết minh":"Autoguide on",
+		"Tắt thuyết minh":"Autoguide off",
+		"Bật tham quan tự động":"Auto rotation on",
+		"Tắt tham quan tự động":"Auto rotation off",
+		"Vị trí":"Location",
+		"Giới thiệu":"Information",
+		"Tour360data/pano/info.html":"Tour360data/pano/info_en.html",
+		"Xem toàn màn hình":"Enter Fullscreen",
+		"Thoát toàn màn hình":"Exit Fullscreen",
+		"Xem hình ảnh":"Show image",
+		"Hướng dẫn": "Help",
+		"Đóng": "Close",
+		"Xem tiếp":"Next",
+		"Quay lại":"Prev",
+		"Tour360data/pano/Images/help_screen_fg.png": "Tour360data/pano/Images/help_screen_fg_en.png",
+		"Bảo tàng Hồ Chí Minh - Chi nhánh Gia Lai Kontum":"Ho Chi Minh Museum - Binh Thuan Branch",
+		"Bảo tàng Hồ Chí Minh - Chi nhánh Gia và Lai Kontum":"Ho Chi Minh Museum - Binh Thuan Branch",
+		"Bảo tàng Hồ Chí Minh":"Ho Chi Minh Museum",
+		"Chi nhánh Bình Thuận":"Binh Thuan Branch",
+		"Toàn cảnh Bảo tàng":"Panorama of the Museum",
+		"Toàn cảnh Nhà trưng bày":"Panorama of Exhibition house",
+		"Tượng Bác Hồ với thiếu nhi":"The statue of Uncle Ho with children",
+		"Gian thờ Bác Hồ":"Uncle Ho Temple of Worship",
+		"Phòng truyền thông":"Media room",
+		"Nhà trưng bày về Chủ tịch Hồ Chí Minh":"The exhibition house of President Ho Chi Minh",	
+		"Gian long trọng":"Ceremonial compartment",
+		"Nhà trưng bày":"Exhibition house",
+		"Chủ đề I":"Theme I",
+		"Chủ đề II":"Theme II",
+		"Chủ đề III":"Theme III",
+		"Chủ đề IV":"Theme IV",
+		"Chủ đề V":"Theme V",
+		"Chủ đề VI":"Theme VI",
+		"Chủ đề VII":"Theme VII",
+		"Chủ đề VIII":"Theme VIII",
+		"Di tích Dục Thanh":"Duc Thanh Relic",		
+		"Toàn cảnh Trường Dục Thanh":"Panorama of Duc Thanh School",
+		"Toàn cảnh Di tích Dục Thanh":"Panorama of Duc Thanh Relic",
+		"Cổng trường":"The school gate",
+		"Lối vào":"The entrance",
+		"Sân trường":"The school grounds",
+		"Lớp học":"The classes",
+		"Nhà thờ Nguyễn Thông":"Nguyen Thong Temple of Worship",
+		"Nhà Ngư":"Dormitory",
+		"Ngọa Du Sào":"Ngoa Du Sao",
+		"Cây khế":"Starfruit tree",
+		"Giếng nước":"Water well"
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

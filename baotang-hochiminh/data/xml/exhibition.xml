@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exhibition name="viettel">
+    <SectionCollection>
+        <Section key_id="9" action="pano9" sectionparent_key_id="">
+            <title>
+                <vi>Sảnh khánh tiết.</vi>
+                <en>First Hall</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/9.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/9.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+        <Section key_id="1" action="pano13" sectionparent_key_id="">
+            <title>
+                <vi>Thời thơ ấu và thanh niên của Chủ tịch Hồ Chí Minh, bước đầu hoạt động yêu nước và cách mạng (1890-1911).</vi>
+                <en>President Ho Chi Minh's childhood and youth, his initial patriotic and revolutionary activities (1890-1911).</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/1.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/1.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+        <Section key_id="2" action="pano15" sectionparent_key_id="">
+            <title>
+                <vi>Chủ tịch Hồ Chí Minh tiếp nhận chủ nghĩa Mác - LêNin và khẳng định con đường cách mạng Việt Nam (1911-1920). </vi>
+                <en>President Ho Chi Minh absorbed Marxism - Leninism and affirmed the path of the Vietnamese revolution (1911-1920).</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/2.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/2.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="20" action="pano185" sectionparent_key_id="">
+            <title>
+                <vi>Giới thiệu bảo tàng Hồ Chí Minh.</vi>
+                <en>Introduce Ho Chi Minh Museum.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/20.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/20.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="0" action="pano11" sectionparent_key_id="">
+            <title>
+                <vi>Điểm tham quan</vi>
+                <en>Exhibition Hall</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/silence.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/silence.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="3" action="pano21" sectionparent_key_id="">
+            <title>
+                <vi>Chủ tịch Hồ Chí Minh đấu tranh bảo vệ và vận dụng sáng tạo đường lối của V.I.Lênin về vấn đề dân tộc và thuộc địa (1920-1924).</vi>
+                <en>President Ho Chi Minh struggled to defend and creatively apply V.I.Lenin's line on the national and colonial questions (1920-1924).</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/3.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/3.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="4" action="pano61" sectionparent_key_id="">
+            <title>
+                <vi>Chủ tịch Hồ Chí Minh sáng lập chính Đảng của giai cấp công nhân Việt Nam (1924-1930).</vi>
+                <en>President Ho Chi Minh founded the political party of the Vietnamese working class (1924-1930).</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/4.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/4.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="5" action="pano89" sectionparent_key_id="">
+            <title>
+                <vi>Chủ tịch Hồ Chí Minh - Người tổ chức và lãnh đạo Cách mạng tháng Tám thắng lợi và sáng lập nước Việt Nam Dân chủ Cộng hòa (1930-1945).</vi>
+                <en>President Ho Chi Minh, organizer and leader of the triumphant August Revolution, and founder of the Democratic Republic of Vietnam (1930-1945).</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/5.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/5.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="6" action="pano115" sectionparent_key_id="">
+            <title>
+                <vi>Chủ tịch Hồ Chí Minh, Người tổ chức và lãnh đạo cuộc đấu tranh giữ vững chính quyền cách mạng và kháng chiến chống thực dân Pháp xâm lược (1946-1954).</vi>
+                <en>President Ho Chi Minh - organizer and leader of the struggle to defend the revolutionary adminis-tration and the resistance war against French colonialist aggression (1946-1954).</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/6.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/6.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="7" action="pano151" sectionparent_key_id="">
+            <title>
+                <vi>Chủ tịch Hồ Chí Minh lãnh đạo cách mạng xã hội chủ nghĩa ở miền Bắc và đấu tranh chống Mỹ xâm lược, giải phóng miền Nam thống nhất Tổ quốc (1954-1969).</vi>
+                <en>President Ho Chi Minh led the socialist revolution in the North and the struggle against U.S. aggression to liberate the South and reunify the country (1954-1969).</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/7.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/7.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="8" action="pano168" sectionparent_key_id="">
+            <title>
+                <vi>Mãi mãi đi theo con đường của Chủ tịch Hồ Chí Minh.</vi>
+                <en>Forever follow the path charted by President Ho Chi Minh.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/8.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/8.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="10" action="pano17" sectionparent_key_id="">
+            <title>
+                <vi>Tổ hợp hình tượng quê hương, gia đình.</vi>
+                <en>Grouping of images Ho Chi Minh's birth - place and family.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/silence.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/silence.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="11" action="pano39" sectionparent_key_id="">
+            <title>
+                <vi>Tổ hợp phong trào cách mạng Việt Nam 1930-1931 và Xô Viết Nghệ Tĩnh.</vi>
+                <en>A section of exhibition of the revolutionary movement in Vietnam in the 1920's and the 1930-1931 revolutionary high tide, with ít peak being the Nghe-Tinh Soviet.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/silence.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/silence.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="12" action="pano65" sectionparent_key_id="">
+            <title>
+                <vi>Tổ hợp hình tượng Pác Bó - Tân Trào.</vi>
+                <en>Part of group of images of Pac Bo - Tan Trao.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/silence.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/silence.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="13" action="pano85" sectionparent_key_id="">
+            <title>
+                <vi>Tổ hợp hình tượng Việt Nam chiến đấu và chiến thắng 1946 - 1954.</vi>
+                <en>Grouping of images Vietnam's struggle and victory 1946-1954.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/silence.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/silence.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="14" action="pano128" sectionparent_key_id="">
+            <title>
+                <vi>Gian tưởng niệm Chủ tịch Hồ Chí Minh.</vi>
+                <en>A view of the Hall in memory of President Ho Chi Minh's.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/silence.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/silence.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="15" action="pano108" sectionparent_key_id="">
+            <title>
+                <vi>Hình tượng nơi ở và làm việc của Chủ tịch Hồ Chí Minh tại chiến khu Việt Bắc.</vi>
+                <en>Image of President Ho Chi Minh's redidence-cum-office in the Viet Bac resistance base area.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/silence.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/silence.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="16" action="pano166" sectionparent_key_id="">
+            <title>
+                <vi>Tổ hợp hình tượng Việt Nam chiến đấu và chiến thắng 1954 - 1975.</vi>
+                <en>Grouping of images Vietnam's struggle and victory 1954-1975.</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/silence.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/silence.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+        
+        
+
+
+    </SectionCollection>
+</exhibition>

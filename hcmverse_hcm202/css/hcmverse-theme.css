@@ -1,0 +1,265 @@
+/**
+ * HCMVERSE — override heritage (xanh lá) → palette trang chủ (cyan / tím / navy).
+ */
+:root {
+  --hcm-bg: #05051a;
+  --hcm-bg-panel: #0a0e1a;
+  --hcm-cyan: #00d2ff;
+  --hcm-cyan-bright: #00e5ff;
+  --hcm-purple: #8a2be2;
+  --hcm-purple-bright: #bf00ff;
+  --hcm-text: #ffffff;
+  --hcm-muted: #9aa8b8;
+
+  --gen-label-highlight: var(--hcm-cyan);
+  --gen-label: var(--hcm-text);
+  --gen-bar-bg: rgba(10, 14, 26, 0.88);
+  --gen-bg-primary: rgba(5, 5, 26, 0.92);
+  --gen-bg-secondary: var(--hcm-bg-panel);
+  --gen-bg-tertiary: rgba(0, 51, 102, 0.45);
+  --gen-sidebar-transparent-bg: rgba(0, 51, 102, 0.42);
+  --gen-divider-color: rgba(0, 210, 255, 0.25);
+
+  --header-primary-bg: rgba(5, 5, 26, 0.9);
+  --header-primary-label: var(--hcm-text);
+  --header-secondary-bg: rgba(10, 14, 26, 0.85);
+  --header-secondary-label: var(--hcm-text);
+
+  --button-primary-bg-default: rgba(0, 210, 255, 0.12);
+  --button-primary-label-default: var(--hcm-muted);
+  --button-primary-bg-active: rgba(0, 210, 255, 0.22);
+  --button-primary-label-active: var(--hcm-cyan-bright);
+  --button-primary-bg-default-menuright: rgba(0, 210, 255, 0.15);
+
+  --button-secondary-bg-default: rgba(138, 43, 226, 0.15);
+  --button-secondary-label-default: var(--hcm-text);
+  --button-secondary-bg-active: var(--hcm-purple);
+  --button-secondary-label-active: #fff;
+
+  --button-special-bg: rgba(0, 210, 255, 0.18);
+  --button-cancel-bg: #4a5568;
+  --button-exit-bg: rgba(10, 14, 26, 0.9);
+  --button-exit-label: var(--hcm-muted);
+
+  --icon-social-color-secondary: var(--hcm-cyan);
+  --icon-map-color-secondary: var(--hcm-purple-bright);
+
+  --card-bg: rgba(10, 14, 26, 0.92);
+  --card-list-bg: rgba(0, 51, 102, 0.35);
+  --card-list-bg-hover: rgba(0, 210, 255, 0.12);
+  --card-selected-bg: rgba(0, 210, 255, 0.22);
+
+  --search-bar-bg: rgba(10, 14, 26, 0.95);
+  --search-bar-label: var(--hcm-muted);
+  --list-background-hoverstate: rgba(0, 210, 255, 0.1);
+}
+
+html,
+body {
+  font-family: "Montserrat", "Segoe UI", system-ui, sans-serif !important;
+  background-color: var(--hcm-bg) !important;
+  color: var(--hcm-text) !important;
+}
+
+/* —— Logo tròn (loading + menu) —— */
+.hcmverse-logo-round,
+#loading_logo_project,
+#logo_main_icon,
+#default_logo_left img,
+.loading_logo img {
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center 42% !important;
+}
+
+#default_logo_left {
+  padding: 3px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, var(--hcm-cyan), var(--hcm-purple-bright)) !important;
+  box-shadow: 0 0 16px rgba(0, 210, 255, 0.35);
+}
+
+#default_logo_left img,
+#logo_main_icon {
+  width: 44px !important;
+  height: 44px !important;
+  border: 2px solid var(--hcm-bg) !important;
+  background: var(--hcm-bg) !important;
+}
+
+.loading_logo {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.loading_logo img,
+#loading_logo_project {
+  width: clamp(100px, 22vw, 160px) !important;
+  height: clamp(100px, 22vw, 160px) !important;
+  padding: 4px !important;
+  background: linear-gradient(135deg, var(--hcm-cyan), var(--hcm-purple-bright)) !important;
+  border: 3px solid var(--hcm-bg) !important;
+  box-shadow: 0 0 28px rgba(0, 210, 255, 0.35);
+}
+
+/* —— Màn hình loading —— */
+#loading_container .modal-content,
+#loading_container .modal-body {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 210, 255, 0.12), transparent),
+    radial-gradient(ellipse 60% 50% at 100% 50%, rgba(191, 0, 255, 0.1), transparent),
+    var(--hcm-bg) !important;
+}
+
+.loading_content div:nth-child(1),
+.loading_content div:nth-child(2) {
+  color: var(--hcm-text) !important;
+}
+
+.loading_content div:nth-child(2) {
+  background: linear-gradient(90deg, var(--hcm-cyan-bright), var(--hcm-purple-bright));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loading_content div:nth-child(3) {
+  background: linear-gradient(90deg, var(--hcm-cyan), var(--hcm-purple-bright)) !important;
+  color: #fff !important;
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.loading_language_item.active img {
+  border-color: var(--hcm-cyan-bright) !important;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.5) !important;
+}
+
+#loading_text_choose_language,
+.loading_language_item span {
+  color: var(--hcm-muted) !important;
+}
+
+.group_view_slider_child.group_active {
+  background-color: var(--hcm-cyan) !important;
+  color: var(--hcm-bg) !important;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(90deg, rgba(0, 210, 255, 0.25), rgba(191, 0, 255, 0.2)) !important;
+  color: #fff !important;
+}
+
+.div-loading {
+  background-color: var(--hcm-bg) !important;
+}
+
+.loader {
+  border-top-color: var(--hcm-cyan) !important;
+}
+
+.loader::after {
+  border-left-color: var(--hcm-purple-bright) !important;
+}
+
+/* —— Thanh chrome HCMVERSE —— */
+#hcmverse-chrome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483646;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 1rem;
+  pointer-events: none;
+  background: rgba(5, 5, 26, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 210, 255, 0.15);
+}
+
+#hcmverse-chrome a,
+#hcmverse-chrome .hcmverse-chrome__brand {
+  pointer-events: auto;
+}
+
+.hcmverse-chrome__home {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--hcm-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.hcmverse-chrome__home:hover {
+  color: var(--hcm-cyan-bright);
+}
+
+.hcmverse-chrome__logo {
+  --sz: 40px;
+  width: var(--sz);
+  height: var(--sz);
+  padding: 3px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--hcm-cyan), var(--hcm-purple-bright));
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.35);
+}
+
+.hcmverse-chrome__logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 42%;
+  border: 2px solid var(--hcm-bg);
+}
+
+.hcmverse-chrome__wordmark {
+  font-family: "Orbitron", system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.hcmverse-chrome__wordmark .hcm {
+  color: var(--hcm-cyan);
+}
+
+.hcmverse-chrome__wordmark .verse {
+  color: var(--hcm-purple-bright);
+}
+
+.hcmverse-chrome__back {
+  pointer-events: auto;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--hcm-cyan);
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  border-radius: 999px;
+  background: rgba(0, 210, 255, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.hcmverse-chrome__back:hover {
+  border-color: var(--hcm-cyan-bright);
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.25);
+}
+
+@media (max-width: 480px) {
+  .hcmverse-chrome__home span:not(.hcmverse-chrome__logo) {
+    display: none;
+  }
+}

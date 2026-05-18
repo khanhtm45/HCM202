@@ -1,0 +1,32 @@
+node_modules/
+
+# Generated / capture artifacts
+download-result.json
+download-map3d-result.json
+hcmverse_hcm202/download-map3d-result.json
+diagnose-map3d-media.json
+map3d-capture-page.html
+map3d-capture-urls.txt
+map3d-capture-meta.json
+map3d-raw.html
+map3d-tour*.xml
+map3d-local-vn.js
+
+# Temp krpano / analysis dumps (root)
+data_index.js
+index.xml
+data.xml
+includer.xml
+temp_index.swf
+_*.js
+_*.json
+
+# Capture / scan outputs (regenerate with npm run capture:phu-tho / scan-404)
+asset-urls-full.txt
+asset-urls-captured.txt
+asset-urls-missing.txt
+extra-asset-urls.txt
+missing-404.json
+
+# Chunked git push progress (local only)
+.git-push-chunked-state.json

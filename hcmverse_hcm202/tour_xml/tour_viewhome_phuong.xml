@@ -1,0 +1,1756 @@
+<krpano version="1.22" title="Virtual Tour">
+
+
+
+
+	
+	
+	<scene name="scene_03_bd_01_chua_khanh_hoi_tren_cao_(01)_home" title="03_bd_01_chua_khanh_hoi_tren_cao_(01)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_01_chua_khanh_hoi_tren_cao_(01).tiles/thumb.jpg" lat="10.98094778" lng="106.65884139" alt="79.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="188.735" vlookat="35.232" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_01_chua_khanh_hoi_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_01_chua_khanh_hoi_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_01_chua_khanh_hoi_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	
+	<scene name="scene_03_bd_05_khu_du_lich_dai_nam_tren_cao_(03)_home" title="03_bd_05_khu_du_lich_dai_nam_tren_cao_(03)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_05_khu_du_lich_dai_nam_tren_cao_(03).tiles/thumb.jpg" lat="11.03513333" lng="106.62770972" alt="167.77" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="7.236" vlookat="5.685" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_05_khu_du_lich_dai_nam_tren_cao_(03).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_05_khu_du_lich_dai_nam_tren_cao_(03).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_05_khu_du_lich_dai_nam_tren_cao_(03).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_01_brvt_02_binh_chau_hot_spring_tren_cao_(01)_home" title="01_brvt_02_binh_chau_hot_spring_tren_cao_(01)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/baria-vungtau/01_brvt_02_binh_chau_hot_spring_tren_cao_(01).tiles/thumb.jpg" lat="10.60405278" lng="107.55735833" alt="94.20" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-30.154" vlookat="39.847" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/baria-vungtau/01_brvt_02_binh_chau_hot_spring_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/baria-vungtau/01_brvt_02_binh_chau_hot_spring_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/baria-vungtau/01_brvt_02_binh_chau_hot_spring_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_01_tuyen_metro_so_1_tren_cao_(09)_home" title="01_tuyen_metro_so_1_tren_cao_(09)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tren_cao_(09).tiles/thumb.jpg" lat="10.87937444" lng="106.81431306" alt="68.46" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tren_cao_(09).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tren_cao_(09).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tren_cao_(09).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_01_tuyen_metro_so_1_tram_dai_hoc_quoc_gia_(03)_home" title="01_tuyen_metro_so_1_tram_dai_hoc_quoc_gia_(03)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tram_dai_hoc_quoc_gia_(03).tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tram_dai_hoc_quoc_gia_(03).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tram_dai_hoc_quoc_gia_(03).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1152,2304,4736" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tram_dai_hoc_quoc_gia_(03).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_01_tuyen_metro_so_1_tren_cao_(08)_home" title="01_tuyen_metro_so_1_tren_cao_(08)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tren_cao_(08).tiles/thumb.jpg" lat="10.84589972" lng="106.77232444" alt="77.69" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tren_cao_(08).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tren_cao_(08).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tren_cao_(08).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	
+	
+	<scene name="scene_03_bd_03_bao_tang_binh_duong_tren_cao_(01)_home_binh_duong" title="03_bd_03_bao_tang_binh_duong_tren_cao_(01)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_03_bao_tang_binh_duong_tren_cao_(01).tiles/thumb.jpg" lat="10.99007278" lng="106.66406111" alt="96.73" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-118.208" vlookat="28.663" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_03_bao_tang_binh_duong_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_03_bao_tang_binh_duong_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_03_bao_tang_binh_duong_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+    <scene name="scene_01_brvt_05_tuong_chua_kito_tren_cao_(01)_home" title="01_brvt_05_tuong_chua_kito_tren_cao_(01)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/baria-vungtau/01_brvt_05_tuong_chua_kito_tren_cao_(01).tiles/thumb.jpg" lat="10.32608612" lng="107.08463333" alt="203.40" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="80.086" vlookat="32.354" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/baria-vungtau/01_brvt_05_tuong_chua_kito_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/baria-vungtau/01_brvt_05_tuong_chua_kito_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/baria-vungtau/01_brvt_05_tuong_chua_kito_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+
+	<scene name="scene_20-di-tich-lich-su-Nga-Ba-Giong-tren-cao-(1)_home" title="Toàn cảnh Di tích lịch sử cấp Quốc gia Ngã Ba Giồng" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/20-di-tich-lich-su-Nga-Ba-Giong-tren-cao-(1).tiles/thumb.jpg" lat="10.86815111" lng="106.55965528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-142.249" vlookat="24.565" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/20-di-tich-lich-su-Nga-Ba-Giong-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/20-di-tich-lich-su-Nga-Ba-Giong-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/20-di-tich-lich-su-Nga-Ba-Giong-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_35-khu-sinh-thai-gd-green-land-farm-tren-cao-(1)_home" title="Toàn cảnh Khu Du lịch Sinh thái Giáo dục Green Land Farm" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/35-khu-sinh-thai-gd-green-land-farm-tren-cao-(1).tiles/thumb.jpg" lat="10.99296722" lng="106.57885250" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="198.473" vlookat="13.556" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/35-khu-sinh-thai-gd-green-land-farm-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/35-khu-sinh-thai-gd-green-land-farm-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/35-khu-sinh-thai-gd-green-land-farm-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_38_dao_thieng_lieng_tren_cao_(01)_home" title="38_dao_thieng_lieng_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/38_dao_thieng_lieng_tren_cao_(01).tiles/thumb.jpg" lat="10.51495806" lng="106.95756694" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-768.245" vlookat="18.646" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/38_dao_thieng_lieng_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/38_dao_thieng_lieng_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/38_dao_thieng_lieng_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_18-khu-di-tich-lich-su-lang-le-tren-cao-(1)_home" title="Toàn cảnh Khu di tích lịch sử Láng Le - Bàu Cò (1)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/18-khu-di-tich-lich-su-lang-le-tren-cao-(1).tiles/thumb.jpg" lat="10.72113417" lng="106.53622250" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="209.441" vlookat="44.121" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/18-khu-di-tich-lich-su-lang-le-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/18-khu-di-tich-lich-su-lang-le-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/18-khu-di-tich-lich-su-lang-le-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_09_nha_truyen_thong_cu_chi_tren_cao_(01)_home" title="09_nha_truyen_thong_cu_chi_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/09_nha_truyen_thong_cu_chi_tren_cao_(01).tiles/thumb.jpg" lat="10.96887139" lng="106.48655167" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-46.425" vlookat="23.016" fovtype="MFOV" fov="113.564"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/09_nha_truyen_thong_cu_chi_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/09_nha_truyen_thong_cu_chi_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/09_nha_truyen_thong_cu_chi_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01)_home" title="27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01).tiles/thumb.jpg" lat="10.80380056" lng="106.66160278" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="389.817" vlookat="28.920" fovtype="MFOV" fov="78.633"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_37_vuon_xuong_rong_ngoc_hung_tren_cao_(01)_home" title="37_vuon_xuong_rong_ngoc_hung_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/37_vuon_xuong_rong_ngoc_hung_tren_cao_(01).tiles/thumb.jpg" lat="10.69573528" lng="106.55428472" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="77.739" vlookat="20.232" fovtype="MFOV" fov="111.619"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/37_vuon_xuong_rong_ngoc_hung_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/37_vuon_xuong_rong_ngoc_hung_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/37_vuon_xuong_rong_ngoc_hung_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_15_dinh_quan_hoc_mon_tren_cao_(01)_home" title="15_dinh_quan_hoc_mon_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/15_dinh_quan_hoc_mon_tren_cao_(01).tiles/thumb.jpg" lat="10.88923278" lng="106.59557917" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-100.915" vlookat="23.636" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/15_dinh_quan_hoc_mon_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/15_dinh_quan_hoc_mon_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/15_dinh_quan_hoc_mon_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01)_home" title="12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01).tiles/thumb.jpg" lat="11.06090222" lng="106.43993444" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="121.745" vlookat="28.712" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_21-cong-vien-ca-koi-tren-cao-(1)_home" title="Toàn cảnh Công viên Cá Koi Rin Rin Park - Vườn Nhật Bản" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/21-cong-vien-ca-koi-tren-cao-(1).tiles/thumb.jpg" lat="10.85930444" lng="106.58453056" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="43.992" vlookat="33.747" fovtype="MFOV" fov="129.727" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/21-cong-vien-ca-koi-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/21-cong-vien-ca-koi-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/21-cong-vien-ca-koi-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_22-canh-dong-hoa-nhi-binh-tren-cao-(1)_home" title="Toàn cảnh Cánh đồng hoa Nhị Bình" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/22-canh-dong-hoa-nhi-binh-tren-cao-(1).tiles/thumb.jpg" lat="10.92063500" lng="106.68357417" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-138.126" vlookat="36.140" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/22-canh-dong-hoa-nhi-binh-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/22-canh-dong-hoa-nhi-binh-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/22-canh-dong-hoa-nhi-binh-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_1_1_2_dia-dao-cu-chi_(1)_home" title="Địa đạo Củ Chi (1)_home" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/1_1_2_dia-dao-cu-chi_(1).tiles/thumb.jpg" lat="11.14627667" lng="106.46065028" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/1_1_2_dia-dao-cu-chi_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/1_1_2_dia-dao-cu-chi_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/1_1_2_dia-dao-cu-chi_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>	
+	
+	<scene name="scene_28-khu-du-lich-sinh-thai-bien-phuong-nam-can-gio-tren-cao-(1)_home" title="Toàn cảnh Khu du lịch Sinh thái biển Phương Nam Cần Giờ" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/28-khu-du-lich-sinh-thai-bien-phuong-nam-can-gio-tren-cao-(1).tiles/thumb.jpg" lat="10.37643972" lng="106.89070833" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="147.830" vlookat="8.303" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/28-khu-du-lich-sinh-thai-bien-phuong-nam-can-gio-tren-cao-(1).tiles/preview.jpg" />
+
+		<image>
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/28-khu-du-lich-sinh-thai-bien-phuong-nam-can-gio-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_38_chua_phat_co_don_tren_cao_(1)_home" title="38_chua_phat_co_don_tren_cao_(1)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/38_chua_phat_co_don_tren_cao_(1).tiles/thumb.jpg" lat="10.77917861" lng="106.51485861" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-89.241" vlookat="32.169" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/38_chua_phat_co_don_tren_cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/38_chua_phat_co_don_tren_cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/38_chua_phat_co_don_tren_cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_36-khu-nong-nghiep-cnc-tren-cao-(1)_home" title="Toàn cảnh Khu Nông Nghiệp Công Nghệ Cao" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/36-khu-nong-nghiep-cnc-tren-cao-(1).tiles/thumb.jpg" lat="11.02009306" lng="106.52879167" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-48.965" vlookat="20.032" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/36-khu-nong-nghiep-cnc-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/36-khu-nong-nghiep-cnc-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/36-khu-nong-nghiep-cnc-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_23-khu-du-lich-sinh-thai-en-viet-can-gio-tren_cao-(1)_home" title="Toàn cảnh Khu du lịch sinh thái Én Việt Cần Giờ" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/23-khu-du-lich-sinh-thai-en-viet-can-gio-tren_cao-(1).tiles/thumb.jpg" lat="10.58991500" lng="106.84587111" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-8.554" vlookat="32.675" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/23-khu-du-lich-sinh-thai-en-viet-can-gio-tren_cao-(1).tiles/preview.jpg" />
+
+		<image>
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/23-khu-du-lich-sinh-thai-en-viet-can-gio-tren_cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_34-kdl-mot-thoang-viet-nam-tren-cao-(1)_home" title="Toàn cảnh Khu Du lịch Một Thoáng Việt Nam" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/34-kdl-mot-thoang-viet-nam-tren-cao-(1).tiles/thumb.jpg" lat="11.13126639" lng="106.50408444" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-56.423" vlookat="27.960" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/34-kdl-mot-thoang-viet-nam-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/34-kdl-mot-thoang-viet-nam-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/34-kdl-mot-thoang-viet-nam-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_30-dinh-phu-xuan-tren-cao-(1)_home" title="Toàn cảnh Đình Phú Xuân (1)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/30-dinh-phu-xuan-tren-cao-(1).tiles/thumb.jpg" lat="10.69829806" lng="106.73548972" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="217.624" vlookat="21.960" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/30-dinh-phu-xuan-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/30-dinh-phu-xuan-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/30-dinh-phu-xuan-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_4_11_1_ho_con_rua_tren_cao_(5)_home" title="Hồ Con Rùa 3" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide();"
+		
+		 havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_11_1_ho_con_rua_tren_cao_(5).tiles/thumb.jpg" lat="10.78205222" lng="106.69657389" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="-210.637" vlookat="44.268" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="60" fovmax="150" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_11_1_ho_con_rua_tren_cao_(5).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_11_1_ho_con_rua_tren_cao_(5).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4160,8256" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_11_1_ho_con_rua_tren_cao_(5).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_bnr_flycam1_home" title="Bến Nhà Rồng 1" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/bnr_flycam1.tiles/thumb.jpg" lat="10.76872044" lng="106.70661636" heading="0.0">
+
+		<view hlookat="44.862" vlookat="27.822" fovtype="mfov" fov="103.545" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/bnr_flycam1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/bnr_flycam1.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,3840,7808" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_4_2_1_nga-sau-an-duong-vuong-tren-cao_(4)_home" title="Ngã 6 An Dương Vương 2" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_2_1_nga-sau-an-duong-vuong-tren-cao_(4).tiles/thumb.jpg" lat="10.76019528" lng="106.66910333" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="212.678" vlookat="35.621" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_2_1_nga-sau-an-duong-vuong-tren-cao_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_2_1_nga-sau-an-duong-vuong-tren-cao_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2176,4352,8704" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_2_1_nga-sau-an-duong-vuong-tren-cao_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_4_9_1_cau-sai-gon-tren-cao_(1)_home" title="Cầu Sài Gòn 1" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_9_1_cau-sai-gon-tren-cao_(1).tiles/thumb.jpg" lat="10.80144806" lng="106.72939083" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="-108.504" vlookat="2.838" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_9_1_cau-sai-gon-tren-cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_9_1_cau-sai-gon-tren-cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2176,4352,8704" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_9_1_cau-sai-gon-tren-cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_37-dinh-tho-dinh-phong-phu-tren-cao-(1)_home" title="Toàn cảnh Đình Phong Phú" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/37-dinh-tho-dinh-phong-phu-tren-cao-(1).tiles/thumb.jpg" lat="10.83229972" lng="106.78375306" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-11.140" vlookat="43.574" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/37-dinh-tho-dinh-phong-phu-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/37-dinh-tho-dinh-phong-phu-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/37-dinh-tho-dinh-phong-phu-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_4_10_1_cau-phu-my-tren-cao_(4)-1)_home" title="Cầu Phú Mỹ" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_10_1_cau-phu-my-tren-cao_(4).tiles/thumb.jpg" lat="10.74898472" lng="106.74484194" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="-206.787" vlookat="15.079" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_10_1_cau-phu-my-tren-cao_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_10_1_cau-phu-my-tren-cao_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2176,4352,8704" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_10_1_cau-phu-my-tren-cao_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_21_cong_vien_hoang_van_thu_tren_cao_(01)_home" title="21_cong_vien_hoang_van_thu_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/21_cong_vien_hoang_van_thu_tren_cao_(01).tiles/thumb.jpg" lat="10.80133306" lng="106.66414917" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="103.451" vlookat="21.626" fovtype="MFOV" fov="99.936"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/21_cong_vien_hoang_van_thu_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/21_cong_vien_hoang_van_thu_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/21_cong_vien_hoang_van_thu_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3)_home" title="Toàn cảnh Cầu Ánh Sao - Hồ Bán Nguyệt" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3).tiles/thumb.jpg" lat="10.72417139" lng="106.71848528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-0.000" vlookat="2.753" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_22_cho_tan_binh_tren_cao_(01)_home" title="22_cho_tan_binh_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/22_cho_tan_binh_tren_cao_(01).tiles/thumb.jpg" lat="10.78625056" lng="106.65394389" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-106.293" vlookat="28.463" fovtype="MFOV" fov="106.950"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/22_cho_tan_binh_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/22_cho_tan_binh_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/22_cho_tan_binh_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_11-nha-tho-tan-dinh-(1)_home" title="Nhà thờ Tân Định (1)_home" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/11-nha-tho-tan-dinh-(1).tiles/thumb.jpg" lat="10.78865583" lng="106.69087194" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="115.640" vlookat="-14.906" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/11-nha-tho-tan-dinh-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/11-nha-tho-tan-dinh-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2688,5376" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/11-nha-tho-tan-dinh-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_32_vuon_minh_tran_tren_cao_(1)_home" title="32_vuon_minh_tran_tren_cao_(1)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/32_vuon_minh_tran_tren_cao_(1).tiles/thumb.jpg" lat="10.82631639" lng="106.63388750" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/32_vuon_minh_tran_tren_cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/32_vuon_minh_tran_tren_cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/32_vuon_minh_tran_tren_cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_04_01-tuong-tran-hung-dao-tren-cao-(1)-ben-bach-dang_home" title="Bến Bạch Đằng" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd1/04_01-tuong-tran-hung-dao-tren-cao-(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+	    <view hlookat="-87.783" vlookat="15.113" fovtype="MFOV" fov="138.140" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd1/04_01-tuong-tran-hung-dao-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd1/04_01-tuong-tran-hung-dao-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd1/04_01-tuong-tran-hung-dao-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_04-khu-pho-co-hai-thuong-lan-ong-(1)_home" title="Khu phố cổ Hải Thượng Lãn Ông (1)_home" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/04-khu-pho-co-hai-thuong-lan-ong-(1).tiles/thumb.jpg" lat="10.75097306" lng="106.66186472" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-92.882" vlookat="-9.497" fovtype="MFOV" fov="120.045" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/04-khu-pho-co-hai-thuong-lan-ong-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/04-khu-pho-co-hai-thuong-lan-ong-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1152,2304,4736" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/04-khu-pho-co-hai-thuong-lan-ong-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_15-chua-phung-son-(1)_home" title="Chùa Phụng Sơn (1)_home" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/15-chua-phung-son-(1).tiles/thumb.jpg" lat="10.75590083" lng="106.64513889" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="91.830" vlookat="-3.594" fovtype="MFOV" fov="120.093" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/15-chua-phung-son-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/15-chua-phung-son-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1152,2304,4736" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/15-chua-phung-son-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_25_duong_den_pham_the_hien_tren_cao_(01)_home" title="25_duong_den_pham_the_hien_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/25_duong_den_pham_the_hien_tren_cao_(01).tiles/thumb.jpg" lat="10.73759028" lng="106.65057083" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="150.512" vlookat="18.217" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/25_duong_den_pham_the_hien_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/25_duong_den_pham_the_hien_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/25_duong_den_pham_the_hien_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_29_bao_tang_II_vu_trang_dnb_tren_cao_(1)_home" title="29_bao_tang_II_vu_trang_dnb_tren_cao_(1)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/29_bao_tang_II_vu_trang_dnb_tren_cao_(1).tiles/thumb.jpg" lat="10.80027500" lng="106.66624556" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="151.651" vlookat="24.896" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/29_bao_tang_II_vu_trang_dnb_tren_cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/29_bao_tang_II_vu_trang_dnb_tren_cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/29_bao_tang_II_vu_trang_dnb_tren_cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_chuavnghiem_view_flycam_home" title="Chùa Vĩnh Nghiêm 1" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/chuavnghiem_view_flycam.tiles/thumb.jpg" lat="10.79065978" lng="106.68254367" heading="0.0">
+
+		<view hlookat="-23.616" vlookat="12.439" fovtype="mfov" fov="97.575" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/chuavnghiem_view_flycam.tiles/preview.jpg" />
+
+		<image>
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/chuavnghiem_view_flycam.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,3840,7744" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_01_can_cu_vung_bung_6_xa_tren_cao_(01)_home" title="01_can_cu_vung_bung_6_xa_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/01_can_cu_vung_bung_6_xa_tren_cao_(01).tiles/thumb.jpg" lat="10.82621139" lng="106.80690833" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="214.000" vlookat="38.262" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/01_can_cu_vung_bung_6_xa_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/01_can_cu_vung_bung_6_xa_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/01_can_cu_vung_bung_6_xa_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_03_khu_am_thuc_ho_nha_tren_cao_(01)_home" title="03_khu_am_thuc_ho_nha_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/03_khu_am_thuc_ho_nha_tren_cao_(01).tiles/thumb.jpg" lat="10.79878278" lng="106.84254333" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="63.616" vlookat="22.543" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/03_khu_am_thuc_ho_nha_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/03_khu_am_thuc_ho_nha_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/03_khu_am_thuc_ho_nha_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_hungvuong_viewflycam_home" title="hungvuong_viewflycam" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/hungvuong_viewflycam.tiles/thumb.jpg" lat="10.78752392" lng="106.70535511" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-66.158" vlookat="57.128" fovtype="MFOV" fov="91.684" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/hungvuong_viewflycam.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/hungvuong_viewflycam.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/hungvuong_viewflycam.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_3_2_1_viet-nam-quoc-tu_tren-cao_(1)_home" title="Việt Nam Quốc Tự (1)_home" onstart="set(hotspot[nadirlogo].visible,flase); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_2_1_viet-nam-quoc-tu_tren-cao_(1).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-42.442" vlookat="45.302" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_2_1_viet-nam-quoc-tu_tren-cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_2_1_viet-nam-quoc-tu_tren-cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_2_1_viet-nam-quoc-tu_tren-cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_6_8_1_white-palace-pham-van-dong-tren-cao_(1)_home" title="Trung tâm sự kiện White Palace Phạm Văn Đồng (1)_home" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/6_8_1_white-palace-pham-van-dong-tren-cao_(1).tiles/thumb.jpg" lat="10.82478056" lng="106.71598472" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="65.494" vlookat="30.231" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/6_8_1_white-palace-pham-van-dong-tren-cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/6_8_1_white-palace-pham-van-dong-tren-cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2176,4352,8704" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/6_8_1_white-palace-pham-van-dong-tren-cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_17_khu_do_thi_cityland_park_hills_go_vap_tren_cao_(01)_home" title="17_khu_do_thi_cityland_park_hills_go_vap_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/17_khu_do_thi_cityland_park_hills_go_vap_tren_cao_(01).tiles/thumb.jpg" lat="10.83476917" lng="106.67054194" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="46.156" vlookat="21.541" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/17_khu_do_thi_cityland_park_hills_go_vap_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/17_khu_do_thi_cityland_park_hills_go_vap_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/17_khu_do_thi_cityland_park_hills_go_vap_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_38-lang-ong-ba-chieu-tren-cao-(1)_home" title="Toàn cảnh Lăng Ông Bà Chiểu" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/38-lang-ong-ba-chieu-tren-cao-(1).tiles/thumb.jpg" lat="10.80126611" lng="106.69659528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="25.695" vlookat="22.933" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/38-lang-ong-ba-chieu-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/38-lang-ong-ba-chieu-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/38-lang-ong-ba-chieu-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_36_hoc_vien_phat_giao_tren_cao_(2)_home" title="36_hoc_vien_phat_giao_tren_cao_(2)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/36_hoc_vien_phat_giao_tren_cao_(2).tiles/thumb.jpg" lat="10.77392889" lng="106.51635306" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-151.038" vlookat="54.281" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/36_hoc_vien_phat_giao_tren_cao_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/36_hoc_vien_phat_giao_tren_cao_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/36_hoc_vien_phat_giao_tren_cao_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_34_thuong_xa_dong_khanh_tren_cao_(1)_home" title="34_thuong_xa_dong_khanh_tren_cao_(1)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/34_thuong_xa_dong_khanh_tren_cao_(1).tiles/thumb.jpg" lat="10.75195833" lng="106.65605944" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-354.861" vlookat="7.433" fovtype="MFOV" fov="114.650"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/34_thuong_xa_dong_khanh_tren_cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/34_thuong_xa_dong_khanh_tren_cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/34_thuong_xa_dong_khanh_tren_cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_16-dinh-thong-tay-hoi-(2)_home" title="Đình Thông Tây Hội (2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/16-dinh-thong-tay-hoi-(2).tiles/thumb.jpg" lat="10.84006056" lng="106.66519694" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-98.281" vlookat="-4.759" fovtype="MFOV" fov="129.766" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/16-dinh-thong-tay-hoi-(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/16-dinh-thong-tay-hoi-(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1152,2304,4736" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/16-dinh-thong-tay-hoi-(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_4_3_1_nga-sau-phu-dong-tren-cao_(3)_home" title="Ngã 6 Phù Đổng 1" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_3_1_nga-sau-phu-dong-tren-cao_(3).tiles/thumb.jpg" lat="10.77168917" lng="106.69307972" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_3_1_nga-sau-phu-dong-tren-cao_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_3_1_nga-sau-phu-dong-tren-cao_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2176,4352,8704" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_3_1_nga-sau-phu-dong-tren-cao_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_4_12_1_dam_sen_tren_cao_(2)_home" title="Đầm sen (2)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide();"
+		
+		 havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_12_1_dam_sen_tren_cao_(2).tiles/thumb.jpg" lat="10.76704528" lng="106.63796972" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="-32.790" vlookat="22.256" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="60" fovmax="150" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_12_1_dam_sen_tren_cao_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_12_1_dam_sen_tren_cao_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4160,8256" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_12_1_dam_sen_tren_cao_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_4_6_2_cho-binh-tay_(6)_home" title="Chợ Bình Tây" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_6_2_cho-binh-tay_(6).tiles/thumb.jpg" lat="10.74986028" lng="106.65098944" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="2.191" vlookat="-10.331" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_6_2_cho-binh-tay_(6).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_6_2_cho-binh-tay_(6).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1536,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_6_2_cho-binh-tay_(6).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_24_tttm_binh_dien_(01)_home" title="24_tttm_binh_dien_(01)_home" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/24_tttm_binh_dien_(01).tiles/thumb.jpg" lat="10.69917389" lng="106.60904917" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="58.374" vlookat="8.115" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/24_tttm_binh_dien_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/24_tttm_binh_dien_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/24_tttm_binh_dien_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_dinhdoclap_viewflycam2_home" title="Dinh Độc Lập (2)" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/dinhdoclap_viewflycam2.tiles/thumb.jpg" lat="10.77840150" lng="106.69667625" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="mfov" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/dinhdoclap_viewflycam2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/dinhdoclap_viewflycam2.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,3840,7808" />
+		</image>
+
+    </scene>
+    
+    <scene name="scene_13-chua-giac-lam-tren-cao_home" title="Toàn cảnh Chùa Giác Lâm" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/13-chua-giac-lam-tren-cao.tiles/thumb.jpg" lat="10.77717611" lng="106.64936778" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="174.688" vlookat="39.481" fovtype="MFOV" fov="120.617" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/13-chua-giac-lam-tren-cao.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/13-chua-giac-lam-tren-cao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/13-chua-giac-lam-tren-cao.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_24-khu-du-lich-sinh-thai-rung-ngap-man-vam-sat-tren-cao-(1)_home" title="Toàn cảnh Khu du lịch sinh thái rừng ngập mặn Vàm Sát" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/24-khu-du-lich-sinh-thai-rung-ngap-man-vam-sat-tren-cao-(1).tiles/thumb.jpg" lat="10.48950472" lng="106.79580694" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-9.823" vlookat="19.138" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/24-khu-du-lich-sinh-thai-rung-ngap-man-vam-sat-tren-cao-(1).tiles/preview.jpg" />
+
+		<image>
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/24-khu-du-lich-sinh-thai-rung-ngap-man-vam-sat-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_3_3_1_chua-phap-dien-dang-quang-tren-cao_(10)_home" title="Pháp Viện Minh Đăng Quang (2)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_3_1_chua-phap-dien-dang-quang-tren-cao_(10).tiles/thumb.jpg" lat="10.80249278" lng="106.75173500" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="158.795" vlookat="26.616" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_3_1_chua-phap-dien-dang-quang-tren-cao_(10).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_3_1_chua-phap-dien-dang-quang-tren-cao_(10).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2176,4352,8704" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_3_1_chua-phap-dien-dang-quang-tren-cao_(10).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_03-khu-do-thi-sala-tren-cao-(1)_home" title="Khu Đô thị Sala (1)_home"  onstart="set(hotspot[nadirlogo].visible,false);skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-city-3d/thanh-pho-thu-duc/panos_rev01/03-khu-do-thi-sala-tren-cao-(1).tiles/thumb.jpg" lat="10.77286389" lng="106.72468722" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="168.824" vlookat="17.158" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-city-3d/thanh-pho-thu-duc/panos_rev01/03-khu-do-thi-sala-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/thanh-pho-thu-duc/panos_rev01/03-khu-do-thi-sala-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/thanh-pho-thu-duc/panos_rev01/03-khu-do-thi-sala-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_19_cho_an_dong_tren_cao_(01)_home" title="19_cho_an_dong_tren_cao_(01)_home" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/19_cho_an_dong_tren_cao_(01).tiles/thumb.jpg" lat="10.75740639" lng="106.67235806" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-48.734" vlookat="4.000" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/19_cho_an_dong_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/19_cho_an_dong_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/19_cho_an_dong_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_3_1_2_den_tuong_niem_vua_hung_tren_cao_(3)_home" title="Đền tưởng niệm Vua Hùng (2)" onstart="set(hotspot[nadirlogo].visible,flase); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_1_2_den_tuong_niem_vua_hung_tren_cao_(3).tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="11.055" vlookat="33.437" fovtype="MFOV" fov="103.497" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_1_2_den_tuong_niem_vua_hung_tren_cao_(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_1_2_den_tuong_niem_vua_hung_tren_cao_(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/3_1_2_den_tuong_niem_vua_hung_tren_cao_(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_28_bao_tang_khong_quan_phia_nam_tren_cao_(1)_home" title="28_bao_tang_khong_quan_phia_nam_tren_cao_(1)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); js('giongdoc.stop()')" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/28_bao_tang_khong_quan_phia_nam_tren_cao_(1).tiles/thumb.jpg" lat="10.80512833" lng="106.66089389" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-39.186" vlookat="3.407" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/28_bao_tang_khong_quan_phia_nam_tren_cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/28_bao_tang_khong_quan_phia_nam_tren_cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/28_bao_tang_khong_quan_phia_nam_tren_cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_36-khu-nong-nghiep-cnc-tren-cao-(1)_home" title="Toàn cảnh Khu Nông Nghiệp Công Nghệ Cao" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/36-khu-nong-nghiep-cnc-tren-cao-(1).tiles/thumb.jpg" lat="11.02009306" lng="106.52879167" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-48.965" vlookat="20.032" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/36-khu-nong-nghiep-cnc-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/36-khu-nong-nghiep-cnc-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/36-khu-nong-nghiep-cnc-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_03_bd_02_di_tich_nha_tu_phu_loi_tren_cao_(01)_home" title="03_bd_02_di_tich_nha_tu_phu_loi_tren_cao_(01)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_02_di_tich_nha_tu_phu_loi_tren_cao_(01).tiles/thumb.jpg" lat="10.99088333" lng="106.68240556" alt="68.65" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-82.767" vlookat="27.291" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_02_di_tich_nha_tu_phu_loi_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_02_di_tich_nha_tu_phu_loi_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/du-lich-lien-ket-vung-dong-nam-bo/binh-duong/panos/03_bd_02_di_tich_nha_tu_phu_loi_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_35_happy_farm_tren_cao_(1)_home" title="35_happy_farm_tren_cao_(1)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/35_happy_farm_tren_cao_(1).tiles/thumb.jpg" lat="10.67201444" lng="106.64473222" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-120.535" vlookat="58.134" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/35_happy_farm_tren_cao_(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/35_happy_farm_tren_cao_(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/35_happy_farm_tren_cao_(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_2_6_1_bao-tang-ao-dai-tren-cao_(2)_home" title="Bảo tàng Áo dài 1" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/2_6_1_bao-tang-ao-dai-tren-cao_(2).tiles/thumb.jpg" lat="10.80827389" lng="106.85289028" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/2_6_1_bao-tang-ao-dai-tren-cao_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/2_6_1_bao-tang-ao-dai-tren-cao_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2176,4352,8704" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/2_6_1_bao-tang-ao-dai-tren-cao_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_15-chua-phung-son-(1)_home" title="Chùa Phụng Sơn (1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/15-chua-phung-son-(1).tiles/thumb.jpg" lat="10.75590083" lng="106.64513889" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="91.830" vlookat="-3.594" fovtype="MFOV" fov="120.093" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/15-chua-phung-son-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/15-chua-phung-son-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1152,2304,4736" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/15-chua-phung-son-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+		
+	</scene>
+
+	<scene name="scene_01_tuyen_metro_so_1_tram_cong_nghe_cao_(03)_home" title="01_tuyen_metro_so_1_tram_cong_nghe_cao_(03)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tram_cong_nghe_cao_(03).tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tram_cong_nghe_cao_(03).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tram_cong_nghe_cao_(03).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1152,2304,4736" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-city-3d/tuyen-metro-so-1/panos/01_tuyen_metro_so_1_tram_cong_nghe_cao_(03).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01)_home" title="12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01).tiles/thumb.jpg" lat="11.06090222" lng="106.43993444" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="121.745" vlookat="28.712" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/12_lang_nghi_duong_thong_kinh_dong_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_22-canh-dong-hoa-nhi-binh-tren-cao-(1)_home" title="Toàn cảnh Cánh đồng hoa Nhị Bình" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/22-canh-dong-hoa-nhi-binh-tren-cao-(1).tiles/thumb.jpg" lat="10.92063500" lng="106.68357417" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-138.126" vlookat="36.140" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/22-canh-dong-hoa-nhi-binh-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/22-canh-dong-hoa-nhi-binh-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/22-canh-dong-hoa-nhi-binh-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_4_6_2_cho-binh-tay_(6)-1_home" title="Chợ Bình Tây" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_6_2_cho-binh-tay_(6).tiles/thumb.jpg" lat="10.74986028" lng="106.65098944" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="2.191" vlookat="-10.331" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_6_2_cho-binh-tay_(6).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_6_2_cho-binh-tay_(6).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1536,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_6_2_cho-binh-tay_(6).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3)_home" title="Toàn cảnh Cầu Ánh Sao - Hồ Bán Nguyệt" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3).tiles/thumb.jpg" lat="10.72417139" lng="106.71848528" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-0.000" vlookat="2.753" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/31-cau-anh-sao-ho-ban-nguyet-tren-cao-(3).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_14-khu-du-lich-ben-xua-(1)_home" title="Khu du lịch Bến Xưa (1)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/14-khu-du-lich-ben-xua-(1).tiles/thumb.jpg" lat="10.85308750" lng="106.67789806" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="159.515" vlookat="-4.865" fovtype="MFOV" fov="103.498" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/14-khu-du-lich-ben-xua-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/14-khu-du-lich-ben-xua-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1152,2304,4736" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/14-khu-du-lich-ben-xua-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_18-khu-di-tich-lich-su-lang-le-tren-cao-(1)_home" title="Toàn cảnh Khu di tích lịch sử Láng Le - Bàu Cò (1)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/18-khu-di-tich-lich-su-lang-le-tren-cao-(1).tiles/thumb.jpg" lat="10.72113417" lng="106.53622250" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="209.441" vlookat="44.121" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/18-khu-di-tich-lich-su-lang-le-tren-cao-(1).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/18-khu-di-tich-lich-su-lang-le-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/18-khu-di-tich-lich-su-lang-le-tren-cao-(1).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_4_10_1_cau-phu-my-tren-cao_(4)-1_home" title="Cầu Phú Mỹ" onstart=" set(hotspot[nadirlogo].visible,false); skin_video_autohide();" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_10_1_cau-phu-my-tren-cao_(4).tiles/thumb.jpg" lat="10.74898472" lng="106.74484194" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+	
+		<view hlookat="-206.787" vlookat="15.079" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_10_1_cau-phu-my-tren-cao_(4).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_10_1_cau-phu-my-tren-cao_(4).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2176,4352,8704" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/panos/4_10_1_cau-phu-my-tren-cao_(4).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01)_home" title="27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01)" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01).tiles/thumb.jpg" lat="10.80380056" lng="106.66160278" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="389.817" vlookat="28.920" fovtype="MFOV" fov="78.633"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,768,1664,3200,6400" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/27_khu_luu_niem_mo_cu_ohan_chau_trinh_tren_cao_(01).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_24-khu-du-lich-sinh-thai-rung-ngap-man-vam-sat-tren-cao-(1)_home" title="Toàn cảnh Khu du lịch sinh thái rừng ngập mặn Vàm Sát" onstart="set(hotspot[nadirlogo].visible,false); skin_video_autohide(); " thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/24-khu-du-lich-sinh-thai-rung-ngap-man-vam-sat-tren-cao-(1).tiles/thumb.jpg" lat="10.48950472" lng="106.79580694" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="-9.823" vlookat="19.138" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/24-khu-du-lich-sinh-thai-rung-ngap-man-vam-sat-tren-cao-(1).tiles/preview.jpg" />
+
+		<image>
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd3/panos/24-khu-du-lich-sinh-thai-rung-ngap-man-vam-sat-tren-cao-(1).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,1024,2048,4096,7936" />
+		</image>
+
+	</scene>
+	
+	
+	<scene name="scene_31_king_koi_coffee_(2)_home" title="31_king_koi_coffee_(2)" onstart="set(hotspot[nadirlogo].visible,true); skin_video_autohide(); " havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/31_king_koi_coffee_(2).tiles/thumb.jpg" lat="10.79731972" lng="106.61672250" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="120.000"  fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/31_king_koi_coffee_(2).tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/31_king_koi_coffee_(2).tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1152,2304,4736" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="/proxy-s3/starglobal-3d/smart-tourism-3d/sdl-tphcm/gd4/panos/31_king_koi_coffee_(2).tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	
+</krpano>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

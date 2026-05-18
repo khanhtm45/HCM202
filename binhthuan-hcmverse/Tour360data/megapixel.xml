@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.20.10">
+<action name="startup">
+	showlog(false);
+    if (s !== null, if (startscene === null OR startscene === "undefined", set(startscene, get(s));); );
+    if (startscene === null OR startscene === "undefined",
+        set(startscene, pano10);
+		if(device.mobile, 
+			playOversSound();
+		);
+	   
+    );
+    if(startlanguage !== null AND startlanguage !== "undefined",
+      set(tour_language, get(startlanguage));
+    );
+    if(starttime !== null AND starttime !== "undefined" AND starttime GT 0,
+      set(videoscenestarttime, get(starttime));
+    ,
+      set(videoscenestarttime, 0);
+    );
+    mainloadsceneStartup(get(startscene));
+    if (h !== null,
+      if (v !== null,
+        if (f !== null,
+          lookat(get(h), get(v), get(f));
+         ,
+          lookat(get(h), get(v));
+        );
+      ,
+        if (f !== null,
+          lookat(get(h), get(view.vlookat), get(f));
+         ,
+          lookat(get(h), get(view.vlookat));
+        );
+      );
+    ,
+      if (v !== null,
+        if (f !== null,
+          lookat(get(view.hlookat), get(v), get(f));
+         ,
+          lookat(get(view.hlookat), get(v));
+        );
+      ,
+        if (f !== null,
+          lookat(get(view.hlookat), get(view.vlookat), get(f));
+        );
+      );
+    );
+  </action>
+
+<!--Tooltip-->
+<action name="showTooltip">
+	if (tooltip !== null,
+	getmessage(currentTooltipText, get(tooltip));
+	if (%2 == null,
+		set(tooltipCurrentTextfieldLayer, get(tooltip));
+	,
+		set(tooltipCurrentTextfieldLayer, %2);
+	);
+
+	ifnot (currentTooltipText == "",
+		
+		if(calc(contains(layer[get(tooltipCurrentTextfieldLayer)].name, 'spotpolygon')) == 'false',
+			styleTooltip();	
+			,
+			<!-- trace('layer[get(tooltipCurrentTextfieldLayer)].name');  -->
+			set(tooltipCurrentTextfieldLayer, "panotourTooltipDefaultText");
+			normalTooltip();
+		);
+	);
+  );
+</action>
+<action name="normalTooltip">
+	tooltipTextSettingsUpdate(%1, %3, %4, %5, %6);
+		
+	set(tooltipHtmlText, get(currentTooltipText));
+	escape(tooltipHtmlText);
+	jsget(ret, translateTooltip(krpano.get('currentTooltipText')));			
+	set(layer[get(tooltipCurrentTextfieldLayer)].html, get(ret));
+	set(layer[get(tooltipCurrentTextfieldLayer)].visible, true);
+	
+	div(halfWidth, get(layer[get(tooltipCurrentTextfieldLayer)].width), 2);
+	div(halfHeight, get(layer[get(tooltipCurrentTextfieldLayer)].height), 2);
+	
+	<!-- Default edge center -->
+	set(usedWidth, get(halfWidth));
+	set(usedHeight, get(halfHeight));
+	
+	if(layer[get(tooltipCurrentTextfieldLayer)].edge == "left",
+		set(usedWidth, get(layer[get(tooltipCurrentTextfieldLayer)].width));
+		add(rightMargin, get(mouse.x), get(usedWidth));
+		set(leftMargin, get(mouse.x));
+	,
+		if(layer[get(tooltipCurrentTextfieldLayer)].edge == "right",
+			set(usedWidth, get(layer[get(tooltipCurrentTextfieldLayer)].width));
+			set(rightMargin, get(mouse.x));
+			sub(leftMargin, get(mouse.x), get(usedWidth));
+		,
+			add(rightMargin, get(mouse.x), get(usedWidth));
+			sub(leftMargin, get(mouse.x), get(usedWidth));
+		);
+	);
+	
+	add(rightMargin, get(layer[get(tooltipCurrentTextfieldLayer)].xoffset));
+	add(leftMargin, get(layer[get(tooltipCurrentTextfieldLayer)].xoffset));
+	
+	if(layer[get(tooltipCurrentTextfieldLayer)].edge == "bottom",
+		set(usedHeight, get(layer[get(tooltipCurrentTextfieldLayer)].height));
+		sub(topMargin, get(mouse.y), get(usedHeight));
+		set(bottomMargin, get(mouse.y));
+	,
+		if(layer[get(tooltipCurrentTextfieldLayer)].edge == "top",
+			set(usedHeight, get(layer[get(tooltipCurrentTextfieldLayer)].height));
+			set(topMargin, get(mouse.y));
+			add(bottomMargin, get(mouse.y), get(usedHeight));
+		,
+			sub(topMargin, get(mouse.y), get(usedHeight));
+			add(bottomMargin, get(mouse.y), get(usedHeight));
+		);
+	);
+	
+	add(topMargin, get(layer[get(tooltipCurrentTextfieldLayer)].yoffset));
+	add(bottomMargin, get(layer[get(tooltipCurrentTextfieldLayer)].yoffset));
+	
+	if(leftMargin LT 0,
+		set(layer[get(tooltipCurrentTextfieldLayer)].align, "left");
+		set(tooltipPositionX, get(usedWidth));
+	,
+		set(tooltipstagewidth, get(stagewidth));
+		if(area.left, sub(tooltipstagewidth, get(area.left)));
+		if(area.right, sub(tooltipstagewidth, get(area.right)));
+		
+		if(rightMargin GT tooltipstagewidth,
+			set(layer[get(tooltipCurrentTextfieldLayer)].align, "right");
+			set(tooltipPositionX, get(usedWidth));
+		,
+			div(tooltipPositionX, get(tooltipstagewidth), 2);
+			sub(tooltipPositionX, get(mouse.x), get(tooltipPositionX));
+			add(tooltipPositionX, get(layer[get(tooltipCurrentTextfieldLayer)].xoffset));
+		);
+	);
+	
+	set(layer[get(tooltipCurrentTextfieldLayer)].x, get(tooltipPositionX));
+	
+	if(topMargin LT 0,
+		if(layer[get(tooltipCurrentTextfieldLayer)].align == "center",
+			set(layer[get(tooltipCurrentTextfieldLayer)].align, "top");
+		,
+			txtadd(layer[get(tooltipCurrentTextfieldLayer)].align, "top");
+		);
+		set(tooltipPositionY, get(usedHeight));
+	,
+		set(tooltipstageheight, get(stageheight));
+		if(area.top, sub(tooltipstageheight, get(area.top)));
+		if(area.bottom, sub(tooltipstageheight, get(area.bottom)));
+		
+		if(bottomMargin GT tooltipstageheight,
+			if(layer[get(tooltipCurrentTextfieldLayer)].align == "center",
+				set(layer[get(tooltipCurrentTextfieldLayer)].align, "bottom");
+			,
+				txtadd(layer[get(tooltipCurrentTextfieldLayer)].align, "bottom");
+			);
+			set(tooltipPositionY, get(usedHeight));
+		,
+			div(tooltipPositionY, get(tooltipstageheight), 2);
+			sub(tooltipPositionY, get(mouse.y), get(tooltipPositionY));
+			add(tooltipPositionY, get(layer[get(tooltipCurrentTextfieldLayer)].yoffset));
+		);
+	);
+	
+	set(layer[get(tooltipCurrentTextfieldLayer)].y, get(tooltipPositionY));
+</action>
+<action name="styleTooltip">
+	addlayer(get(tooltipCurrentTextfieldLayer));
+	txtadd(layer[get(tooltipCurrentTextfieldLayer)].parent, 'hotspot[', get(name), ']');
+	if(rotate,
+		sub(newRotate, 0, get(rotate));
+		if(rotate GE 0 AND rotate LT 45 OR rotate GE 315 AND rotate LT 360,
+			set(layer[get(tooltipCurrentTextfieldLayer)].rotate,get(newRotate));
+			if (%2 == null,
+				set(layer[get(tooltipCurrentTextfieldLayer)].align,center);
+			,
+				set(layer[get(tooltipCurrentTextfieldLayer)].align,center);
+			);
+		,
+			if(rotate GE 45 AND rotate LT 135,
+				set(layer[get(tooltipCurrentTextfieldLayer)].rotate,get(newRotate));
+				if (%2 == null,
+					set(layer[get(tooltipCurrentTextfieldLayer)].align,right);
+				,
+					set(layer[get(tooltipCurrentTextfieldLayer)].align,right);
+				);
+			,
+				if(rotate GE 135 AND rotate LT 225,
+					set(layer[get(tooltipCurrentTextfieldLayer)].rotate,get(newRotate));
+					if (%2 == null,
+						set(layer[get(tooltipCurrentTextfieldLayer)].align,center);
+					,
+						set(layer[get(tooltipCurrentTextfieldLayer)].align,center);
+					);
+				,
+					set(layer[get(tooltipCurrentTextfieldLayer)].rotate,get(newRotate));
+					if (%2 == null,
+						set(layer[get(tooltipCurrentTextfieldLayer)].align,right);
+					,
+						set(layer[get(tooltipCurrentTextfieldLayer)].align,right);
+					);
+				);
+			);
+		);
+	,
+		if (%2 == null,
+			set(layer[get(tooltipCurrentTextfieldLayer)].align,center);
+		,
+			set(layer[get(tooltipCurrentTextfieldLayer)].align,center);
+		);
+	);
+	if (%2 == null,
+		set(layer[get(tooltipCurrentTextfieldLayer)].edge,center);
+	,
+		set(layer[get(tooltipCurrentTextfieldLayer)].edge,center);
+	);
+	set(layer[get(tooltipCurrentTextfieldLayer)].enabled,true);
+	set(layer[get(tooltipCurrentTextfieldLayer)].capture,true);
+	set(layer[get(tooltipCurrentTextfieldLayer)].visible, true);
+	set(layer[get(tooltipCurrentTextfieldLayer)].tag,"tooltip");
+	set(layer[get(tooltipCurrentTextfieldLayer)].type,text);
+	set(layer[get(tooltipCurrentTextfieldLayer)].bg,false);
+	set(layer[get(tooltipCurrentTextfieldLayer)].backgroundcolor, transparent);
+	set(layer[get(tooltipCurrentTextfieldLayer)].backgroundalpha, 0);
+	set(layer[get(tooltipCurrentTextfieldLayer)].roundedge, 0);
+	set(layer[get(tooltipCurrentTextfieldLayer)].bgborder, 0);
+	set(layer[get(tooltipCurrentTextfieldLayer)].txtshadow,'0');
+	set(layer[get(tooltipCurrentTextfieldLayer)].css,'color:#ffffff;font-family:Times New Roman, Times, serif;');
+	set(layer[get(tooltipCurrentTextfieldLayer)].mergedalpha, true);
+	set(layer[get(tooltipCurrentTextfieldLayer)].interactivecontent, false);			
+	set(layer[get(tooltipCurrentTextfieldLayer)].vcenter,true);
+	set(layer[get(tooltipCurrentTextfieldLayer)].wordwrap,false);
+					
+	set(layer[get(tooltipCurrentTextfieldLayer)].y, -68);
+	set(layer[get(tooltipCurrentTextfieldLayer)].x, 0);
+	<!-- set(layer[get(tooltipCurrentTextfieldLayer)].zorder, 99999); -->
+	set(layer[get(tooltipCurrentTextfieldLayer)].padding, 0 0 0 0);           
+	set(tooltipHtmlText, get(currentTooltipText));
+	escape(tooltipHtmlText);
+	set(tooltipText, calc(replace(get(currentTooltipText),'[div class=hotspottooltip][/div]','')));
+	if(calc(contains(tooltipText, 'location')) == 'false',
+		jsget(ret, translateTooltip(krpano.get('tooltipText')));			
+		set(layer[get(tooltipCurrentTextfieldLayer)].html, calc('[div class=hotspot-tooltip][div class=title][div][/div]' + get(ret) + '[/div][/div]'));
+		,
+		set(temp, calc(replace(get(tooltipText),'[div class=location][/div]','')));
+		jsget(ret, translateTooltip(krpano.get('temp')));			
+		set(layer[get(tooltipCurrentTextfieldLayer)].html, calc('[div class="hotspot-tooltip location"][div class=title][div][/div]' + get(ret) + '[/div][/div]'));					
+	);
+</action>
+<action name="tooltipTextSettingsUpdate">
+	if(get(tooltipCurrentTextfieldLayer) != "",
+		set(layer[get(tooltipCurrentTextfieldLayer)].align, "center");
+		if (%2 == null,
+			set(layer[get(tooltipCurrentTextfieldLayer)].edge, "bottom");
+		,
+			set(layer[get(tooltipCurrentTextfieldLayer)].edge, %2);
+		);
+		if (%3 != null,
+			set(layer[get(tooltipCurrentTextfieldLayer)].autowidth, false);
+			set(layer[get(tooltipCurrentTextfieldLayer)].wordwrap, true);
+			set(layer[get(tooltipCurrentTextfieldLayer)].width, %3);
+		);
+		if (%4 != null,
+			set(layer[get(tooltipCurrentTextfieldLayer)].xoffset, %4);
+		);
+		if (%5 != null,
+			set(layer[get(tooltipCurrentTextfieldLayer)].yoffset, %5);
+		);
+		set(layer[get(tooltipCurrentTextfieldLayer)].zorder, 99);
+	);
+	set(layer[panotourTooltipDefaultText].yoffset, -15);
+	set(layer[panotourTooltipDefaultText].padding, 9 12 8 12);
+	set(layer[panotourTooltipDefaultText].zorder, 99);
+	set(layer[panotourTooltipDefaultText].roundedge, 3);
+	set(layer[panotourTooltipDefaultText].textshadow, 0.5);
+	set(layer[panotourTooltipDefaultText].textshadowrange, 1.0);
+	set(layer[panotourTooltipDefaultText].textshadowangle, 0);
+	set(layer[panotourTooltipDefaultText].textshadowcolor, 0xffffff);
+	set(layer[panotourTooltipDefaultText].textshadowalpha, 0.1);
+	set(layer[panotourTooltipDefaultText].background, true);
+	set(layer[panotourTooltipDefaultText].backgroundcolor, 0xB80000);
+	set(layer[panotourTooltipDefaultText].backgroundalpha, 0.8);
+	set(layer[panotourTooltipDefaultText].css, color:#ffffff;font-weight:normal;font-size:14px;text-align:left;);
+</action>
+<action name="hideTooltip">
+	set(layer[get(tooltipCurrentTextfieldLayer)].visible, false);
+	set(layer[get(tooltipCurrentTextfieldLayer)].html, '');
+	js(onTourFocus());
+</action>
+<action name="showPermanentTooltip">
+	if (tooltip !== null,
+		getmessage(currentTooltipText, get(tooltip));
+		ifnot (currentTooltipText == "",
+			txtadd(permanentTooltipForSpot, get(tooltip), '_permanent');
+			set(activateUsePermanentTooltip, false);
+			if(%1 == "std",
+				if(device.desktop,
+					set(activateUsePermanentTooltip, true);
+				);
+			,
+				if(%1 == "touch",
+					if(device.tablet OR device.mobile,
+						set(activateUsePermanentTooltip, true);
+					);
+				,
+					set(activateUsePermanentTooltip, true);
+				);
+			);
+			if(activateUsePermanentTooltip,
+				addlayer(get(permanentTooltipForSpot));
+				txtadd(layer[get(permanentTooltipForSpot)].parent, 'hotspot[', get(name), ']');
+				if(rotate,
+					sub(newRotate, 0, get(rotate));
+					if(rotate GE 0 AND rotate LT 45 OR rotate GE 315 AND rotate LT 360,
+						set(layer[get(permanentTooltipForSpot)].rotate,get(newRotate));
+						if (%2 == null,
+							set(layer[get(permanentTooltipForSpot)].align,bottom);
+						,
+							set(layer[get(permanentTooltipForSpot)].align,top);
+						);
+					,
+						if(rotate GE 45 AND rotate LT 135,
+							set(layer[get(permanentTooltipForSpot)].rotate,get(newRotate));
+							if (%2 == null,
+								set(layer[get(permanentTooltipForSpot)].align,right);
+							,
+								set(layer[get(permanentTooltipForSpot)].align,left);
+							);
+						,
+							if(rotate GE 135 AND rotate LT 225,
+								set(layer[get(permanentTooltipForSpot)].rotate,get(newRotate));
+								if (%2 == null,
+									set(layer[get(permanentTooltipForSpot)].align,top);
+								,
+									set(layer[get(permanentTooltipForSpot)].align,bottom);
+								);
+							,
+								set(layer[get(permanentTooltipForSpot)].rotate,get(newRotate));
+								if (%2 == null,
+									set(layer[get(permanentTooltipForSpot)].align,left);
+								,
+									set(layer[get(permanentTooltipForSpot)].align,right);
+								);
+							);
+						);
+					);
+				,
+					if (%2 == null,
+						set(layer[get(permanentTooltipForSpot)].align,bottom);
+					,
+						set(layer[get(permanentTooltipForSpot)].align,top);
+					);
+				);
+				if (%2 == null,
+					set(layer[get(permanentTooltipForSpot)].edge,top);
+				,
+					set(layer[get(permanentTooltipForSpot)].edge,bottom);
+				);
+				set(layer[get(permanentTooltipForSpot)].enabled,true);
+				set(layer[get(permanentTooltipForSpot)].capture,true);
+				set(layer[get(permanentTooltipForSpot)].visible, true);
+				set(layer[get(permanentTooltipForSpot)].tag,"tooltip");
+
+				set(layer[get(permanentTooltipForSpot)].type,text);
+				set(layer[get(permanentTooltipForSpot)].bg,false);
+				set(layer[get(permanentTooltipForSpot)].backgroundcolor, transparent);
+				set(layer[get(permanentTooltipForSpot)].backgroundalpha, 0);
+				set(layer[get(permanentTooltipForSpot)].roundedge, 0);
+				set(layer[get(permanentTooltipForSpot)].bgborder, 0);
+				set(layer[get(permanentTooltipForSpot)].txtshadow,'0');
+				<!-- set(layer[get(permanentTooltipForSpot)].css,'color:#ffffff;font-family:Times New Roman, Times, serif;'); -->
+				set(layer[get(permanentTooltipForSpot)].mergedalpha, true);
+				set(layer[get(permanentTooltipForSpot)].interactivecontent, false);			
+				set(layer[get(permanentTooltipForSpot)].vcenter,true);
+				set(layer[get(permanentTooltipForSpot)].wordwrap,false);					
+				<!-- set(layer[get(permanentTooltipForSpot)].x,0);				 -->
+				set(layer[get(permanentTooltipForSpot)].padding, 0 0 0 0);
+				set(tooltipHtmlText, get(currentTooltipText));
+				<!-- set(layer[get(permanentTooltipForSpot)].width,310); -->
+				escape(tooltipHtmlText);
+				
+				if(calc(contains(currentTooltipText, 'hotspottooltip')) == 'false',
+					if(calc(contains(currentTooltipText, 'logo')) == 'false',
+						jsget(ret, translateTooltip(krpano.get('currentTooltipText')));	
+						jsget(cul, window.lang.currentLang);			
+						set(layer[get(permanentTooltipForSpot)].html, calc('[div class=note-tooltip][div class=title data-lang="'+get(tooltipHtmlText)+'"]' + get(ret) + '[/div][/div]'));					
+						,
+						set(layer[get(permanentTooltipForSpot)].html, get(tooltipHtmlText));
+					);
+					,
+					set(tooltipText, calc(replace(get(currentTooltipText),'[div class=hotspottooltip][/div]','')));
+					<!-- trace(get(tooltipText)); -->
+					if(calc(contains(tooltipText, 'low')) == 'false',
+						jsget(ret, translateTooltip(krpano.get('tooltipText')));			
+						set(layer[get(permanentTooltipForSpot)].html, calc('[div class=hotspot-tooltip][div class=title data-lang="'+get(tooltipText)+'"][div][/div]' + get(ret) + '[/div][/div]'));
+						,
+						set(temp, calc(replace(get(tooltipText),'[div class=low][/div]','')));
+						jsget(ret, translateTooltip(krpano.get('temp')));			
+						set(layer[get(permanentTooltipForSpot)].html, calc('[div class="hotspot-tooltip low"][div class=title data-lang="'+get(temp)+'"][div][/div]' + get(ret) + '[/div][/div]'));					
+						trace(get(temp));
+					);
+				);
+				
+				<!-- if(calc(contains(tooltipHtmlText, 'low')) == 'true',
+					set(temp, calc(replace(get(currentTooltipText),'[div class=low][/div]','')));
+					jsget(ret, translateTooltip(krpano.get('temp')));			
+					set(layer[get(tooltipCurrentTextfieldLayer)].html, calc('[div class="note-tooltip low"][div class=title data-lang="' + get(temp) + '"]' + get(ret) + '[/div][/div]'));					
+				); -->
+				<!-- set(abcd, calc(contains(tooltipHtmlText, 'logo')));
+				trace( get(abcd) ); -->
+				<!-- set(layer[get(permanentTooltipForSpot)].html, get(ret)); -->
+				<!-- escape(tooltipHtmlText);-->
+				<!-- set(layer[get(permanentTooltipForSpot)].html, get(tooltipHtmlText));  -->
+				<!-- set(layer[get(permanentTooltipForSpot)].name,'fdsfdsfsd');-->
+				<!-- trace('click on layer[',layer[get(permanentTooltipForSpot)].name,']');  -->
+			);
+		);
+	);
+</action>
+<action name="tooltipZOrder">
+<!-- Toàn cảnh Trường Dục Thanh -->
+if( scene[get(xml.scene)].name == pano12,
+	set(hotspot[spotpoint1361].zorder, 100);
+	set(hotspot[spotpoint1363].zorder, 100);
+	set(hotspot[spotpoint1364].zorder, 100);
+);
+</action>
+<plugin name="soundinterface"
+          preload="true"
+          url="%SWFPATH%/graphics/soundinterface.swf"
+          alturl="%FIRSTXML%/graphics/soundinterface.js"
+          rootpath="%FIRSTXML%/pano"
+          backgroundsound=""
+          backgroundsoundloops="1"        
+          started="true"
+		  autopause="false"
+		  autounlock="true"
+		  mute="false"
+          keep="true"/>
+<action name="playBgSound">
+	playsound(bgSound, "sound.mp3", true);
+</action>
+<action name="stopBgSound">
+	stopsound(bgSound);
+</action>
+<action name="playOversSound">
+	playsound(oversSound, "ThuyetMinh/BaoTangHCM.mp3");
+</action>
+<action name="playOversSound_01">
+	playsound(oversSound, "ThuyetMinh/BaoTangHCM.mp3");
+</action>
+<action name="playOversSound_02">
+	playsound(oversSound, "ThuyetMinh/TuongBacHo.mp3");
+</action>
+<action name="playOversSound_03">
+	playsound(oversSound, "ThuyetMinh/NhaTrungBay.mp3");
+</action>
+<action name="playOversSound_04">
+	playsound(oversSound, "ThuyetMinh/GianLongTrong.mp3");
+</action>
+<action name="playOversSound_05">
+	playsound(oversSound, "ThuyetMinh/ChuDe_1.mp3");
+</action>
+<action name="playOversSound_06">
+	playsound(oversSound, "ThuyetMinh/ChuDe_2.mp3");
+</action>
+<action name="playOversSound_07">
+	playsound(oversSound, "ThuyetMinh/ChuDe_3.mp3");
+</action>
+<action name="playOversSound_08">
+	playsound(oversSound, "ThuyetMinh/ChuDe_4.mp3");
+</action>
+<action name="playOversSound_09">
+	playsound(oversSound, "ThuyetMinh/ChuDe_5.mp3");
+</action>
+<action name="playOversSound_10">
+	playsound(oversSound, "ThuyetMinh/ChuDe_6.mp3");
+</action>
+<action name="playOversSound_11">
+	playsound(oversSound, "ThuyetMinh/ChuDe_7.mp3");
+</action>
+<action name="playOversSound_12">
+	playsound(oversSound, "ThuyetMinh/ChuDe_8.mp3");
+</action>
+<action name="playOversSound_13">
+	playsound(oversSound, "ThuyetMinh/DucThanh.mp3");
+</action>
+<action name="playOversSound_14">
+	playsound(oversSound, "ThuyetMinh/CongTruong.mp3");
+</action>
+<action name="playOversSound_15">
+	playsound(oversSound, "ThuyetMinh/SanTruong.mp3");
+</action>
+<action name="playOversSound_16">
+	playsound(oversSound, "ThuyetMinh/LopHoc.mp3");
+</action>
+<action name="playOversSound_17">
+	playsound(oversSound, "ThuyetMinh/NhaNgu.mp3");
+</action>
+<action name="playOversSound_18">
+	playsound(oversSound, "ThuyetMinh/NgoaDuSao.mp3");
+</action>
+<action name="playOversSound_19">
+	playsound(oversSound, "ThuyetMinh/NhaThoNguyenThong.mp3");
+</action>
+<action name="playOversSound_20">
+	playsound(oversSound, "ThuyetMinh/CayKhe.mp3");
+</action>
+<action name="playOversSound_21">
+	playsound(oversSound, "ThuyetMinh/GiengNuoc.mp3");
+</action>
+<action name="stopOversSound">
+	stopsound(oversSound);
+</action>
+<events 
+  	onnewscene="js(setTitle());				
+				js(setOvers());
+				js(setMasterLink());
+				tooltipZOrder();				
+				"	
+	onmousewheel="js(onTourFocus());"
+	onmousedown="js(onTourFocus());"
+  />  
+  <!--js(setMasterLink());onxmlcomplete="playBgSound();playOversSound();" playBgSound();
+	   playOversSound(); onloadcomplete="playBgSound();"-->	
+<style name="H25"
+	y="86"
+	onloaded.addevent="setLayerID('h25');"
+/>
+<style name="H50"
+	y="111"
+	onloaded.addevent="setLayerID('h50');"
+/>
+<style name="H75"
+	y="136"
+	onloaded.addevent="setLayerID('h75');"
+/>
+<style name="H100"
+	y="161"
+	onloaded.addevent="setLayerID('h100');"
+/>
+<style name="H125"
+	y="186"
+	onloaded.addevent="setLayerID('h125');"
+/>
+<style name="H150"
+	y="211"
+	onloaded.addevent="setLayerID('h150');"
+/>
+<style name="H175"
+	y="236"
+	onloaded.addevent="setLayerID('h175');"
+/>
+<style name="H200"
+	y="261"
+	onloaded.addevent="setLayerID('h200');"
+/>
+<style name="H225"
+	y="286"
+	onloaded.addevent="setLayerID('h225');"
+/>
+<style name="H250"
+	y="311"
+	onloaded.addevent="setLayerID('h250');"
+/>
+<style name="H275"
+	y="336"
+	onloaded.addevent="setLayerID('h275');"
+/>
+<style name="H300"
+	y="361"
+	onloaded.addevent="setLayerID('h300');"
+/>
+<style name="H350"
+	y="411"
+	onloaded.addevent="setLayerID('h350');"
+/>
+<style name="H400"
+	y="461"
+	onloaded.addevent="setLayerID('h400');"
+/>
+<action name="setLayerID" type="Javascript">
+  	caller.sprite.id = args[1];
+</action>
+</krpano>

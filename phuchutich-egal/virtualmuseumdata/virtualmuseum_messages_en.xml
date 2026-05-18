@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[New Project]]></data>
+
+
+
+  <data name="en_pano7601_title"><![CDATA[0]]></data>
+  <data name="en_spotpoint7605javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_5)]]></data>
+  <data name="en_spotpoint8252javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_1)]]></data>
+  <data name="en_spotpoint10682javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_5)]]></data>
+
+  <data name="en_panogroup37_title"><![CDATA[1]]></data>
+
+  <data name="en_pano36_title"><![CDATA[1_1]]></data>
+  <data name="en_spotpoint108javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_1)]]></data>
+  <data name="en_spotpoint109javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_2)]]></data>
+  <data name="en_spotpoint10678javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_1)]]></data>
+  <data name="en_pano54_title"><![CDATA[1_3]]></data>
+  <data name="en_spotpoint112javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_2)]]></data>
+  <data name="en_pano38_title"><![CDATA[1_2]]></data>
+  <data name="en_spotpoint110javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_1)]]></data>
+  <data name="en_spotpoint8254javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_3)]]></data>
+  <data name="en_spotpoint10679javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_2)]]></data>
+
+  <data name="en_panogroup322_title"><![CDATA[2]]></data>
+
+  <data name="en_pano129_title"><![CDATA[2_1]]></data>
+  <data name="en_spotpoint208javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_6)]]></data>
+  <data name="en_spotpoint222javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_2)]]></data>
+  <data name="en_spotpoint8268javascriptcalljsfunctioncall"><![CDATA[egal.goPano(12)]]></data>
+  <data name="en_spotpoint10684javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_7)]]></data>
+  <data name="en_pano181_title"><![CDATA[2_4]]></data>
+  <data name="en_spotpoint225javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_5)]]></data>
+  <data name="en_spotpoint226javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_2)]]></data>
+  <data name="en_spotpoint10685javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_8)]]></data>
+  <data name="en_pano188_title"><![CDATA[2_5]]></data>
+  <data name="en_spotpoint227javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_4)]]></data>
+  <data name="en_spotpoint228javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_7)]]></data>
+  <data name="en_spotpoint229javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_8)]]></data>
+  <data name="en_spotpolygon13096javascriptcalljsfunctioncall"><![CDATA[egal.goPhoto()]]></data>
+  <data name="en_spotpolygon13097javascriptcalljsfunctioncall"><![CDATA[egal.goPhoto()]]></data>
+  <data name="en_spotpolygon13098javascriptcalljsfunctioncall"><![CDATA[egal.goPhoto()]]></data>
+  <data name="en_pano206_title"><![CDATA[2_6]]></data>
+  <data name="en_spotpoint232javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_8)]]></data>
+  <data name="en_spotpoint233javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_3)]]></data>
+  <data name="en_spotpolygon13095javascriptcalljsfunctioncall"><![CDATA[egal.goPhoto()]]></data>
+  <data name="en_pano196_title"><![CDATA[2_7]]></data>
+  <data name="en_spotpoint8261javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_5)]]></data>
+  <data name="en_spotpoint10686javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_9)]]></data>
+  <data name="en_pano200_title"><![CDATA[2_8]]></data>
+  <data name="en_spotpoint230javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_5)]]></data>
+  <data name="en_spotpoint231javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_6)]]></data>
+  <data name="en_spotpolygon13092javascriptcalljsfunctioncall"><![CDATA[egal.goPhoto()]]></data>
+  <data name="en_pano9225_title"><![CDATA[2_2]]></data>
+  <data name="en_spotpoint9229javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_1)]]></data>
+  <data name="en_spotpoint9230javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_3)]]></data>
+  <data name="en_spotpoint11307javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_4)]]></data>
+  <data name="en_pano9227_title"><![CDATA[2_3]]></data>
+  <data name="en_spotpoint9231javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_2)]]></data>
+  <data name="en_spotpoint9232javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_6)]]></data>
+
+  <data name="en_panogroup402_title"><![CDATA[4]]></data>
+
+  <data name="en_pano407_title"><![CDATA[4_1]]></data>
+  <data name="en_spotpoint423javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_27)]]></data>
+  <data name="en_spotpoint424javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_3)]]></data>
+  <data name="en_spotpoint430javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_2)]]></data>
+  <data name="en_pano416_title"><![CDATA[4_4]]></data>
+  <data name="en_spotpoint427javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_3)]]></data>
+  <data name="en_pano413_title"><![CDATA[4_3]]></data>
+  <data name="en_spotpoint425javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_1)]]></data>
+  <data name="en_spotpoint426javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_4)]]></data>
+  <data name="en_spotpoint9223javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_7)]]></data>
+  <data name="en_pano8896_title"><![CDATA[4_2]]></data>
+  <data name="en_spotpoint8902javascriptcalljsfunctioncall"><![CDATA[egal.goPano(6_2)]]></data>
+  <data name="en_spotpoint8904javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_1)]]></data>
+  <data name="en_spotpoint8905javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_5)]]></data>
+  <data name="en_pano8898_title"><![CDATA[4_7]]></data>
+  <data name="en_spotpoint8912javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_6)]]></data>
+  <data name="en_spotpoint10687javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_10)]]></data>
+  <data name="en_pano8890_title"><![CDATA[4_5]]></data>
+  <data name="en_spotpoint8906javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_2)]]></data>
+  <data name="en_spotpoint8909javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_6)]]></data>
+  <data name="en_pano8888_title"><![CDATA[4_6]]></data>
+  <data name="en_spotpoint8910javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_5)]]></data>
+  <data name="en_spotpoint8911javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_7)]]></data>
+
+  <data name="en_panogroup439_title"><![CDATA[9]]></data>
+
+  <data name="en_pano442_title"><![CDATA[9_1]]></data>
+  <data name="en_spotpoint475javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_11)]]></data>
+  <data name="en_spotpoint476javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_2)]]></data>
+  <data name="en_pano446_title"><![CDATA[9_2]]></data>
+  <data name="en_spotpoint477javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_1)]]></data>
+  <data name="en_spotpoint478javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_3)]]></data>
+  <data name="en_pano458_title"><![CDATA[9_3]]></data>
+  <data name="en_spotpoint479javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_3)]]></data>
+  <data name="en_spotpoint480javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_4)]]></data>
+  <data name="en_pano466_title"><![CDATA[9_4]]></data>
+  <data name="en_spotpoint481javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_3)]]></data>
+  <data name="en_spotpoint482javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_5)]]></data>
+  <data name="en_pano470_title"><![CDATA[9_5]]></data>
+  <data name="en_spotpoint483javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_4)]]></data>
+  <data name="en_spotpoint9214javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_12)]]></data>
+
+  <data name="en_panogroup537_title"><![CDATA[3]]></data>
+
+  <data name="en_pano7454_title"><![CDATA[3_1]]></data>
+  <data name="en_spotpoint7467javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_24)]]></data>
+  <data name="en_spotpoint7472javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_8)]]></data>
+  <data name="en_spotpoint7473javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_2)]]></data>
+  <data name="en_spotpoint10690javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_14)]]></data>
+  <data name="en_pano507_title"><![CDATA[3_2]]></data>
+  <data name="en_spotpoint7474javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_1)]]></data>
+  <data name="en_spotpoint11793javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_3)]]></data>
+  <data name="en_pano515_title"><![CDATA[3_3]]></data>
+  <data name="en_spotpoint7475javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_1)]]></data>
+  <data name="en_spotpoint11794javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_2)]]></data>
+  <data name="en_spotpoint11795javascriptcalljsfunctioncall"><![CDATA[egal.goPano()]]></data>
+  <data name="en_pano7458_title"><![CDATA[3_4]]></data>
+  <data name="en_spotpoint7471javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_26)]]></data>
+  <data name="en_spotpoint8672javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_5)]]></data>
+  <data name="en_pano7543_title"><![CDATA[3_8]]></data>
+  <data name="en_spotpoint7548javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_7)]]></data>
+  <data name="en_spotpoint7549javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_9)]]></data>
+  <data name="en_spotpoint7551javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_10)]]></data>
+  <data name="en_spotpoint10689javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_13)]]></data>
+  <data name="en_pano7541_title"><![CDATA[3_9]]></data>
+  <data name="en_spotpoint7550javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_8)]]></data>
+  <data name="en_spotpoint7582javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_12)]]></data>
+  <data name="en_spotpoint10688javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_12)]]></data>
+  <data name="en_pano521_title"><![CDATA[3_10]]></data>
+  <data name="en_spotpoint7579javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_8)]]></data>
+  <data name="en_pano527_title"><![CDATA[3_11]]></data>
+  <data name="en_spotpoint7581javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_8)]]></data>
+  <data name="en_pano533_title"><![CDATA[3_12]]></data>
+  <data name="en_spotpoint7583javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_9)]]></data>
+  <data name="en_pano7586_title"><![CDATA[3_5]]></data>
+  <data name="en_spotpoint7588javascriptcalljsfunctioncall"><![CDATA[egal.goPano(13)]]></data>
+  <data name="en_spotpoint7711javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_6)]]></data>
+  <data name="en_spotpoint8673javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_4)]]></data>
+  <data name="en_pano9215_title"><![CDATA[3_7]]></data>
+  <data name="en_spotpoint9221javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_6)]]></data>
+  <data name="en_spotpoint9222javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_8)]]></data>
+  <data name="en_spotpoint9224javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_3)]]></data>
+  <data name="en_pano9217_title"><![CDATA[3_6]]></data>
+  <data name="en_spotpoint9219javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_5)]]></data>
+  <data name="en_spotpoint9220javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_7)]]></data>
+
+
+  <data name="en_pano7590_title"><![CDATA[12]]></data>
+  <data name="en_spotpoint7598javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_7)]]></data>
+  <data name="en_spotpoint8269javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_1)]]></data>
+  <data name="en_spotpoint10681javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_4)]]></data>
+
+  <data name="en_panogroup7640_title"><![CDATA[8]]></data>
+
+  <data name="en_pano7637_title"><![CDATA[8_1]]></data>
+  <data name="en_spotpoint7683javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_20)]]></data>
+  <data name="en_spotpoint7684javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_2)]]></data>
+  <data name="en_pano7641_title"><![CDATA[8_2]]></data>
+  <data name="en_spotpoint7685javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_1)]]></data>
+  <data name="en_spotpoint7686javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_3)]]></data>
+  <data name="en_pano7643_title"><![CDATA[8_3]]></data>
+  <data name="en_spotpoint7687javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_2)]]></data>
+  <data name="en_spotpoint8270javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_4)]]></data>
+  <data name="en_pano7645_title"><![CDATA[8_4]]></data>
+  <data name="en_spotpoint8644javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_3)]]></data>
+  <data name="en_spotpoint8645javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_21)]]></data>
+
+
+  <data name="en_pano462_title"><![CDATA[10]]></data>
+  <data name="en_spotpoint473javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_11)]]></data>
+  <data name="en_spotpoint10683javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_6)]]></data>
+
+  <data name="en_panogroup8265_title"><![CDATA[7]]></data>
+
+  <data name="en_pano155_title"><![CDATA[7_1]]></data>
+  <data name="en_spotpoint213javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_9)]]></data>
+  <data name="en_spotpoint214javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_8)]]></data>
+  <data name="en_spotpoint9237javascriptcalljsfunctioncall"><![CDATA[egal.goPano(7_2)]]></data>
+  <data name="en_pano9235_title"><![CDATA[7_2]]></data>
+  <data name="en_spotpoint9602javascriptcalljsfunctioncall"><![CDATA[egal.goPano(7_1)]]></data>
+  <data name="en_spotpoint9603javascriptcalljsfunctioncall"><![CDATA[egal.goPano(7_3)]]></data>
+  <data name="en_pano9233_title"><![CDATA[7_3]]></data>
+  <data name="en_spotpoint9604javascriptcalljsfunctioncall"><![CDATA[egal.goPano(7_2)]]></data>
+  <data name="en_spotpoint9615javascriptcalljsfunctioncall"><![CDATA[egal.goPano(5_2)]]></data>
+
+  <data name="en_panogroup9608_title"><![CDATA[5]]></data>
+
+  <data name="en_pano9607_title"><![CDATA[5_1]]></data>
+  <data name="en_spotpoint9611javascriptcalljsfunctioncall"><![CDATA[egal.goPano(5_2)]]></data>
+  <data name="en_pano9609_title"><![CDATA[5_2]]></data>
+  <data name="en_spotpoint9612javascriptcalljsfunctioncall"><![CDATA[egal.goPano(10_1)]]></data>
+  <data name="en_spotpoint9613javascriptcalljsfunctioncall"><![CDATA[egal.goPano(5_3)]]></data>
+  <data name="en_spotpoint9616javascriptcalljsfunctioncall"><![CDATA[egal.goPano(7_3)]]></data>
+  <data name="en_pano9605_title"><![CDATA[5_3]]></data>
+  <data name="en_spotpoint9614javascriptcalljsfunctioncall"><![CDATA[egal.goPano(5_2)]]></data>
+
+  <data name="en_panogroup12425_title"><![CDATA[15]]></data>
+
+  <data name="en_pano68_title"><![CDATA[15_1]]></data>
+  <data name="en_spotpoint76javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_1)]]></data>
+  <data name="en_spotpoint107javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_3)]]></data>
+  <data name="en_spotpoint121javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_4)]]></data>
+  <data name="en_spotpoint8253javascriptcalljsfunctioncall"><![CDATA[egal.goPano(0)]]></data>
+  <data name="en_pano64_title"><![CDATA[15_2]]></data>
+  <data name="en_spotpoint115javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_28)]]></data>
+  <data name="en_spotpoint117javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_3)]]></data>
+  <data name="en_spotpoint8255javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_4)]]></data>
+  <data name="en_pano60_title"><![CDATA[15_3]]></data>
+  <data name="en_spotpoint105javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_1)]]></data>
+  <data name="en_spotpoint116javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_2)]]></data>
+  <data name="en_pano48_title"><![CDATA[15_4]]></data>
+  <data name="en_spotpoint120javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_2)]]></data>
+  <data name="en_spotpoint122javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_1)]]></data>
+  <data name="en_spotpoint8256javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_11)]]></data>
+  <data name="en_pano7603_title"><![CDATA[15_5]]></data>
+  <data name="en_spotpoint7606javascriptcalljsfunctioncall"><![CDATA[egal.goPano(0)]]></data>
+  <data name="en_spotpoint8259javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_6)]]></data>
+  <data name="en_spotpoint8266javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_7)]]></data>
+  <data name="en_pano139_title"><![CDATA[15_6]]></data>
+  <data name="en_spotpoint209javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_1)]]></data>
+  <data name="en_spotpoint210javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_9)]]></data>
+  <data name="en_spotpoint8260javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_5)]]></data>
+  <data name="en_pano7596_title"><![CDATA[15_7]]></data>
+  <data name="en_spotpoint7600javascriptcalljsfunctioncall"><![CDATA[egal.goPano(12)]]></data>
+  <data name="en_spotpoint8267javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_5)]]></data>
+  <data name="en_spotpoint9917javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_17)]]></data>
+  <data name="en_pano165_title"><![CDATA[15_8]]></data>
+  <data name="en_spotpoint215javascriptcalljsfunctioncall"><![CDATA[egal.goPano(7_1)]]></data>
+  <data name="en_spotpoint216javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_9)]]></data>
+  <data name="en_spotpoint218javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_10)]]></data>
+  <data name="en_pano147_title"><![CDATA[15_9]]></data>
+  <data name="en_spotpoint211javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_6)]]></data>
+  <data name="en_spotpoint212javascriptcalljsfunctioncall"><![CDATA[egal.goPano(7_1)]]></data>
+  <data name="en_spotpoint217javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_8)]]></data>
+  <data name="en_spotpoint221javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_10)]]></data>
+  <data name="en_pano171_title"><![CDATA[15_10]]></data>
+  <data name="en_spotpoint219javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_8)]]></data>
+  <data name="en_spotpoint220javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_9)]]></data>
+  <data name="en_pano438_title"><![CDATA[15_11]]></data>
+  <data name="en_spotpoint472javascriptcalljsfunctioncall"><![CDATA[egal.goPano(10)]]></data>
+  <data name="en_spotpoint474javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_1)]]></data>
+  <data name="en_spotpoint8258javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_4)]]></data>
+  <data name="en_pano7633_title"><![CDATA[15_12]]></data>
+  <data name="en_spotpoint8667javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_5)]]></data>
+  <data name="en_spotpoint8668javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_17)]]></data>
+  <data name="en_spotpoint8669javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_13)]]></data>
+  <data name="en_spotpoint9918javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_27)]]></data>
+  <data name="en_pano7635_title"><![CDATA[15_13]]></data>
+  <data name="en_spotpoint9617javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_12)]]></data>
+  <data name="en_spotpoint9618javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_25)]]></data>
+  <data name="en_pano7615_title"><![CDATA[15_14]]></data>
+  <data name="en_spotpoint8660javascriptcalljsfunctioncall"><![CDATA[egal.goPano(11_3)]]></data>
+  <data name="en_pano7617_title"><![CDATA[15_15]]></data>
+  <data name="en_spotpoint8662javascriptcalljsfunctioncall"><![CDATA[egal.goPano(11_3)]]></data>
+  <data name="en_spotpoint8663javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_16)]]></data>
+  <data name="en_pano7647_title"><![CDATA[15_16]]></data>
+  <data name="en_spotpoint8664javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_15)]]></data>
+  <data name="en_spotpoint9914javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_2)]]></data>
+  <data name="en_pano7631_title"><![CDATA[15_17]]></data>
+  <data name="en_spotpoint8665javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_12)]]></data>
+  <data name="en_spotpoint9916javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_7)]]></data>
+  <data name="en_pano8642_title"><![CDATA[15_18]]></data>
+  <data name="en_spotpoint8652javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_19)]]></data>
+  <data name="en_spotpoint8653javascriptcalljsfunctioncall"><![CDATA[egal.goPano(11_1)]]></data>
+  <data name="en_pano7627_title"><![CDATA[15_19]]></data>
+  <data name="en_spotpoint8650javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_22)]]></data>
+  <data name="en_spotpoint8651javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_18)]]></data>
+  <data name="en_pano7639_title"><![CDATA[15_20]]></data>
+  <data name="en_spotpoint7682javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_1)]]></data>
+  <data name="en_spotpoint8675javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_26)]]></data>
+  <data name="en_pano7607_title"><![CDATA[15_21]]></data>
+  <data name="en_spotpoint8646javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_4)]]></data>
+  <data name="en_spotpoint8647javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_22)]]></data>
+  <data name="en_pano7625_title"><![CDATA[15_22]]></data>
+  <data name="en_spotpoint8648javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_21)]]></data>
+  <data name="en_spotpoint8649javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_19)]]></data>
+  <data name="en_pano7452_title"><![CDATA[15_23]]></data>
+  <data name="en_spotpoint7463javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_24)]]></data>
+  <data name="en_spotpoint10680javascriptcalljsfunctioncall"><![CDATA[egal.videoGuide(20_3)]]></data>
+  <data name="en_pano7450_title"><![CDATA[15_24]]></data>
+  <data name="en_spotpoint7464javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_3)]]></data>
+  <data name="en_spotpoint7465javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_25)]]></data>
+  <data name="en_spotpoint7466javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_1)]]></data>
+  <data name="en_spotpoint7468javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_26)]]></data>
+  <data name="en_pano536_title"><![CDATA[15_25]]></data>
+  <data name="en_spotpoint7462javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_24)]]></data>
+  <data name="en_spotpoint9619javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_13)]]></data>
+  <data name="en_pano7460_title"><![CDATA[15_26]]></data>
+  <data name="en_spotpoint7469javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_24)]]></data>
+  <data name="en_spotpoint7470javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_4)]]></data>
+  <data name="en_spotpoint8674javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_20)]]></data>
+  <data name="en_pano401_title"><![CDATA[15_27]]></data>
+  <data name="en_spotpoint422javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_1)]]></data>
+  <data name="en_spotpoint9920javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_12)]]></data>
+  <data name="en_pano74_title"><![CDATA[15_28]]></data>
+  <data name="en_spotpoint118javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_2)]]></data>
+
+  <data name="en_panogroup12443_title"><![CDATA[11]]></data>
+
+  <data name="en_pano7621_title"><![CDATA[11_2]]></data>
+  <data name="en_spotpoint8656javascriptcalljsfunctioncall"><![CDATA[egal.goPano(11_1)]]></data>
+  <data name="en_spotpoint8657javascriptcalljsfunctioncall"><![CDATA[egal.goPano(11_3)]]></data>
+  <data name="en_pano7613_title"><![CDATA[11_3]]></data>
+  <data name="en_spotpoint8658javascriptcalljsfunctioncall"><![CDATA[egal.goPano(11_2)]]></data>
+  <data name="en_spotpoint8659javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_14)]]></data>
+  <data name="en_spotpoint8661javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_15)]]></data>
+  <data name="en_pano7609_title"><![CDATA[11_1]]></data>
+  <data name="en_spotpoint8654javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_18)]]></data>
+  <data name="en_spotpoint8655javascriptcalljsfunctioncall"><![CDATA[egal.goPano(11_2)]]></data>
+
+
+  <data name="en_pano7584_title"><![CDATA[13]]></data>
+  <data name="en_spotpoint7589javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_5)]]></data>
+
+  <data name="en_panogroup12456_title"><![CDATA[6]]></data>
+
+  <data name="en_pano8892_title"><![CDATA[6_1]]></data>
+  <data name="en_spotpoint8903javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_7)]]></data>
+  <data name="en_pano8894_title"><![CDATA[6_2]]></data>
+  <data name="en_spotpoint8907javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_5)]]></data>
+  <data name="en_spotpoint8908javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_6)]]></data>
+
+
+
+
+	<data name="en_project_floor_title"><![CDATA[New Project]]></data>
+	<data name="en_spotmap12108_tooltip"><![CDATA[Phủ chủ tịch]]></data>
+  <data name="en_spotmap12108javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_2)]]></data>
+	<data name="en_spotmap12109_tooltip"><![CDATA[Nhà sàn Bác Hồ]]></data>
+  <data name="en_spotmap12109javascriptcalljsfunctioncall"><![CDATA[egal.goPano(3_1)]]></data>
+	<data name="en_spotmap12110_tooltip"><![CDATA[Nhà 54]]></data>
+  <data name="en_spotmap12110javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_1)]]></data>
+	<data name="en_spotmap12111_tooltip"><![CDATA[Điểm đầu tham quan]]></data>
+  <data name="en_spotmap12111javascriptcalljsfunctioncall"><![CDATA[egal.goPano(0)]]></data>
+	<data name="en_spotmap12112_tooltip"><![CDATA[Cây đa Kiên trì]]></data>
+  <data name="en_spotmap12112javascriptcalljsfunctioncall"><![CDATA[egal.goPano(12)]]></data>
+	<data name="en_spotmap12113_tooltip"><![CDATA[Nhà 67]]></data>
+  <data name="en_spotmap12113javascriptcalljsfunctioncall"><![CDATA[egal.goPano(4_1)]]></data>
+	<data name="en_spotmap12114_tooltip"><![CDATA[Giàn hoa phủ chủ tịch]]></data>
+  <data name="en_spotmap12114javascriptcalljsfunctioncall"><![CDATA[egal.goPano(10)]]></data>
+	<data name="en_spotmap12417_tooltip"><![CDATA[Ao cá Bác Hồ]]></data>
+  <data name="en_spotmap12417javascriptcalljsfunctioncall"><![CDATA[egal.goPano(15_14)]]></data>
+	<data name="en_spotmap12418_tooltip"><![CDATA[Phòng họp và tiếp khách của chủ tịch Hồ Chí Minh]]></data>
+  <data name="en_spotmap12418javascriptcalljsfunctioncall"><![CDATA[egal.goPano(5_2)]]></data>
+	<data name="en_spotmap12459_tooltip"><![CDATA[]]></data>
+	<data name="en_spotmap13091_tooltip"><![CDATA[]]></data>
+  <data name="en_spotmap13091javascriptcalljsfunctioncall"><![CDATA[egal.goPano(8_1)]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>

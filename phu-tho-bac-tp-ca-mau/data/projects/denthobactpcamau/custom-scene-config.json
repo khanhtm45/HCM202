@@ -1,0 +1,14 @@
+{
+  "scenes": [
+    {
+      "name": "custom_user",
+      "title": "Góc chụp thử — thay bằng panorama của bạn",
+      "mode": "cube",
+      "folder": "panos/custom_user",
+      "linkFrom": "dtbh_s0",
+      "thumb": "panos/custom_user/thumb.jpg",
+      "uiLabel": "Góc chụp 360° mới",
+      "navLabel": "Góc chụp mới →"
+    }
+  ]
+}

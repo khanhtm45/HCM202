@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<title>HCMVERSE — Tour 360° Khu tưởng niệm Phú Thọ Bắc</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="cache-control" content="no-cache">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta charset="utf-8">
+<script>
+(function () {
+  var p = location.pathname;
+  var marker = '/phu-tho-bac-tp-ca-mau';
+  var i = p.indexOf(marker);
+  var base = i >= 0 ? p.slice(0, i + marker.length) + '/' : p.replace(/[^/]*$/, '') || '/';
+  if (!base.endsWith('/')) base += '/';
+  document.write('<base href="' + base + '">');
+  if (/\/phu-tho-bac-tp-ca-mau$/.test(p)) location.replace(base + 'index.html');
+})();
+</script>
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="description" content="Tour panorama 360° Khu tưởng niệm Chủ tịch Hồ Chí Minh Phú Thọ Bắc, TP. Cà Mau — HCMVERSE Ho Chi Minh Metaverse Museum.">
+<meta content="" property="image">
+<meta content="" property="og:image">
+<link rel="icon" href="assets/images/logo-icon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/hcmverse-tour.css?v=2">
+
+<style>
+@font-face {
+	font-family: Regular-font;
+	src: url("data/font/Montserrat-Regular.ttf")
+}
+@font-face {
+	font-family: menufont1;
+	src: url("data/font/Roboto-Bold.ttf");
+}
+@font-face {
+	font-family: menufont3;
+	src: url("data/font/BalooTammudu2-Medium.ttf");
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: Montserrat, "Segoe UI", system-ui, sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+	background-color: #05051a;
+}
+
+#btn-custom-pano {
+	position: fixed;
+	z-index: 9999;
+	right: 14px;
+	bottom: 14px;
+	padding: 10px 18px;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	color: #fff;
+	background: linear-gradient(90deg, #00d2ff, #bf00ff);
+	border: 1px solid rgba(0, 210, 255, 0.45);
+	border-radius: 999px;
+	cursor: pointer;
+	box-shadow: 0 0 20px rgba(0, 210, 255, 0.35);
+	display: none;
+}
+#btn-custom-pano:hover {
+	filter: brightness(1.08);
+	box-shadow: 0 0 28px rgba(191, 0, 255, 0.4);
+}
+
+</style>
+<audio id="myAudio" autoplay>
+  <source src="data/editsource/bgsound.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.</audio>
+<script>
+var x = document.getElementById("myAudio");
+	x.load();
+	 x.volume = 1;
+	
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+}
+
+	
+</script>
+</head>
+<body>
+<script src="data/index.js"></script>
+
+<button type="button" id="btn-custom-pano" hidden>Góc chụp 360° mới</button>
+<div id="pano" style="width:100%;height:100%;">
+  <noscript>
+  <table style="width:100%;height:100%;">
+    <tr style="vertical-align:middle;">
+      <td><div style="text-align:center;">Lỗi:<br/>
+          <br/>
+          Bật javascript lên các bạn ơi<br/>
+          <br/>
+        </div></td>
+    </tr>
+  </table>
+  </noscript>
+  <script>
+		embedpano({
+			swf: "data/index.swf",
+			xml: "data/projects/denthobactpcamau/index.xml",
+			target: "pano",
+			html5: "auto",
+			mobilescale: 1.0,
+			passQueryParameters: true
+		});
+  </script>
+  <script src="data/custom-scene-loader.js"></script>
+</div>
+<script src="js/hcmverse-tour.js"></script>
+</body>
+</html>

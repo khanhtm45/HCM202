@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <script>
+  (function () {
+    var p = location.pathname;
+    var marker = '/hcmverse';
+    var i = p.indexOf(marker);
+    var base = i >= 0 ? p.slice(0, i + marker.length) + '/' : p.replace(/[^/]*$/, '') || '/';
+    if (!base.endsWith('/')) base += '/';
+    document.write('<base href="' + base + '">');
+    if (/\/hcmverse$/.test(p)) location.replace(base + 'index.html');
+  })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HCMVERSE — Bảo tàng số Tư tưởng Hồ Chí Minh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-chrome" id="site-chrome" hidden>
+    <a class="site-chrome__home" href="../index.html">
+      <span class="site-chrome__logo" aria-hidden="true"></span>
+      <span class="site-chrome__wordmark"><span class="hcm">HCM</span><span class="verse">VERSE</span></span>
+    </a>
+    <div class="site-chrome__xp" id="xp-display">
+      <span class="xp-label">XP</span>
+      <span class="xp-value" id="xp-value">0</span>
+    </div>
+  </header>
+
+  <section id="screen-welcome" class="screen welcome active">
+    <p class="curriculum-badge" id="curriculum-badge">Immersive Learning</p>
+    <h1 class="logo"><span class="hcm">HCM</span><span class="verse">VERSE</span></h1>
+    <p class="tagline" id="welcome-tagline">Bảo tàng số 3D/Metaverse — Tư tưởng Hồ Chí Minh</p>
+    <p class="welcome-sub">Chọn avatar để bước vào bốn khu trải nghiệm</p>
+    <div id="avatar-grid" class="avatar-grid"></div>
+    <button type="button" id="btn-enter" class="btn btn-primary" disabled>Vào bảo tàng</button>
+    <nav class="welcome-links" id="welcome-links" aria-label="Tour 360 liên kết"></nav>
+  </section>
+
+  <section id="screen-lobby" class="screen">
+    <header class="lobby-header">
+      <div>
+        <strong class="lobby-brand"><span class="hcm">HCM</span><span class="verse">VERSE</span></strong>
+        <span class="lobby-sub-label">Sảnh bảo tàng</span>
+      </div>
+      <div id="user-display" class="user-chip">👤 Khách</div>
+      <div class="lobby-xp" id="lobby-xp">0 XP</div>
+      <button type="button" id="btn-logout" class="btn btn-ghost">Đổi avatar</button>
+    </header>
+    <main class="lobby-main">
+      <h2 class="lobby-title">Chọn khu vực tham quan</h2>
+      <p class="lobby-sub" id="lobby-intro">Timeline · Hiện vật · Tư tưởng · Quiz</p>
+      <div id="zone-grid" class="zone-grid"></div>
+      <div class="progress-bar">
+        <label id="progress-label">Tiến độ: 0/4 khu</label>
+        <div class="progress-track"><div id="progress-fill" class="progress-fill"></div></div>
+      </div>
+      <aside class="leaderboard" id="leaderboard-panel">
+        <h3>Bảng xếp hạng</h3>
+        <ol id="leaderboard-list"></ol>
+      </aside>
+      <nav class="lobby-external" id="lobby-external"></nav>
+    </main>
+  </section>
+
+  <section id="screen-zone" class="screen zone-screen">
+    <nav class="zone-nav">
+      <button type="button" id="btn-back-zone" class="btn btn-ghost">← Sảnh chính</button>
+      <h2 id="zone-title">Khu</h2>
+    </nav>
+    <article id="zone-intro" class="zone-intro" hidden></article>
+    <div id="zone-body" class="zone-body"></div>
+  </section>
+
+  <script src="js/media.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

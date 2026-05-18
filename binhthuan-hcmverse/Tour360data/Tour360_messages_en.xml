@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[Bảo tàng Hồ Chí Minh - Chi nhánh tỉnh Bình Thuận]]></data>
+
+
+
+  <data name="en_pano10_title"><![CDATA[Toàn cảnh bảo tàng]]></data>
+
+
+  <data name="en_pano12_title"><![CDATA[Toàn cảnh Di tích Dục Thanh]]></data>
+
+
+  <data name="en_pano14_title"><![CDATA[Toàn cảnh Nhà trưng bày]]></data>
+
+
+  <data name="en_pano16_title"><![CDATA[Cây khế]]></data>
+
+
+  <data name="en_pano17_title"><![CDATA[Cổng trường]]></data>
+
+
+  <data name="en_pano18_title"><![CDATA[Giếng nước]]></data>
+
+
+  <data name="en_pano19_title"><![CDATA[Lối vào]]></data>
+
+  <data name="en_panogroup47_title"><![CDATA[Lớp học]]></data>
+
+  <data name="en_pano20_title"><![CDATA[Lớp học]]></data>
+  <data name="en_pano21_title"><![CDATA[Lớp học]]></data>
+  <data name="en_pano22_title"><![CDATA[Lớp học]]></data>
+
+  <data name="en_panogroup50_title"><![CDATA[Ngọa Du Sào]]></data>
+
+  <data name="en_pano23_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="en_pano24_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="en_pano25_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="en_pano26_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="en_pano27_title"><![CDATA[Ngọa Du Sào]]></data>
+
+  <data name="en_panogroup55_title"><![CDATA[Nhà Ngư]]></data>
+
+  <data name="en_pano28_title"><![CDATA[Nhà Ngư]]></data>
+  <data name="en_pano29_title"><![CDATA[Nhà Ngư]]></data>
+  <data name="en_pano30_title"><![CDATA[Nhà Ngư]]></data>
+  <data name="en_pano31_title"><![CDATA[Nhà Ngư]]></data>
+
+  <data name="en_panogroup59_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+
+  <data name="en_pano32_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="en_pano33_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="en_pano34_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="en_pano35_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="en_pano36_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+
+  <data name="en_panogroup64_title"><![CDATA[Sân trường]]></data>
+
+  <data name="en_pano37_title"><![CDATA[Sân trường]]></data>
+  <data name="en_pano38_title"><![CDATA[Sân trường]]></data>
+  <data name="en_pano39_title"><![CDATA[Sân trường]]></data>
+  <data name="en_pano40_title"><![CDATA[Sân trường]]></data>
+  <data name="en_pano41_title"><![CDATA[Sân trường]]></data>
+  <data name="en_pano42_title"><![CDATA[Sân trường]]></data>
+
+  <data name="en_panogroup207_title"><![CDATA[Chủ đề I]]></data>
+
+  <data name="en_pano124_title"><![CDATA[Chủ đề I]]></data>
+  <data name="en_pano125_title"><![CDATA[Chủ đề I]]></data>
+  <data name="en_pano126_title"><![CDATA[Chủ đề I]]></data>
+  <data name="en_pano127_title"><![CDATA[Chủ đề I]]></data>
+  <data name="en_pano128_title"><![CDATA[Chủ đề I]]></data>
+  <data name="en_pano129_title"><![CDATA[Chủ đề I]]></data>
+  <data name="en_pano130_title"><![CDATA[Chủ đề I]]></data>
+
+  <data name="en_panogroup214_title"><![CDATA[Chủ đề II]]></data>
+
+  <data name="en_pano131_title"><![CDATA[Chủ đề II]]></data>
+  <data name="en_pano132_title"><![CDATA[Chủ đề II]]></data>
+
+  <data name="en_panogroup216_title"><![CDATA[Chủ đề III]]></data>
+
+  <data name="en_pano133_title"><![CDATA[Chủ đề III]]></data>
+  <data name="en_pano134_title"><![CDATA[Chủ đề III]]></data>
+  <data name="en_pano135_title"><![CDATA[Chủ đề III]]></data>
+
+  <data name="en_panogroup219_title"><![CDATA[Chủ đề IV]]></data>
+
+  <data name="en_pano136_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="en_pano137_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="en_pano138_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="en_pano142_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="en_pano141_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="en_pano140_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="en_pano139_title"><![CDATA[Chủ đề IV]]></data>
+
+  <data name="en_panogroup234_title"><![CDATA[Chủ đề VI]]></data>
+
+  <data name="en_pano151_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano152_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano153_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano154_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano155_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano156_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano157_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano158_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano159_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano160_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano161_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano162_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano163_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano164_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano165_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano166_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano167_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano168_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano169_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano170_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano171_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano172_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano173_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="en_pano174_title"><![CDATA[Chủ đề VI]]></data>
+
+  <data name="en_panogroup258_title"><![CDATA[Chủ đề VII]]></data>
+
+  <data name="en_pano175_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano176_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano177_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano178_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano179_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano180_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano181_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano514_title"><![CDATA[ChuDe_7_14]]></data>
+  <data name="en_pano182_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano183_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano184_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano185_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano186_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="en_pano187_title"><![CDATA[Chủ đề VII]]></data>
+
+  <data name="en_panogroup271_title"><![CDATA[Chủ đề VIII]]></data>
+
+  <data name="en_pano188_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano189_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano190_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano191_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano192_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano193_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano194_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano195_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano196_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="en_pano197_title"><![CDATA[Chủ đề VIII]]></data>
+
+  <data name="en_panogroup281_title"><![CDATA[Gian thờ Bác Hồ]]></data>
+
+  <data name="en_pano198_title"><![CDATA[Gian thờ Bác Hồ]]></data>
+  <data name="en_pano199_title"><![CDATA[Gian thờ Bác Hồ]]></data>
+
+  <data name="en_panogroup283_title"><![CDATA[Nhà trưng bày]]></data>
+
+  <data name="en_pano200_title"><![CDATA[Nhà trưng bày]]></data>
+  <data name="en_pano201_title"><![CDATA[Nhà trưng bày]]></data>
+  <data name="en_pano202_title"><![CDATA[Nhà trưng bày]]></data>
+
+  <data name="en_panogroup286_title"><![CDATA[Phòng truyền thông]]></data>
+
+  <data name="en_pano204_title"><![CDATA[Phòng truyền thông]]></data>
+  <data name="en_pano205_title"><![CDATA[Phòng truyền thông]]></data>
+
+  <data name="en_panogroup226_title"><![CDATA[Chủ đề V]]></data>
+
+  <data name="en_pano143_title"><![CDATA[Chủ đề V]]></data>
+  <data name="en_pano144_title"><![CDATA[Chủ đề V]]></data>
+  <data name="en_pano145_title"><![CDATA[Chủ đề V]]></data>
+  <data name="en_pano146_title"><![CDATA[Chủ đề V]]></data>
+  <data name="en_pano147_title"><![CDATA[Chủ đề V]]></data>
+  <data name="en_pano148_title"><![CDATA[Chủ đề V]]></data>
+  <data name="en_pano149_title"><![CDATA[Chủ đề V]]></data>
+  <data name="en_pano150_title"><![CDATA[Chủ đề V]]></data>
+
+
+  <data name="en_pano206_title"><![CDATA[Tượng "Bác Hồ với thiếu nhi"]]></data>
+
+
+  <data name="en_pano203_title"><![CDATA[Phòng đón khách]]></data>
+
+
+
+
+
+
+
+
+  <data name="en_vr_setup_hmd0"><![CDATA[SELECT YOUR HMD]]></data>
+  <data name="en_vr_setup_advanced"><![CDATA[ADVANCED SETTINGS]]></data>
+  <data name="en_vr_setup_title"><![CDATA[WEB VR SETTINGS]]></data>
+  <data name="en_vr_setup_dvn1"><![CDATA[Device:]]></data>
+  <data name="en_vr_setup_siz1"><![CDATA[Screen size:]]></data>
+  <data name="en_vr_setup_ipd1"><![CDATA[IPD:]]></data>
+  <data name="en_vr_setup_hmd1"><![CDATA[HMD:]]></data>
+  <data name="en_vr_setup_hmd3"><![CDATA[Customize]]></data>
+  <data name="en_vr_setup_cal"><![CDATA[Calibrate gyroscope]]></data>
+  <data name="en_vr_setup_sav"><![CDATA[SAVE]]></data>
+  <data name="en_vr_setup_rst"><![CDATA[RESET]]></data>
+  <data name="en_vr_setup_simple"><![CDATA[SIMPLE]]></data>
+  <data name="en_vr_setup_cls"><![CDATA[CLOSE]]></data>
+  <data name="en_vr_setup_m31"><![CDATA[HMD SETTINGS]]></data>
+  <data name="en_vr_setup_fov1"><![CDATA[FOV:]]></data>
+  <data name="en_vr_setup_dst1"><![CDATA[Distortion:]]></data>
+  <data name="en_vr_setup_d2tx"><![CDATA[Distortion 2:]]></data>
+  <data name="en_vr_setup_vig1"><![CDATA[Vignette:]]></data>
+  <data name="en_vr_setup_cac1"><![CDATA[Chromatic aberration:]]></data>
+  <data name="en_vr_setup_olp1"><![CDATA[Overlap:]]></data>
+  <data name="en_vr_setup_m35"><![CDATA[RETURN]]></data>
+  <data name="en_vr_setup_cb1"><![CDATA[GYROSCOPE]]></data>
+  <data name="en_vr_setup_cb2"><![CDATA[Place the device on a flat and[br]stable surface and tab CALIBRATE[br]to correct a gyroscope drifting.]]></data>
+  <data name="en_vr_setup_cb3"><![CDATA[CALIBRATE]]></data>
+  <data name="en_vr_setup_cb4"><![CDATA[RESET]]></data>
+  <data name="en_vr_setup_cb5"><![CDATA[RETURN]]></data>
+  <data name="en_vr_setup_cb6"><![CDATA[Calibrating...]]></data>
+  <data name="en_vr_setup_cb7"><![CDATA[Successful calibration]]></data>
+  <data name="en_vr_setup_cb8"><![CDATA[Calibration failed]]></data>
+  <data name="en_vr_setup_unavailable"><![CDATA[VR mode[br]is unavailable on your device]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>

@@ -1,0 +1,17 @@
+<krpano>
+  <!-- Scene 360° bổ sung — nạp MERGE sau tour chính (XML không mã hóa) -->
+  <scene name="custom_user" title="Góc chụp bổ sung — HCM202" thumburl="panos/custom_user/thumb.jpg" onstart="">
+    <view hlookat="0" vlookat="0" fovtype="MFOV" fov="90" fovmin="40" fovmax="120" />
+    <image>
+      <cube url="panos/custom_user/pano_%s.jpg" />
+    </image>
+    <preview url="panos/custom_user/preview.jpg" />
+    <hotspot name="hs_back_tour"
+      type="text"
+      html="← Quay lại tour chính"
+      css="font-family:Arial;font-size:14px;color:#fff;background:rgba(0,0,0,0.55);padding:8px 12px;border-radius:6px;"
+      ath="0" atv="12" distorted="false" zoom="false"
+      onclick="loadscene(dtbh_s0, null, MERGE, BLEND(1));"
+    />
+  </scene>
+</krpano>

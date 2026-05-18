@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8" />
+	<title>HCMVERSE — Tham quan 3D Phủ Chủ Tịch</title>
+	<meta name="description" content="Tour 360° Khu di tích Hồ Chí Minh tại Phủ Chủ Tịch — HCMVERSE." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="icon" href="../assets/images/hero-museum.png" type="image/png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet" />
+	<style type="text/css">
+		@-ms-viewport { width: device-width; }
+		@media only screen and (min-device-width: 800px) { html { overflow:hidden; } }
+		* { padding: 0; margin: 0; box-sizing: border-box; }
+		html { height: 100%; }
+		body { height: 100%; overflow: hidden; }
+		div#container { height: 100%; min-height: 100%; width: 100%; margin: 0 auto; }
+		div#tourDIV { height: 100%; position: relative; overflow: hidden; }
+		div#panoDIV {
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			-webkit-user-select: none;
+			user-select: none;
+		}
+	</style>
+	<script type="text/javascript" src="virtualmuseumdata/lib/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript">
+	function readDeviceOrientation() {
+		var winH = window.innerHeight ? window.innerHeight : jQuery(window).height();
+		if (!winH || winH == 0) winH = '100%';
+		jQuery('html').css('height', winH);
+		window.scrollTo(0, 0);
+	}
+	jQuery(document).ready(function () {
+		if (/(iphone|ipod|ipad|android|mobile|tablet)/i.test(navigator.userAgent)) {
+			jQuery(window).resize(readDeviceOrientation);
+			readDeviceOrientation();
+		}
+	});
+	</script>
+	<link rel="stylesheet" type="text/css" href="shadowbox/shadowbox.css" />
+	<script type="text/javascript" src="shadowbox/shadowbox.js"></script>
+	<script type="text/javascript">Shadowbox.init();</script>
+	<script type="text/javascript" src="js/lang.js"></script>
+	<link type="text/css" href="css/main.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/hcmverse-theme.css?v=8" />
+	<script type="text/javascript" src="js/conf.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/krpano-safe.js"></script>
+	<script type="text/javascript" src="js/egal.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="tourDIV">
+			<div id="panoDIV">
+				<noscript>
+					<p style="padding:2rem;text-align:center;color:#9aa8b8;">Bật JavaScript để xem tour 360°.</p>
+				</noscript>
+			</div>
+			<script type="text/javascript" src="virtualmuseumdata/virtualmuseum.js"></script>
+			<script type="text/javascript">
+				embedpano({
+					swf: "virtualmuseumdata/virtualmuseum.swf",
+					xml: "virtualmuseumdata/virtualmuseum_final.xml",
+					target: "panoDIV",
+					html5: "auto",
+					passQueryParameters: true,
+					id: "virtualmuseum",
+					basepath: "virtualmuseumdata/"
+				});
+			</script>
+		</div>
+	</div>
+	<div id="warning-message" style="display:none" aria-hidden="true"></div>
+	<script src="js/hcmverse-tour.js?v=8"></script>
+</body>
+</html>

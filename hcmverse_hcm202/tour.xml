@@ -1,0 +1,169 @@
+<krpano version="1.20.11" title="StarGlobal 3D">
+    <include url="https://sanpham.starglobal3d.com/managements/skin/snapscreen_showroom.xml"/>
+	<!--<include url="skin/videointerface.xml" />-->
+	<include url="https://sanpham.starglobal3d.com/managements/user/xml/init.xml"/>
+	<include url="https://sanpham.starglobal3d.com/managements/js/plugins/coreshort.xml"/>
+	<include url="https://sanpham.starglobal3d.com/managements/js/plugins/imghotspotshort.xml"/>
+	<include url="https://sanpham.starglobal3d.com/managements/toolbox/image/distortedhotspot_editor.xml"/>
+	<include url="https://sanpham.starglobal3d.com/managements/skin/skin-theme.xml" />
+	<!--<include url="starglobal/xml/minimap.xml"/>-->
+
+	
+	<!-- Đường dẫn gọi file ảnh pano -->
+	<include url="tour_xml/tour.xml" />
+	
+	<!-- Đường dẫn gọi file video pano-->
+	 
+	<!--<include url="https://sanpham.starglobal3d.com/smart-tourism-3d/sdl-tphcm/tour_view.xml" />-->
+	
+	
+	<autorotate enabled="true" waittime="1.5" speed="1.0"/>
+	
+	<memory maxmem="1024" devices="handheld" />
+	
+	<skin_settings maps="true"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key="AIzaSyATHfh3keqweo2zvhqOW4HN4WtLd3WeRwM"
+	               maps_zoombuttons="true"
+	               maps_loadonfirstuse="true"
+	               gyro="false"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="70" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="true"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="true"
+	               loadscene_flags="ZOOMBLEND"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="OPENBLEND(1.0, -0.5, 0.3, 0.8, linear)"
+	               loadingtext="loading..."
+	               layout_width="100%"
+	               layout_maxwidth="100%"
+	               controlbar_width="-0.1"
+	               controlbar_height="40"
+	               controlbar_offset="0"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin-check-in.png"
+	               design_bgcolor="0xFFFFFF"
+	               design_bgalpha="0"
+	               design_bgborder="0"
+	               design_bgroundedge="0"
+	               design_bgshadow="0 4 10 0x000000 0.1"
+	               design_thumbborder_bgborder="2 0xFFFFFF 2.0"
+	               design_thumbborder_padding="0"
+	               design_thumbborder_bgroundedge="1"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="0"
+	               />
+	
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+	
+	<hotspot name="nadirlogo" keep="true"
+		url="upload/image/logo_bottom.png"
+		ath="0"
+		atv="90"
+		distorted="true"
+		scale="0.5"
+	    rotate="0.0"
+		enabled="false"
+		visible="true"
+		style="logo"
+	/>
+
+	
+	<action name="yourCallingAction">
+		if (view.fov LT 85,	toggleHotspotVisibility(1),toggleHotspotVisibility(0)) 
+	</action>
+	
+	<action name="toggleHotspotVisibility">
+		if (c !== %1,
+			for(set(i,0), i LT hotspot.count, inc(i),
+				if( hotspot[get(i)].style !== 'hotspot_sylte' AND hotspot[get(i)].style !== 'hotspot_sylte_text' AND hotspot[get(i)].style !== 'logo',set(hotspot[get(i)].visible, %1); )
+			); 
+			set(c,%1);
+		)
+	</action>
+	
+	<action name="toggleTextVisibility">
+		for(set(i,0), i LT hotspot.count, inc(i),
+				if( hotspot[get(i)].style == 'hotspot_sylte_text', set(plugin[skin_btn_text_show].visible,get(display_text)); sub(display_text,1,display_text); set(hotspot[get(i)].visible, get(display_text)); set(plugin[skin_btn_text_hide].visible,get(display_text)););
+		); 
+	</action>
+	
+	<action name="init_compass">
+		set(hotspot[nadirlogo].rotate,get(view.hlookat)); copy(inithlookat,view.hlookat); copy(initvlookat,view.vlookat);copy(initfov,view.fov);
+	</action>
+	
+		<!-- update the rotation values -->
+	<action name="compass_update_rotate">
+		set(global_heading, 180);
+		calc(plugin[compass2_plate].rotate,  global_heading - view.hlookat);
+	</action>
+	
+	<events name="test" keep="true" onresize="if(stagewidth LT 960,tween(layer[compass2].scale, 0.15), tween(layer[compass2].scale, 0.2))"  />
+	
+	<action name="add_iframe" type="Javascript">
+		var iframe = document.createElement("iframe");
+		iframe.style.position = "absolute";
+		iframe.style.left = 0;
+		iframe.style.top = 0;
+		iframe.style.width = "100%";
+		iframe.style.height = "100%";
+		iframe.style.border = 0;
+		iframe.src = args[1];
+		caller.registercontentsize(args[2], args[3]);
+		caller.sprite.appendChild(iframe);
+	</action>
+
+
+			
+	<action name="calc_pos_from_hfov_yaw_pitch_roll">
+		div(hfov,%1,57.295779);
+		div(yaw,%2,-57.295779);
+		div(pitch,%3,57.295779);
+		div(roll,%4,-57.295779);
+		mul(hfov,0.5);Math.tan(hfov);mul(width,hfov,1000);set(height,'prop');
+		Math.cos(ch,yaw);Math.sin(sh,yaw);
+		Math.cos(ca,pitch);Math.sin(sa,pitch);
+		Math.cos(cb,roll);Math.sin(sb,roll);
+		mul(m0,ca,ch);
+		mul(tmp,cb,sa);mul(tmp,ch);mul(tmp2,sb,sh);add(m3,tmp,tmp2);
+		mul(m4,cb,ca);
+		mul(tmp,cb,sa);mul(tmp,sh);mul(tmp2,sb,ch);sub(m5n,tmp,tmp2);mul(m5n,-1);
+		mul(tmp,sb,sa);mul(tmp,ch);mul(tmp2,cb,sh);sub(m6n,tmp,tmp2);mul(m6n,-1);
+		Math.atan2(yaw,m6n,m0);
+		Math.atan2(roll,m5n,m4);
+		Math.asin(pitch,m3);
+		mul(ath,yaw,57.295779);
+		mul(atv,pitch,57.295779);
+		mul(rotate,roll,57.295779);
+	</action>
+	
+	
+
+</krpano>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exhibition name="viettel">
+    <SectionCollection>
+	
+	<Section key_id="0" action="pano7601" sectionparent_key_id="">
+            <title>
+                <vi>Khu di tích Hồ Chí Minh tại Phủ Chủ Tịch</vi>
+                <en>Khu di tích Hồ Chí Minh tại Phủ Chủ Tịch</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/0.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/0.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+	
+	
+        <Section key_id="1" action="pano38" sectionparent_key_id="">
+            <title>
+                <vi>Phủ Chủ tịch</vi>
+                <en>Phủ Chủ tịch</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/1.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/1.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="2" action="pano129" sectionparent_key_id="">
+            <title>
+                <vi>Nhà 54</vi>
+                <en>Nhà 54</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/2.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/2.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="3" action="pano7454" sectionparent_key_id="">
+            <title>
+                <vi>Nhà sàn</vi>
+                <en>Nhà sàn</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/3.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/3.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="4" action="pano413" sectionparent_key_id="">
+            <title>
+                <vi>Nhà 67</vi>
+                <en>Nhà 67</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/4.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/4.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+        <Section key_id="5" action="pano9607" sectionparent_key_id="">
+            <title>
+                <vi>Căn phòng Chủ tịch Hồ Chí Minh chủ trì họp Bộ chính trị và tiếp khách</vi>
+                <en>Căn phòng Chủ tịch Hồ Chí Minh chủ trì họp Bộ chính trị và tiếp khách</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/5.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/5.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="6" action="pano8892" sectionparent_key_id="">
+            <title>
+                <vi>Phòng trưng bày bộ đồ y tế</vi>
+                <en>Phòng trưng bày bộ đồ y tế</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/6.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/6.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="7" action="pano9235" sectionparent_key_id="">
+            <title>
+                <vi>Những chiếc xe ô tô đã dùng phục vụ Chủ tịch Hồ Chí Minh</vi>
+                <en>Những chiếc xe ô tô đã dùng phục vụ Chủ tịch Hồ Chí Minh</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/7.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/7.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="8" action="pano7637" sectionparent_key_id="">
+            <title>
+                <vi>Ao cá</vi>
+                <en>Ao cá</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/8.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/8.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="9" action="pano442" sectionparent_key_id="">
+            <title>
+                <vi>Đường xoài</vi>
+                <en>Đường xoài</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/9.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/9.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		<Section key_id="10" action="pano462" sectionparent_key_id="">
+            <title>
+                <vi>Giàn hoa Phủ chủ tịch</vi>
+                <en>Giàn hoa Phủ chủ tịch</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/10.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/10.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		
+		
+		<Section key_id="11" action="pano7613" sectionparent_key_id="">
+            <title>
+                <vi>Vườn cây</vi>
+                <en>Vườn cây</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/11.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/11.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		
+		
+		
+		<Section key_id="12" action="pano7590" sectionparent_key_id="">
+            <title>
+                <vi>Cây đa Kiên trì</vi>
+                <en>Cây đa Kiên trì</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/12.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/12.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		
+		
+		<Section key_id="13" action="pano7584" sectionparent_key_id="">
+            <title>
+                <vi>Nhà cầu con</vi>
+                <en>Nhà cầu con</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/13.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/13.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		
+		
+		<Section key_id="15" action="pano68" sectionparent_key_id="">
+            <title>
+                <vi>Tuyến tham quan</vi>
+                <en>Tuyến tham quan</en>
+            </title>
+            <title_icon>
+                <vi></vi>
+                <en></en>
+            </title_icon>
+            <description>
+                <vi></vi>
+                <en></en>
+            </description>
+            <autoguide>
+                <vi>data/sounds/autoguide/exhibition/vi/15.mp3</vi>
+                <en>data/sounds/autoguide/exhibition/en/15.mp3</en>
+            </autoguide>
+            <property name="information" value="information" target="default" theme="default"></property>
+            <property name="video" value="video" target="default" theme="default"></property>
+            <property name="photo" value="photo" target="default" theme="default"></property>
+            <property name="object" value="object" target="default" theme="default"></property>
+        </Section>
+		
+    </SectionCollection>
+</exhibition>

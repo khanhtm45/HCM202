@@ -1,0 +1,514 @@
+/**
+ * HCMVERSE — Bình Thuận (layout Panotour + menu dropdown).
+ * Lưu ý: không dùng thẻ <nav> — menu.css gốc float nav + margin 336px.
+ */
+html.hcmverse-active {
+  --hcm-top-h: 56px;
+  --hcm-header-total: var(--hcm-top-h);
+  --hcm-safe-top: env(safe-area-inset-top, 0px);
+  --hcm-safe-right: env(safe-area-inset-right, 0px);
+  --hcm-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --hcm-safe-left: env(safe-area-inset-left, 0px);
+}
+
+html.hcmverse-active #hcmverse-ui {
+  overflow: visible !important;
+}
+
+html.hcmverse-active .hcm-top,
+html.hcmverse-active .hcm-top--zones {
+  overflow: visible !important;
+}
+
+html.hcmverse-active .loading,
+html.hcmverse-active .header_bg,
+html.hcmverse-active .footer_bg,
+html.hcmverse-active .mobile-menu-bg {
+  position: fixed !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Panotour: thanh đỏ + nhãn scene (megapixel.js) — không hiện chồng HCMVERSE */
+html.hcmverse-active .title_bg,
+html.hcmverse-active .pano_title,
+html.hcmverse-active .master_pano_link_bg,
+html.hcmverse-active .sub_menu_bg,
+html.hcmverse-active .menu_thumb_bg {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html.hcmverse-active a.sub_menu_item {
+  position: fixed !important;
+  left: -10000px !important;
+  top: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Thumbnail góc trái tắt — dùng dropdown / ☰ Phòng (tránh trùng menu đỏ gốc) */
+html.hcmverse-active .hcm-thumbs {
+  display: none !important;
+}
+
+html.hcmverse-active,
+html.hcmverse-active body {
+  overflow: hidden !important;
+  background: #000 !important;
+}
+
+html.hcmverse-active #container,
+html.hcmverse-active #tourDIV,
+html.hcmverse-active #panoDIV {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+html.hcmverse-active #tourDIV {
+  padding-top: var(--hcm-header-total) !important;
+  box-sizing: border-box !important;
+}
+
+html.hcmverse-active #krpanoSWFObject,
+html.hcmverse-active #krpanoSWFObject canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+html.hcmverse-active #mapcontainer {
+  z-index: 2147483640 !important;
+}
+
+/* Header: logo | banner 3 tab (title-wrap) | EN/VI */
+html.hcmverse-active .hcm-top.hcm-top--zones {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto !important;
+  align-items: stretch;
+  width: 100%;
+  min-height: var(--hcm-top-h);
+  gap: 0;
+}
+
+html.hcmverse-active .hcm-top--zones .hcm-top__brand {
+  grid-column: 1;
+  justify-self: start;
+  max-width: min(200px, 42vw);
+}
+
+html.hcmverse-active .hcm-top--zones .hcm-top__zones-wrap {
+  grid-column: 2;
+  display: flex !important;
+  align-items: stretch;
+  justify-content: flex-end;
+  min-width: 0;
+  width: 100%;
+  padding: 0 0.35rem 0 0 !important;
+  margin: 0 !important;
+  float: none !important;
+  pointer-events: none;
+  background: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+html.hcmverse-active .hcm-top--zones .hcm-top__lang {
+  grid-column: 3;
+  justify-self: end;
+  align-self: center;
+  margin: 0 0.65rem 0 0;
+}
+
+html.hcmverse-active #hcmverse-ui .hcm-zone-nav {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(6.75rem, 1fr));
+  align-items: stretch;
+  gap: 0;
+  width: min(34rem, calc(100vw - 15rem));
+  max-width: 100%;
+  min-width: min(20rem, 100%);
+  height: 100%;
+  min-height: var(--hcm-top-h);
+  margin: 0 auto !important;
+  padding: 0 !important;
+  float: none !important;
+  position: relative;
+  box-sizing: border-box;
+  pointer-events: auto;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 210, 255, 0.14) 0%,
+    rgba(0, 210, 255, 0.5) 50%,
+    rgba(191, 0, 255, 0.14) 100%
+  ) !important;
+  border-bottom: 2px solid rgba(0, 210, 255, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 210, 255, 0.12);
+  isolation: isolate;
+}
+
+html.hcmverse-active .hcm-zone-item {
+  min-width: 0;
+  position: relative;
+  display: flex !important;
+  float: none !important;
+  height: 100%;
+  margin: 0 !important;
+}
+
+html.hcmverse-active .hcm-zone-item + .hcm-zone-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+html.hcmverse-active .hcm-zone-tab {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: var(--hcm-top-h);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0 0.5rem;
+  margin: 0 !important;
+  float: none !important;
+  position: relative;
+  z-index: 2;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: clamp(0.58rem, 1vw, 0.74rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+html.hcmverse-active .hcm-zone-tab__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html.hcmverse-active .hcm-zone-tab__caret {
+  flex-shrink: 0;
+  font-size: 0.5rem;
+  opacity: 0.9;
+  transition: transform 0.2s;
+}
+
+html.hcmverse-active .hcm-zone-item:hover .hcm-zone-tab,
+html.hcmverse-active .hcm-zone-item.is-open .hcm-zone-tab {
+  background: rgba(5, 5, 26, 0.28) !important;
+}
+
+html.hcmverse-active .hcm-zone-item.is-open .hcm-zone-tab__caret {
+  transform: rotate(180deg);
+}
+
+html.hcmverse-active .hcm-zone-tab.is-active,
+html.hcmverse-active .hcm-zone-item.is-active-zone .hcm-zone-tab {
+  background: rgba(5, 5, 26, 0.2) !important;
+  box-shadow: inset 0 -3px 0 var(--hcm-cyan-bright, #00e5ff) !important;
+}
+
+/* Dropdown */
+html.hcmverse-active .hcm-zone-drop {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  min-width: 280px;
+  max-width: min(440px, 92vw);
+  pointer-events: auto;
+  contain: layout style;
+}
+
+html.hcmverse-active .hcm-zone-item:first-child .hcm-zone-drop {
+  left: 0;
+  transform: none;
+}
+
+html.hcmverse-active .hcm-zone-item:last-child .hcm-zone-drop {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+html.hcmverse-active .hcm-zone-item.is-open .hcm-zone-drop {
+  display: block;
+}
+
+html.hcmverse-active .hcm-zone-drop__panel {
+  background: #fff;
+  border: 2px solid rgba(0, 210, 255, 0.45);
+  border-radius: 2px;
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(0, 210, 255, 0.15);
+  padding: 10px 14px 12px;
+}
+
+html.hcmverse-active .hcm-zone-drop__panel.is-wide {
+  min-width: 420px;
+}
+
+html.hcmverse-active .hcm-zone-drop__cols {
+  display: flex;
+  gap: 0;
+}
+
+html.hcmverse-active .hcm-zone-drop__col {
+  flex: 1 1 0;
+  min-width: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html.hcmverse-active .hcm-zone-drop__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0 6px;
+  min-height: 30px;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: left;
+  color: #2a3340 !important;
+  background: transparent !important;
+  border: none;
+  border-top: 1px solid rgba(0, 210, 255, 0.12);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+html.hcmverse-active .hcm-zone-drop__col li:first-child .hcm-zone-drop__link {
+  border-top: none;
+}
+
+html.hcmverse-active .hcm-zone-drop__link:hover,
+html.hcmverse-active .hcm-zone-drop__link.is-active {
+  color: #0088aa !important;
+  background: rgba(0, 210, 255, 0.08) !important;
+}
+
+html.hcmverse-active .hcm-zone-drop__link.is-active {
+  font-weight: 700;
+}
+
+html.hcmverse-active .hcm-zone-drop__arrow {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: #9aa8b8;
+  opacity: 0.7;
+}
+
+html.hcmverse-active .hcm-zone-drop__preview {
+  margin-top: 10px;
+  border: 2px solid rgba(0, 210, 255, 0.55);
+  border-radius: 2px;
+  overflow: hidden;
+  line-height: 0;
+  background: #0a0e1a;
+}
+
+html.hcmverse-active .hcm-zone-drop__preview img {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+html.hcmverse-active .hcm-scene-title {
+  display: none !important;
+}
+
+html.hcmverse-active #hcmverse-ui .hcm-top__zones-wrap,
+html.hcmverse-active #hcmverse-ui .hcm-zone-nav,
+html.hcmverse-active #hcmverse-ui .hcm-zone-item,
+html.hcmverse-active #hcmverse-ui .hcm-zone-tab,
+html.hcmverse-active #hcmverse-ui .hcm-zone-drop,
+html.hcmverse-active #hcmverse-ui .hcm-zone-drop__link {
+  pointer-events: auto !important;
+}
+
+@media (max-width: 720px) {
+  html.hcmverse-active {
+    --hcm-top-h: 48px;
+    --hcm-header-total: calc(88px + var(--hcm-safe-top));
+  }
+
+  html.hcmverse-active .hcm-top.hcm-top--zones {
+    grid-template-columns: 1fr auto !important;
+    grid-template-rows: auto auto;
+    padding-top: var(--hcm-safe-top);
+    padding-left: var(--hcm-safe-left);
+    padding-right: var(--hcm-safe-right);
+  }
+
+  html.hcmverse-active .hcm-top--zones .hcm-top__brand {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 52vw;
+    padding: 0.3rem 0.45rem;
+  }
+
+  html.hcmverse-active .hcm-top--zones .hcm-top__logo {
+    width: 34px;
+    height: 34px;
+  }
+
+  html.hcmverse-active .hcm-top--zones .hcm-top__wordmark {
+    font-size: 0.58rem;
+  }
+
+  html.hcmverse-active .hcm-top--zones .hcm-top__zones-wrap {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding: 0 0.25rem;
+  }
+
+  html.hcmverse-active .hcm-top--zones .hcm-top__lang {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    margin: 0 max(0.35rem, var(--hcm-safe-right)) 0 0;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  html.hcmverse-active #hcmverse-ui .hcm-zone-nav {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  html.hcmverse-active .hcm-zone-tab {
+    min-height: 44px;
+    font-size: clamp(0.48rem, 2.6vw, 0.58rem);
+    padding: 0 0.25rem;
+    line-height: 1.15;
+  }
+
+  html.hcmverse-active .hcm-zone-tab__caret {
+    display: none;
+  }
+
+  html.hcmverse-active .hcm-zone-drop {
+    left: max(8px, var(--hcm-safe-left)) !important;
+    right: max(8px, var(--hcm-safe-right)) !important;
+    max-width: none;
+    width: auto;
+    transform: none;
+  }
+
+  html.hcmverse-active .hcm-zone-drop__panel {
+    max-height: min(58dvh, 420px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  html.hcmverse-active .hcm-zone-drop__panel.is-wide {
+    min-width: 0;
+  }
+
+  html.hcmverse-active .hcm-zone-drop__cols {
+    flex-direction: column;
+  }
+
+  html.hcmverse-active .hcm-zone-drop__link {
+    min-height: 44px;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  html.hcmverse-active .hcm-bottom-right {
+    right: max(6px, var(--hcm-safe-right));
+    bottom: calc(6px + var(--hcm-safe-bottom));
+    max-width: calc(100vw - 12px);
+  }
+
+  html.hcmverse-active .hcm-rooms-fab {
+    left: max(8px, var(--hcm-safe-left));
+    bottom: calc(10px + var(--hcm-safe-bottom));
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 400px) {
+  html.hcmverse-active .hcm-top--zones .hcm-top__brand .hcm-top__wordmark {
+    display: none;
+  }
+
+  html.hcmverse-active .hcm-zone-tab {
+    font-size: 0.46rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Panel phòng */
+html.hcmverse-active .hcm-room-list section {
+  margin-bottom: 0.75rem;
+}
+
+html.hcmverse-active .hcm-room-list h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hcm-cyan-bright, #00e5ff);
+}
+
+html.hcmverse-active .hcm-room-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html.hcmverse-active .hcm-room-list li button {
+  width: 100%;
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  margin: 2px 0;
+  font-size: 0.72rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+html.hcmverse-active .hcm-room-list li button:hover,
+html.hcmverse-active .hcm-room-list li button.is-active {
+  background: rgba(0, 210, 255, 0.15);
+  color: var(--hcm-cyan-bright, #00e5ff);
+}

@@ -1,0 +1,2134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano version="1.17" >
+	
+
+<!--************** KrPano plugins and datas ***************************************************-->
+<plugin name="data" background_soundURL="%FIRSTXML%/../data/sounds/bg.mp3" soundURL="" autoplay="false"  language="vi" keep="true"/>
+
+  
+  <!-- Chuot phai - debug 12/12/2014 by diepdp -->
+  <contextmenu fullscreen="true">
+  <item name="viettel" enabled="true" visible="true" separator="false"
+		caption="Tham quan ảo - Bảo tàng Hồ Chí Minh"
+		/>
+		<item name="egal" enabled="true" visible="true" separator="false"
+		caption="Design by Egal"
+		onclick=""
+		/>
+ </contextmenu>
+
+  <!-- ******************************************** -->
+  <!-- topleftbg : topleft -->
+  <!-- ******************************************** -->
+  <layer name="toprightbg"
+         keep="true"
+         url="%FIRSTXML%/skin/topright.png" 
+         align="topright"
+         x="0"
+         y="0"
+         zorder="14"
+         handcursor="false"
+         visible="false"
+    >
+    
+     	<layer name="languague_en"
+         keep="true"
+         url="%FIRSTXML%/skin/en.png" 
+         align="topright"
+         x="0"
+         y="0"
+         zorder="13"
+         visible="false"
+         onclick="languague_enOnClick"
+         />
+    	 <layer name="languague_vi"
+         keep="true"
+         url="%FIRSTXML%/skin/vi.png" 
+         align="topright"
+         x="0"
+         y="0"
+         zorder="13"
+         visible="false"
+         onclick="languague_viOnClick"
+         />
+         
+    </layer>
+
+  <events name="toprightbgevents" 
+    onTourStart="showtoprightbg();"
+    keep="true" />
+
+  <action name="showtoprightbg">set(layer[toprightbg].visible, true);</action>
+
+	
+  <!-- *******************************************
+  ************************************************ -->
+  <!-- Language : En - topright -->
+  <!--******************************************** 
+  ************************************************ -->
+ 
+  <action name="languague_enOnClick">
+	js(egal.languageChange(en));
+	set(plugin[data].language,en);
+	changeLanguage(en);
+	events.dispatch(tourchangelangevent);
+  </action>
+
+  <events name="languague_envents" 
+    onTourStart="showLanguague_en();"
+    keep="true" />
+    
+  <action name="hidelanguague_en">
+  	tween(layer[languague_en].alpha,0,0.5,default,set(layer[languague_en].visible, false));
+  </action>
+  <action name="showlanguague_en">
+  	set(layer[languague_en].visible, true);
+  	set(layer[languague_en].alpha, 0);
+  	tween(layer[languague_en].alpha,1,0.5,default);
+  </action>
+  
+  
+   <!-- *******************************************
+  ************************************************ -->
+  <!-- Language : Vi - topright -->
+  <!--******************************************** 
+  ************************************************ -->
+ 
+  <action name="languague_viOnClick">
+	js(egal.languageChange(vi));
+	changeLanguage(vi);
+	
+	events.dispatch(tourchangelangevent);
+  </action>
+
+  <events name="languague_envents" keep="true" />
+  
+  <action name="hidelanguague_vi">
+  	tween(layer[languague_vi].alpha,0,0.5,default,set(layer[languague_vi].visible, false));
+  </action>
+  
+  <action name="showlanguague_vi">
+  	set(layer[languague_vi].visible, true);
+  	set(layer[languague_vi].alpha, 0);
+  	tween(layer[languague_vi].alpha,1,0.5,default);
+  	</action>
+  
+  <!-- ******************************************* -->
+ <!-- ******************************************* -->
+  <!-- Action Changelanguage -->
+  <action name="changeLanguage">
+  if(%1=="en",
+  	hidelanguague_en();
+  	showlanguague_vi();
+	set(plugin[data].language,en);
+  );
+  
+  if(%1=="vi",
+  	hidelanguague_vi();
+  	showlanguague_en();
+	set(plugin[data].language,vi);
+  );	
+  </action>
+ <!-- ******************************************* -->
+ <!-- ******************************************* -->
+ <!-- ******************************************* -->
+   
+  	
+  <!-- ******************************************** -->
+  <!-- topleftbg : topright -->
+  <!-- ******************************************** -->
+  <layer name="topbg"
+         keep="true"
+         url="%FIRSTXML%/skin/header.png" 
+         align="top"
+         x="0"
+         y="0"
+		 width="100%"
+         zorder="2"
+         visible="true"
+         handcursor="false"
+         enabled="true"
+         />
+  
+  <layer name="phongtruyenthong"
+         keep="true"
+         url="%FIRSTXML%/skin/phongtruyenthong.png" 
+         align="topleft"
+         x="0"
+         y="0"
+         zorder="4"
+         visible="true"
+         handcursor="false"
+         enabled="true"
+         />
+		 
+ <layer name="phongtruyenthong_en"
+         keep="true"
+         url="%FIRSTXML%/skin/phongtruyenthong_en.png" 
+         align="topleft"
+         x="0"
+         y="0"
+         zorder="4"
+         visible="false"
+         handcursor="false"
+         enabled="true"
+         />
+		 
+  <!-- ****** -->
+  <!-- Footer -->
+  <!-- ****** -->
+  <layer name="footer"
+         keep="true"
+         url="%FIRSTXML%/skin/footer.png" 
+         bgalpha="1"
+         align="bottom"
+         x="0"
+         y="0"
+         zorder="5"
+         enabled="false"
+         capture="true"
+         visible="false"
+
+         height="10"
+         width="100%"
+
+         />
+
+  <events name="footerevents" 
+    onTourStart="showfooter();"
+    keep="true" />
+
+  <action name="showfooter">
+    set(layer[footer].visible, true);
+  </action>
+
+  <!-- ******************************************** -->
+  <!-- bg bottom : bottomright -->
+  <!-- ******************************************** -->
+  <layer name="topleftbg2"
+         keep="true"
+         url="%FIRSTXML%/skin/bottomright.png" 
+         align="bottomright"
+         x="0"
+         y="0"
+         zorder="6"
+         handcursor="false"
+         enabled="false"
+         visible="false"
+		devices="desktop"
+         />
+		 
+	<layer name="topleftbg3"
+         keep="true"
+         url="%FIRSTXML%/skin/bottomright_en.png" 
+         align="bottomright"
+         x="0"
+         y="0"
+         zorder="6"
+         handcursor="false"
+         enabled="false"
+         visible="false"
+		devices="desktop"
+         />
+
+  <events name="topleftbg2events" 
+    onTourStart="showtopleftbg2();"
+    keep="true" />
+	
+<events 
+	name="bottom_changeevents" 
+	tourchangelangevent="bottomrightEvent();" 
+	keep="true" />
+
+  <action name="showtopleftbg2">set(layer[topleftbg2].visible, true);</action>
+  
+  <action name="bottomrightEvent">
+	if(plugin[data].language == vi,
+  		set(layer[topleftbg2].visible,true);
+		set(layer[topleftbg3].visible,false);
+		
+		
+		set(layer[phongtruyenthong].visible,true);
+		set(layer[phongtruyenthong_en].visible,false);
+		
+  		,
+  		
+  		set(layer[topleftbg2].visible,false);
+		set(layer[topleftbg3].visible,true);
+		
+		set(layer[phongtruyenthong].visible,false);
+		set(layer[phongtruyenthong_en].visible,true);
+  	)	
+	
+  </action>
+
+ 
+
+  <!-- ******************************************* -->
+  <!-- Tap doan viettel : bottomleft -->
+  <!-- ******************************************* -->
+   <layer name="tapdoanviettel"
+         keep="true"
+         url="%FIRSTXML%/skin/img.png" 
+         align="bottomleft"
+         x="0"
+         y="0"
+         zorder="8"
+         handcursor="true"
+         enabled="true"
+         visible="false"
+		 onclick="js(egal.showMenu(introduction));"
+         />
+
+  <events name="tapdoanviettelevents" 
+    onTourStart="showtapdoanviettel();"
+    keep="true" />
+
+  <action name="hidetapdoanviettel">
+  	tween(layer[tapdoanviettel].alpha,0,0.5,default,set(layer[tapdoanviettel].visible, false));
+  </action>
+  <action name="showtapdoanviettel">
+  	set(layer[tapdoanviettel].visible, true);
+  	set(layer[tapdoanviettel].alpha, 0);
+  	tween(layer[tapdoanviettel].alpha,1,0.5,default);
+  	</action>
+  
+  <events 
+		name="tapdoanviettel_changeevents" 
+		tourchangelangevent="tapdoanviettel();" 
+		keep="true" />
+  
+  <action name="tapdoanviettel">
+  	if(plugin[data].language == vi,
+  		showtapdoanviettel();
+  		,
+  		hidetapdoanviettel();
+  	)	
+  </action>
+  
+  
+    <!-- ******************************************* -->
+  <!-- Tap doan viettel - en : bottomleft -->
+  <!-- ******************************************* -->
+   <layer name="tapdoanviettel_en"
+         keep="true"
+         url="%FIRSTXML%/skin/img.png" 
+         align="bottomleft"
+         x="0"
+         y="0"
+         zorder="8"
+         handcursor="true"
+         enabled="true"
+         visible="false"
+		 onclick="js(egal.showMenu(introduction));"
+         />
+
+  <events name="tapdoanviettel_enevents" 
+    keep="true" />
+  <action name="hidetapdoanviettel_en">
+  	tween(layer[tapdoanviettel_en].alpha,0,0.5,default,set(layer[tapdoanviettel_en].visible, false));
+  </action>
+  <action name="showtapdoanviettel_en">
+  	set(layer[tapdoanviettel_en].visible, true);
+  	set(layer[tapdoanviettel_en].alpha, 0);
+  	tween(layer[tapdoanviettel_en].alpha,1,0.5,default);
+  	</action>
+  
+  <events 
+		name="tapdoanviettel_en_changeevents" 
+		tourchangelangevent="tapdoanviettel_en();" 
+		keep="true" />
+  
+  <action name="tapdoanviettel_en">
+  	if(plugin[data].language == en,
+  		showtapdoanviettel_en();
+  		,
+  		hidetapdoanviettel_en();
+  	)	
+  </action>
+
+  <!-- ************ -->
+  <!-- iControl Bar -->
+  <!-- ************ -->
+
+
+  <krpano controlbarbarbuilt="false" controlbarbackgroundwidthwhenclosed="0" controlbarbackgroundwidthwhenopened="0" controlbarIsOpened="false" />
+  <events name="controlbarevents" onxmlcomplete="controlbarbuildMenuBar();" keep="true"/>
+  <action name="controlbarbuildMenuBar">
+    ifnot (controlbarbarbuilt, controlbarbuildMenu(); set(controlbarbarbuilt, true););
+  </action>
+
+  <style name="controlbar_btn_style"
+         keep="true"
+         edge="right"
+         align="right"
+         width="40" height="40"
+         crop="0|0|60|60"
+         onovercrop="0|60|60|60"
+         ondowncrop="0|120|60|60"
+         onhover="set_title(get(name));if(title!=null,showtext(get(title), buttonstyle))" 
+         onout="hideTooltip();"
+         />
+		 
+	<style name="map_btn_style"
+         keep="true"
+         onhover="set_title(get(name));if(title!=null,showtext(get(title), buttonstyle))" 
+         onout="hideTooltip();"
+         />
+
+  <layer name="controlbar_menu_bg"
+         keep="true"
+         type="container"
+         zorder="9"
+         width="40"
+         height="40"
+         align="bottomright"
+         x="0" y="0"
+         maskchildren="true"
+         rotate="0"
+         visible="false"
+         >
+
+<!--
+    <layer name="controlbarbtn_in"
+            url="%FIRSTXML%/skin/icontrolbar/btn_zoom_in.png"
+            ondown="set(fov_moveforce, -1);"
+            onup="set(fov_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+    <layer name="controlbarbtn_out"
+            url="%FIRSTXML%/skin/icontrolbar/btn_zoom_out.png"
+            ondown="set(fov_moveforce, +1);"
+            onup="set(fov_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+
+    <layer name="controlbarbtn_left"
+            url="%FIRSTXML%/skin/icontrolbar/btn_move_left.png"
+            ondown="set(hlookat_moveforce, -1);"
+            onup="set(hlookat_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+    <layer name="controlbarbtn_right"
+            url="%FIRSTXML%/skin/icontrolbar/btn_move_right.png"
+            ondown="set(hlookat_moveforce, +1);"
+            onup="set(hlookat_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+
+    <layer name="controlbarbtn_up"
+            url="%FIRSTXML%/skin/icontrolbar/btn_move_up.png"
+            ondown="set(vlookat_moveforce, -1);"
+            onup="set(vlookat_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+    <layer name="controlbarbtn_down"
+            url="%FIRSTXML%/skin/icontrolbar/btn_move_down.png"
+            ondown="set(vlookat_moveforce, +1);"
+            onup="set(vlookat_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+            
+        -->
+            
+    <layer name="controlbarbtn_control"
+            url="%FIRSTXML%/skin/icontrolbar/btn_control.png"
+            onclick="showmenucontrol();"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+			
+			
+            
+    <layer name="controlbarbtn_autoplay"
+            url="%FIRSTXML%/skin/icontrolbar/btn_autoplay.png"
+            onclick="startautoplay();"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+    
+    <layer name="controlbarbtn_autoplay_off"
+            url="%FIRSTXML%/skin/icontrolbar/btn_autoplay_off.png"
+            onclick="startautoplay();"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+
+
+    <layer name="controlbarbtn_sound_on"
+            url="%FIRSTXML%/skin/icontrolbar/btn_start_sound.png"
+            onclick="stopBackgroundSound();js(egal.soundButtonClick());"
+            style="controlbar_btn_style"
+            visible="false"
+			devices="desktop"
+            />
+    <layer name="controlbarbtn_sound_off"
+            url="%FIRSTXML%/skin/icontrolbar/btn_stop_sound.png"
+            onclick="playBackgroundSound();js(egal.soundButtonClick());"
+            style="controlbar_btn_style"
+            visible="false"
+			devices="desktop"
+            />
+            
+            
+    <layer name="controlbarbtn_autoguide_on"
+            url="%FIRSTXML%/skin/icontrolbar/btn_start_autoguide.png"
+            onclick="stopAutoguideSound();js(egal.autoguideButtonClick());"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+    <layer name="controlbarbtn_autoguide_off"
+            url="%FIRSTXML%/skin/icontrolbar/btn_stop_autoguide.png"
+            onclick="playAutoguideSound();js(egal.autoguideButtonClick());"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+
+
+    <layer name="controlbarbtn_openfs"
+            url="%FIRSTXML%/skin/icontrolbar/btn_enter_fs.png"
+            onclick="enterFullscreen();"
+            style="controlbar_btn_style"
+            visible="false"
+			devices="desktop"
+            />
+    <layer name="controlbarbtn_closefs"
+            url="%FIRSTXML%/skin/icontrolbar/btn_close_fs.png"
+            onclick="exitFullscreen();"
+            style="controlbar_btn_style"
+            visible="false"
+			devices="desktop"
+            />
+
+    <layer name="controlbarbtn_autorotate_on"
+            url="%FIRSTXML%/skin/icontrolbar/btn_start_autorotation.png"
+            onclick="startautorotation();"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />
+    <layer name="controlbarbtn_autorotate_off"
+            url="%FIRSTXML%/skin/icontrolbar/btn_stop_autorotation.png"
+            onclick="stopautorotation();"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />   
+
+    <layer name="controlbarbtn_display_help"
+            url="%FIRSTXML%/skin/icontrolbar/btn_help.png"
+            onclick="closegraphics_background();controlbardisplayHelp();showbackground_size();"
+            style="controlbar_btn_style"
+            devices="desktop"
+            visible="false"
+            />
+    <layer name="controlbarbtn_close_help"
+            url="%FIRSTXML%/skin/icontrolbar/btn_help.png"
+            onclick="closegraphics_background();hidebackground_size();"
+            style="controlbar_btn_style"
+            visible="false"
+            devices="desktop"
+            />  
+            
+    <layer name="controlbarbtn_resolution_mode"
+            url="%FIRSTXML%/skin/icontrolbar/btn_sd.png"
+            onclick="update_resolution_menu();"
+            style="controlbar_btn_style"
+            devices="desktop"
+            visible="false"
+            />
+    
+ </layer>
+ 
+ <action name="showmenucontrol">
+ 	
+ 	if(layer[menu_control_mode].visible==false,
+ 		set(layer[menu_control_mode].visible,true);
+ 		set(layer[menu_control_mode].alpha,0);
+ 		tween(layer[menu_control_mode].alpha,  1, 0.5, easeOutQuad);
+ 	, 	
+ 		tween(layer[menu_control_mode].alpha,  0, 0.5, easeOutQuad, set(layer[menu_control_mode].visible,false));
+ 	);	
+ </action>
+
+  <action name="controlbarhideMenuControls">
+    set(controlbarIsOpened, false);
+
+
+if (device.desktop,
+	set(layer[controlbarbtn_in].visible, false);
+	set(layer[controlbarbtn_out].visible, false);
+);
+if (device.desktop,
+	set(layer[controlbarbtn_up].visible, false);
+	set(layer[controlbarbtn_down].visible, false);
+);
+if (device.desktop,
+	set(layer[controlbarbtn_left].visible, false);
+	set(layer[controlbarbtn_right].visible, false);
+);
+	controlbarupdateFullscreenButtons();
+	controlbarupdateHelpButtons();
+	controlbarupdateResolutionButtons();
+
+	controlbarupdateAutorotationButtons();
+
+	controlbarupdateSoundButtons();
+	
+	controlbarupdateAutoguideSoundButtons();
+
+
+
+
+    set(layer[controlbar_menu_bg].width , get(controlbarbackgroundwidthwhenclosed));
+	set(layer[controlbar_menu_bg].visible, true);
+  </action>
+  
+  <action name="controlbarshowMenuControls">
+    set(controlbarIsOpened, true);
+    
+	set(layer[controlbar_menu_bg].visible, true);
+
+	if (device.desktop,
+	set(layer[controlbarbtn_control].visible, true);
+);
+
+if (device.desktop,
+	set(layer[controlbarbtn_in].visible, true);
+	set(layer[controlbarbtn_out].visible, true);
+);
+
+if (device.desktop,
+	set(layer[controlbarbtn_up].visible, true);
+	set(layer[controlbarbtn_down].visible, true);
+);
+if (device.desktop,
+	set(layer[controlbarbtn_left].visible, true);
+	set(layer[controlbarbtn_right].visible, true);
+);
+	controlbarupdateFullscreenButtons();
+	controlbarupdateHelpButtons();
+	controlbarupdateResolutionButtons();
+	
+	controlbarupdateAutorotationButtons();
+
+	controlbarupdateSoundButtons();
+	
+	controlbarupdateAutoguideSoundButtons();
+	
+	
+	set(layer[controlbarbtn_autoplay].visible, false);
+	set(layer[controlbarbtn_autoplay_off].visible, false);
+
+
+
+
+    set(layer[controlbar_menu_bg].width, get(controlbarbackgroundwidthwhenopened));
+  </action>
+
+  <layer name="controlbarhelpScreenBg"
+         align="center"
+         keep="true"
+         onclick="controlbarcloseHelp();"
+         url="%FIRSTXML%/skin/icontrolbar/help_screen_bg.png"
+         visible="false"
+         rotate="-90"
+         height="50%"
+         width="prop"
+         zorder="97"
+            devices="desktop"
+         x="100%" />
+		 
+  <layer name="controlbarhelpScreenFg"
+         align="center"
+         keep="true"
+         onclick="controlbarcloseHelp();"
+         url="%FIRSTXML%/skin/icontrolbar/help_screen_fg.png"
+         height="50%"
+         width="prop"
+         visible="false"
+         rotate="90"
+         zorder="98"
+         x="-100%"
+         devices="desktop"
+         displayed="false" />
+         
+	<action name="startautoplay">		
+		set(plugin[data].autoplay,true);
+		js(egal.playVideo());
+	</action>
+	
+	<action name="stopautoplay">
+	</action>
+         
+  <action name="controlbardisplayHelp">
+  if (device.desktop,
+    set(layer[controlbarhelpScreenFg].displayed,true);
+    set(layer[controlbarhelpScreenBg].visible,true);
+    set(layer[controlbarhelpScreenFg].visible,true);
+    tween(layer[controlbarhelpScreenFg].rotate,0, 1);
+    tween(layer[controlbarhelpScreenFg].x,0, 1);
+    tween(layer[controlbarhelpScreenBg].rotate,0, 1);
+    tween(layer[controlbarhelpScreenBg].x,0, 1);
+    controlbarupdateHelpButtons();
+  );
+  </action>
+  
+  <action name="controlbarcloseHelp">
+  if (device.desktop,
+    set(layer[controlbarhelpScreenFg].displayed,false);
+    tween(layer[controlbarhelpScreenFg].rotate,  90, 1, easeOutQuad, set(layer[helpScreenFg].visible,false););
+    tween(layer[controlbarhelpScreenFg].x, -100%, 1);
+    tween(layer[controlbarhelpScreenBg].rotate, -90, 1, easeOutQuad, set(layer[helpScreenBg].visible,false););
+    tween(layer[controlbarhelpScreenBg].x, 100%, 1);
+    controlbarupdateHelpButtons();
+  );
+  </action>
+	<action name="controlbarHideHelpButtons">
+		set(layer[controlbarbtn_display_help].visible, false);
+		set(layer[controlbarbtn_close_help].visible, false);
+	</action>
+	<action name="controlbarShowHelpButtons">
+		if (layer[controlbarhelpScreenFg].displayed,
+			set(layer[controlbarbtn_close_help].visible, true);
+			set(layer[controlbarbtn_display_help].visible, false);
+		,
+			set(layer[controlbarbtn_display_help].visible, true);
+			set(layer[controlbarbtn_close_help].visible, false);
+		);
+	</action>
+	<action name="controlbarupdateHelpButtons">
+	if (device.desktop,
+		set(controlbarDisplayHelpButtons, false);
+		if (controlbarIsOpened, set(controlbarDisplayHelpButtons, true););
+		if (controlbarDisplayHelpButtons,
+			controlbarShowHelpButtons();
+		,
+			controlbarHideHelpButtons();
+		);
+	,
+		controlbarHideHelpButtons();
+	);
+	</action>
+
+	<action name="controlbarHideResolutionButtons">
+		set(layer[controlbarbtn_resolution_mode].visible, false);
+	</action>
+	<action name="controlbarShowResolutionButtons">
+		set(layer[controlbarbtn_resolution_mode].visible, false);
+	</action>
+	<action name="controlbarupdateResolutionButtons">
+	if (device.desktop,
+		set(controlbarDisplayResolutionButtons, false);
+		
+		if (controlbarIsOpened, set(controlbarDisplayResolutionButtons, true););
+		
+		if (controlbarDisplayResolutionButtons,
+			controlbarShowResolutionButtons();
+		,
+			controlbarHideResolutionButtons();
+		);
+	,
+		controlbarHideResolutionButtons();
+	);
+	</action>
+
+
+  <events name="controlbarmenufullscreenchangeevent"
+          onenterfullscreen="controlbarupdateFullscreenButtons();"
+          onexitfullscreen="controlbarupdateFullscreenButtons();"
+          keep="true"/>
+	<action name="controlbarHideFullscreenButtons">
+		set(layer[controlbarbtn_openfs].visible , false);
+		set(layer[controlbarbtn_closefs].visible, false);
+	</action>
+	<action name="controlbarShowFullscreenButtons">
+		if (device.fullscreensupport,
+			if(tour_fullscreen,
+				set(layer[controlbarbtn_openfs].visible , false);
+				set(layer[controlbarbtn_closefs].visible, true);
+			,
+				set(layer[controlbarbtn_openfs].visible ,true);
+				set(layer[controlbarbtn_closefs].visible,false);
+			);
+		,
+			controlbarHideFullscreenButtons();
+		);
+	</action>
+	<action name="controlbarupdateFullscreenButtons">
+		set(controlbarDisplayFullscreenButtons, false);
+		if (controlbarIsOpened, set(controlbarDisplayFullscreenButtons, true););
+		if (controlbarDisplayFullscreenButtons,
+			controlbarShowFullscreenButtons();
+		,
+			controlbarHideFullscreenButtons();
+		);
+	</action>
+
+	<events name="controlbarAutorotationEvents"
+		onstartautorotation="controlbarupdateAutorotationButtons();"
+		onresumeautorotation="controlbarupdateAutorotationButtons();"
+		onstopautorotation="controlbarupdateAutorotationButtons();"
+		onpauseautorotation="controlbarupdateAutorotationButtons();"
+		keep="true"/>
+		
+	<action name="controlbarHideAutorotationButtons">
+		set(layer[controlbarbtn_autorotate_off].visible, false);
+		set(layer[controlbarbtn_autorotate_on].visible , false);
+	</action>
+	<action name="controlbarShowAutorotationButtons">
+		if(tour_autorotateenabled==false,
+			set(layer[controlbarbtn_autorotate_off].visible, false);
+			set(layer[controlbarbtn_autorotate_on].visible , true);
+		,
+			set(layer[controlbarbtn_autorotate_off].visible, true);
+			set(layer[controlbarbtn_autorotate_on].visible , false);
+		);
+	</action>
+	<action name="controlbarupdateAutorotationButtons">
+		set(controlbarDisplayAutorotationButtons, false);
+		if (controlbarIsOpened, set(controlbarDisplayAutorotationButtons, true););
+		if (controlbarDisplayAutorotationButtons,
+			controlbarShowAutorotationButtons();
+		,
+			controlbarHideAutorotationButtons();
+		);
+	</action>
+
+
+  <events name="controlbarplaystopsoundsevent" 
+  	playtoursoundsevent="controlbarupdateSoundButtons();" 
+  	stoptoursoundsevent="controlbarupdateSoundButtons();" 
+  	keep="true"/>
+  	
+	<action name="controlbarHideSoundButtons">
+		set(layer[controlbarbtn_sound_off].visible, false);
+		set(layer[controlbarbtn_sound_on].visible , false);
+	</action>
+	<action name="controlbarShowSoundButtons">
+		if (tour_soundson == true,
+			set(layer[controlbarbtn_sound_off].visible, false);
+			set(layer[controlbarbtn_sound_on].visible , true);
+		,
+			set(layer[controlbarbtn_sound_off].visible, true);
+			set(layer[controlbarbtn_sound_on].visible , false);
+		);
+	</action>
+	<action name="controlbarupdateSoundButtons">
+		set(controlbarDisplaySoundButtons, false);
+		if (controlbarIsOpened, set(controlbarDisplaySoundButtons, true););
+		if (controlbarDisplaySoundButtons,
+			controlbarShowSoundButtons();
+		,
+			controlbarHideSoundButtons();
+		);
+	</action>
+	
+	
+	<events name="controlbarplaystopautoguidesoundsevent" 
+		playtourautoguidesoundsevent="controlbarupdateAutoguideSoundButtons();" 
+		stoptourautoguidesoundsevent="controlbarupdateAutoguideSoundButtons();" 
+		keep="true"/>
+	
+	<action name="controlbarHideAutoguideSoundButtons">
+		set(layer[controlbarbtn_autoguide_off].visible, false);
+		set(layer[controlbarbtn_autoguide_on].visible , false);
+	</action>
+	<action name="controlbarShowAutoguideSoundButtons">
+		if (tour_autoguide_soundson == true,
+			set(layer[controlbarbtn_autoguide_off].visible, false);
+			set(layer[controlbarbtn_autoguide_on].visible , true);
+		,
+			set(layer[controlbarbtn_autoguide_off].visible, true);
+			set(layer[controlbarbtn_autoguide_on].visible , false);
+		);
+	</action>
+	<action name="controlbarupdateAutoguideSoundButtons">
+		set(controlbarDisplayAutoguideSoundButtons, false);
+		if (controlbarIsOpened, set(controlbarDisplayAutoguideSoundButtons, true););
+		if (controlbarDisplayAutoguideSoundButtons,
+			controlbarShowAutoguideSoundButtons();
+		,
+			controlbarHideAutoguideSoundButtons();
+		);
+	</action>
+
+
+  <textstyle name="controlbarmenuTooltipStyle"
+             font="Helvetica"
+             fontsize="12"
+             bold="true"
+             italic="false"
+             background="false"
+             border="false"
+             alpha="1"
+             textcolor="0xffffff"
+             effect="dropshadow(1,15,0x000000,4,1);"
+             origin="cursor"
+             edge="bottom"
+             yoffset="-20"
+             xoffset="0"
+             noclip="true"/>
+             
+<layer name="controlbarmenuTooltipStyle"
+	keep="true"
+	enabled="false"
+	capture="false"
+	url="%FIRSTXML%/skin/textfield.swf"
+	align="center"
+	background="false"
+	backgroundcolor="0x000000"
+	backgroundalpha="0.3"
+	border="false"
+	bordercolor="0xffffff"
+	textshadow="2" textshadowrange="10.0" textshadowangle="45" 	textshadowcolor="0x00d2ff" textshadowalpha="1.0"
+	css="color:#00e5ff;font-family:Montserrat,Arial,sans-serif;font-weight:600;font-size:14px;text-align:center;"
+	width="200"
+	height="20"
+	autoheight="true"
+	edge="bottom"
+	selectable="false"
+	zorder="0"
+	visible="false"
+	html=""
+	devices="html5"
+/>
+  <action name="controlbarbuildMenu">
+    
+    set(controlbarbutton_pos, 0);
+
+
+      if (device.desktop,
+        set(layer[controlbarbtn_display_help].x, get(controlbarbutton_pos));
+        set(layer[controlbarbtn_close_help].x  , get(controlbarbutton_pos));
+        inc(controlbarbutton_pos, 43);
+      ); 
+      
+      if (device.desktop,
+        <!-- set(layer[controlbarbtn_resolution_mode].x, get(controlbarbutton_pos));
+        inc(controlbarbutton_pos, 43); -->
+      );
+
+      if (device.fullscreensupport,
+        set(layer[controlbarbtn_openfs].x , get(controlbarbutton_pos));
+        set(layer[controlbarbtn_closefs].x, get(controlbarbutton_pos));
+        inc(controlbarbutton_pos, 43);
+      );
+
+      set(layer[controlbarbtn_autorotate_on].x , get(controlbarbutton_pos));
+      set(layer[controlbarbtn_autorotate_off].x, get(controlbarbutton_pos));
+      inc(controlbarbutton_pos, 43);
+
+
+      set(layer[controlbarbtn_sound_on].x , get(controlbarbutton_pos));
+      set(layer[controlbarbtn_sound_off].x, get(controlbarbutton_pos));
+      inc(controlbarbutton_pos, 43);
+      
+      
+      set(layer[controlbarbtn_autoguide_on].x , get(controlbarbutton_pos));
+      set(layer[controlbarbtn_autoguide_off].x, get(controlbarbutton_pos));
+      inc(controlbarbutton_pos, 43);
+      
+      if (device.desktop,
+       set(layer[controlbarbtn_control].x , get(controlbarbutton_pos));
+      );
+
+      if (device.desktop,
+        set(layer[controlbarbtn_left].x, 40);
+        
+      	set(layer[controlbarbtn_right].x,0);             
+        
+        set(layer[controlbarbtn_down].x, 80);
+           
+        set(layer[controlbarbtn_up].x, 120);
+        
+        set(layer[controlbarbtn_out].x, 160);
+        
+        set(layer[controlbarbtn_in].x, 200);
+      );
+
+
+      
+      inc(controlbarbutton_pos, 43);
+      
+      
+      
+      set(layer[controlbarbtn_autoplay].x , get(controlbarbutton_pos));
+      set(layer[controlbarbtn_autoplay_off].x, get(controlbarbutton_pos));
+      inc(controlbarbutton_pos, 43);
+
+      dec(controlbarbutton_pos, 5);
+
+      set(controlbarbackgroundwidthwhenopened, get(controlbarbutton_pos));
+      set(layer[controlbar_menu_bg].width, get(controlbarbackgroundwidthwhenopened));
+	
+	
+	
+    </action>
+
+	<events name="controlbarStartTourEvents" onTourStart="controlbarCallOnStartTour();" keep="true" />
+	
+	<action name="controlbarCallOnStartTour">
+		controlbarshowMenuControls();
+	</action>
+
+  <!-- ******************************************** -->
+  <!-- Location_title: top -->
+   <layer name="location_title"
+ 		 keep="true"
+         url="%FIRSTXML%/skin/location_bg.png" 
+         align="top"
+         x="0"
+         y="13"
+         alpha="0.6"
+         zorder="1"
+         enabled="false"
+		 handcursor="true" 
+         visible="true"
+		devices="desktop"
+    />
+    
+    
+    <layer name="locationTextField"
+		keep="true"
+		capture="false"
+		url="%FIRSTXML%/skin/plugins/textfield.swf"
+		width="800"
+		height="40"
+		background="false" 
+		handcursor="true" 
+		enabled="true"
+		selectable="false"		
+		children="false"
+		x="0"
+		y="24"
+        borderwidth="0"
+        align="top"
+        alpha="1"
+        zorder="12"
+        visible="true"
+        css="text-align:center;
+              color:#00e5ff;
+              font-family:Montserrat,Arial,sans-serif;
+              font-size:13px;
+              font-weight:600;"
+		
+		html="Lãnh đạo cuộc vận động giải phóng dân tộc và cách mạng Tháng Tám, sáng lập nhà nước dân chủ cộng hòa (1930-1945)"         
+        onclick=""
+		devices="desktop"
+	/>
+	
+	<action name="showExhibitionTitile">
+  		set(layer[locationTextField].html,%1)
+  	</action>
+  
+	
+  <!-- ******************************************** -->
+  <!-- Location_title - lang:vi : top -->
+  <!-- ******************************************** 
+  <layer name="location_title"
+         keep="true"
+         url="%FIRSTXML%/skin/location/vi/1.png" 
+         align="top"
+         x="0"
+         y="14"
+         zorder="10"
+         handcursor="true"
+         enabled="true"
+         visible="false"
+         
+         onclick="show_graphics(menu_location)"
+         />
+
+  <events name="location_title_events" 
+    onTourStart="showlocation_title();"
+    keep="true" />
+  
+  <action name="hidelocation_title">
+  		tween(layer[location_title].alpha,0,0.5,default,set(layer[location_title].visible, false));
+  	</action>
+  	
+  	<action name="showlocation_title">
+  		set(layer[location_title].visible, true);
+  		set(layer[location_title].alpha, 0);
+  		tween(layer[location_title].alpha,1,0.5,default);
+  	</action>
+  	
+  	<events 
+		name="location_title_changeevents" 
+		tourchangelangevent="set_location_title();" 
+		keep="true" />
+		
+	<action name="set_location_title" >
+		if(plugin[data].language == vi,
+			showlocation_title();
+			,hidelocation_title();
+  		)	
+  	)	
+	</action>
+	-->
+	
+	 <!-- ******************************************** -->
+  <!-- location_title_en - lang:vi : top -->
+  <!-- ******************************************** 
+  <layer name="location_title_en"
+         keep="true"
+         url="%FIRSTXML%/skin/location/en/1.png" 
+         align="top"
+         x="0"
+         y="14"
+         zorder="10"
+         handcursor="true"
+         enabled="true"
+         visible="false"
+         
+         onclick="show_graphics(menu_location)"
+         />
+
+  <events name="location_title_en_events"
+    keep="true" />
+  
+  <action name="hidelocation_title_en">
+  		tween(layer[location_title_en].alpha,0,0.5,default,set(layer[location_title_en].visible, false));
+  	</action>
+  	
+  	<action name="showlocation_title_en">
+  		set(layer[location_title_en].visible, true);
+  		set(layer[location_title_en].alpha, 0);
+  		tween(layer[location_title_en].alpha,1,0.5,default);
+  	</action>
+  	
+  	<events 
+		name="location_title_en_changeevents" 
+		tourchangelangevent="set_location_title_en();" 
+		keep="true" />
+		
+	<action name="set_location_title_en" >
+		if(plugin[data].language == en,
+			showlocation_title_en();
+			,hidelocation_title_en();
+  		)	
+  	)	
+	</action>-->
+
+  <!-- ******************************************** -->
+  <!-- Menu Location information : center -->
+  <!-- ******************************************** -->
+  <layer name="menu_location"
+         keep="true"
+         url="%FIRSTXML%/skin/location_detail_bg.png" 
+         align="top"
+         x="0"
+         y="50"
+         alpha="0"
+         zorder="12"
+         visible="false"
+         handcursor="false"
+         >
+         
+        	 <layer name="location_information"
+	            url="%FIRSTXML%/skin/location_info.png"
+	            align="top"
+	            y="10"
+	            x="-80"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.showLocation(information));"
+	            onhover="set_title(get(name));if(title!=null,showtext(get(title), locationstyle));" 
+	            onout=""
+            />
+            
+             <layer name="location_video"
+	            url="%FIRSTXML%/skin/location_video.png"
+	            align="top"
+	            y="10"
+	            x="-35"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.showLocation(video));"
+	            onhover="set_title(get(name));if(title!=null,showtext(get(title), locationstyle));" 
+	            onout=""
+            />
+            
+             <layer name="location_photo"
+	            url="%FIRSTXML%/skin/location_photo.png"
+	            align="top"
+	            y="10"
+	            x="20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.showLocation(photo));"
+	            onhover="set_title(get(name));if(title!=null,showtext(get(title), locationstyle));" 
+	            onout=""
+            />
+            
+             <layer name="location_object"
+	            url="%FIRSTXML%/skin/location_object.png"
+	            align="top"
+	            y="10"
+	            x="70"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.showLocation(object));"
+	            onhover="set_title(get(name));if(title!=null,showtext(get(title), locationstyle));" 
+	            onout=""
+            />
+            
+            
+                        	
+        	<layer name="close_location"
+	            url="%FIRSTXML%/skin/close.png"
+	            align="topright"
+	            x="-26"
+	            y="10"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="close_graphics(menu_location)"
+            />       
+                        
+         </layer>
+		 
+	 <!-- ******************************************** -->
+  <!-- Map location : bottomright -->
+  <!-- ******************************************** -->
+  <layer name="mapicon"
+         keep="true"
+         url="%FIRSTXML%/skin/map_icon.png" 
+         align="bottomright"
+         x="0"
+         y="43"
+         zorder="15"
+         handcursor="true"
+         enabled="true"
+         visible="false"
+		 devices="desktop"
+         style="map_btn_style"
+         onclick="show_map();"
+         />
+
+  <events name="mapiconOnClickevents" 
+    onTourStart="showMapIcon();"
+    keep="true" />
+
+  <action name="showMapIcon">set(layer[mapicon].visible, true);</action>
+  
+  <!-- ******************************************** -->
+  <!-- Map Lager : center -->
+  <!-- ******************************************** -->
+  <layer name="map_exhibition"
+         keep="true"
+         url="%FIRSTXML%/skin/3_floor.jpg" 
+         align="center"
+		 y="0"
+         zorder="15"
+         alpha="0"
+         handcursor="false"
+         enabled="true"
+         visible="false"
+         >
+         
+            <layer name="sanhkhanhtiet_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            align="topleft"
+	            x="45%"
+	            y="44%"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(9_1));close_map();"
+				onhover="js(egal.hoverPano(9_1));"
+            />
+        
+            <layer name="kv1_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="54%"
+	            y="53%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(1_1));close_map();"
+				onhover="js(egal.hoverPano(1_1));"
+            />
+            
+            
+            <layer name="tohop1_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="50%"
+	            y="54%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(10_1));close_map();"
+				onhover="js(egal.hoverPano(10_1));"
+            />
+			<layer name="kv2_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            align="topleft"
+	            x="50%"
+	            y="60%"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(2_1));close_map();"
+				onhover="js(egal.hoverPano(2_1));"
+            />
+			<layer name="tohop2_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="45%"
+	            y="72%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(11_1));close_map();"
+				onhover="js(egal.hoverPano(11_1));"
+            />
+			<layer name="kv3_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="40%"
+	            y="60%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(4_1));close_map();"
+				onhover="js(egal.hoverPano(4_1));"
+            />
+			<layer name="tohop3_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="40%"
+	            y="54%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(12_1));close_map();"
+				onhover="js(egal.hoverPano(12_1));"
+            />
+			<layer name="kv4_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="36%"
+	            y="53%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(5_4));close_map();"
+				onhover="js(egal.hoverPano(5_4));"
+            />
+			<layer name="tohop4_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="40%"
+	            y="38%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(13_2));close_map();"
+				onhover="js(egal.hoverPano(13_2));"
+            />
+			<layer name="kv5_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="36%"
+	            y="35%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(6_3));close_map();"
+				onhover="js(egal.hoverPano(6_3));"
+            />
+			
+			<layer name="tohop5_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="40%"
+	            y="28%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(15_1));close_map();"
+				onhover="js(egal.hoverPano(15_1));"
+            />
+			<layer name="tohop6_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="45%"
+	            y="16%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(14_1));close_map();"
+				onhover="js(egal.hoverPano(14_1));"
+            />
+			
+			<layer name="kv6_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="50%"
+	            y="28%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(7_1));close_map();"
+				onhover="js(egal.hoverPano(7_1));"
+            />
+			<layer name="tohop7_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="50%"
+	            y="38%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(16_1));close_map();"
+				onhover="js(egal.hoverPano(16_1));"
+            />
+			<layer name="kv8_point"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="54%"
+	            y="32%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(8_1));close_map();"
+				onhover="js(egal.hoverPano(8_1));"
+            />
+            
+            
+            
+			
+            
+         <layer name="close_map"
+	            url="%FIRSTXML%/skin/close.png"
+	            align="topright"
+	            x="-26"
+	            y="30"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="close_map();hidebackground_size();"
+            />
+			
+			 <layer name="floor_3"
+	            url="%FIRSTXML%/skin/3_floor.png"
+	            align="topleft"
+	            x="-21"
+	            y="230"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="z_oder_map(floor_3)"
+            />
+    </layer> 
+  
+ 	    
+  
+	<action name="showmap_exhibition" >
+		set(layer[map_exhibition].visible,true);
+		set(layer[map_exhibition].alpha,0);
+		tween(layer[map_exhibition].alpha,1,0.5);
+	</action>
+	
+	<action name="hidemap_exhibition" >
+		tween(layer[map_exhibition].alpha,0,0.5,default,set(layer[map_exhibition].visible,false));
+	</action>
+	
+	<layer name="map_exhibition_2"
+         keep="true"
+         url="%FIRSTXML%/skin/2_floor.jpg" 
+         align="center"
+		 y="0"
+         zorder="14"
+         alpha="0"
+         handcursor="false"
+         enabled="true"
+         visible="false"
+         >
+         
+                  
+            <layer name="kv1_point_2"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="45%"
+	            y="60%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(20_4));close_map();"
+				onhover="js(egal.hoverPano(20_4));"
+            /> 
+			
+			 <layer name="floor_2"
+	            url="%FIRSTXML%/skin/2_floor.png"
+	            align="topleft"
+	            x="-21"
+	            y="115"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="z_oder_map(floor_2)"
+            />
+    </layer> 
+	
+	<action name="showmap_exhibition_2" >
+		set(layer[map_exhibition_2].visible,true);
+		set(layer[map_exhibition_2].alpha,0);
+		tween(layer[map_exhibition_2].alpha,1,0.5);
+	</action>
+	
+	<action name="hidemap_exhibition_2" >
+		tween(layer[map_exhibition_2].alpha,0,0.5,default,set(layer[map_exhibition_2].visible,false));
+	</action>
+	
+	<layer name="map_exhibition_1"
+         keep="true"
+         url="%FIRSTXML%/skin/1_floor.jpg" 
+         align="center"
+		 y="0"
+         zorder="16"
+         alpha="0"
+         handcursor="false"
+         enabled="true"
+         visible="false"
+         >
+         
+                  
+            <layer name="kv1_point_1"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="45%"
+	            y="90%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(20_1));close_map();"
+				onhover="js(egal.hoverPano(20_1));"
+            /> 
+			
+			<layer name="kv2_point_1"
+	            url="%FIRSTXML%/skin/menu/1.png"
+	            x="45%"
+	            y="60%"
+	            align="topleft"
+        		crop="0|0|27|20"
+        		onovercrop="0|20|27|20"
+	            visible="true"
+	            devices="desktop"
+	            enabled="true"
+	            onclick="js(egal.viewPano(20_3));close_map();"
+				onhover="js(egal.hoverPano(20_3));"
+            />
+			
+			
+			
+			 <layer name="floor_1"
+	            url="%FIRSTXML%/skin/1_floor_active.png"
+	            align="topleft"
+	            x="-21"
+	            y="0"
+	            visible="true"
+	            enabled="true"
+	            onclick="z_oder_map(floor_1)"
+            />
+    </layer> 
+	
+	<action name="showmap_exhibition_1" >
+		set(layer[map_exhibition_1].visible,true);
+		set(layer[map_exhibition_1].alpha,0);
+		tween(layer[map_exhibition_1].alpha,1,0.5);
+	</action>
+	
+	<action name="hidemap_exhibition_1" >
+		tween(layer[map_exhibition_1].alpha,0,0.5,default,set(layer[map_exhibition_1].visible,false));
+	</action>
+	
+	
+	<action name="show_map" >
+		showmap_exhibition();
+		showmap_exhibition_2();
+		showmap_exhibition_1();
+	</action>
+	
+	<action name="close_map">
+		hidemap_exhibition();
+		hidemap_exhibition_2();
+		hidemap_exhibition_1();
+	</action>
+	
+	<action name="z_oder_map">
+		if(%1== floor_1,
+			set(layer[floor_1].url,%FIRSTXML%/skin/1_floor_active.png);
+			set(layer[floor_2].url,%FIRSTXML%/skin/2_floor.png);
+			set(layer[floor_3].url,%FIRSTXML%/skin/3_floor.png);
+			
+			
+			set(layer[map_exhibition_1].zorder,16);
+			set(layer[map_exhibition_2].zorder,15);
+			set(layer[map_exhibition].zorder,14);
+		);
+		
+		if(%1== floor_2,		
+			set(layer[floor_2].url,%FIRSTXML%/skin/2_floor_active.png);
+			set(layer[floor_1].url,%FIRSTXML%/skin/1_floor.png);
+			set(layer[floor_3].url,%FIRSTXML%/skin/3_floor.png);
+			
+			set(layer[map_exhibition_2].zorder,16);
+			set(layer[map_exhibition_1].zorder,15);
+			set(layer[map_exhibition].zorder,14);
+		);
+		
+		if(%1== floor_3,
+			set(layer[floor_3].url,%FIRSTXML%/skin/3_floor_active.png);
+			set(layer[floor_2].url,%FIRSTXML%/skin/2_floor.png);
+			set(layer[floor_1].url,%FIRSTXML%/skin/1_floor.png);
+			
+			set(layer[map_exhibition_1].zorder,14);
+			set(layer[map_exhibition_2].zorder,15);
+			set(layer[map_exhibition].zorder,16);
+		);
+		
+		
+	</action>
+	
+	
+  
+	<!-- ******************************************** -->
+  	<!-- Control bar-->
+ 	<!-- ******************************************** --> 
+	
+ 
+ <layer name="menu_control_mode"
+ 	 keep="true"
+     url="%FIRSTXML%/skin/control_mode_bg.png" 
+     align="bottomright"
+     x="180"
+     y="50"
+     alpha="1"
+     zorder="12"
+     visible="false"
+     handcursor="false"
+     onout=""
+  > 	
+    
+    <layer name="controlbarbtn_in"
+            url="%FIRSTXML%/skin/icontrolbar/btn_zoom_in.png"
+            ondown="set(fov_moveforce, -1);"
+            onup="set(fov_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="true"
+            devices="desktop"
+            />
+    <layer name="controlbarbtn_out"
+            url="%FIRSTXML%/skin/icontrolbar/btn_zoom_out.png"
+            ondown="set(fov_moveforce, +1);"
+            onup="set(fov_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="true"
+            devices="desktop"
+            />
+
+    <layer name="controlbarbtn_left"
+            url="%FIRSTXML%/skin/icontrolbar/btn_move_left.png"
+            ondown="set(hlookat_moveforce, -1);"
+            onup="set(hlookat_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="true"
+            devices="desktop"
+            />
+    <layer name="controlbarbtn_right"
+            url="%FIRSTXML%/skin/icontrolbar/btn_move_right.png"
+            ondown="set(hlookat_moveforce, +1);"
+            onup="set(hlookat_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="true"
+            devices="desktop"
+            />
+
+    <layer name="controlbarbtn_up"
+            url="%FIRSTXML%/skin/icontrolbar/btn_move_up.png"
+            ondown="set(vlookat_moveforce, -1);"
+            onup="set(vlookat_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="true"
+            devices="desktop"
+            />
+    <layer name="controlbarbtn_down"
+            url="%FIRSTXML%/skin/icontrolbar/btn_move_down.png"
+            ondown="set(vlookat_moveforce, +1);"
+            onup="set(vlookat_moveforce, 0);"
+            style="controlbar_btn_style"
+            visible="true"
+            devices="desktop"
+            />
+ </layer>
+ 
+ 
+	
+	<!-- ******************************************** -->
+  	<!-- Chuyển đổi chế độ full hd - hd -->
+ 	<!-- ******************************************** --> 
+	
+ 
+ <layer name="menu_resolution_mode"
+ 	 keep="true"
+     url="%FIRSTXML%/skin/resolution_mode_bg.png" 
+     align="bottomright"
+     x="45"
+     y="50"
+     alpha="0"
+     zorder="12"
+     visible="false"
+     handcursor="false"
+     onout="delayedcall(4,hide_resolution_menu());"
+  >
+ 	
+    <layer name="controlbarbtn_resolution_mode_SD"
+            url="%FIRSTXML%/skin/icontrolbar/mode_sd_active.png"
+     		handcursor="false"
+            onclick="js(egal.switch(modeSD));"
+            style="controlbar_btn_style"
+            visible="true"
+            keep="true"
+           	align="bottom"
+           	y="40"
+            />
+            
+     <layer name="controlbarbtn_resolution_mode_HD"
+            url="%FIRSTXML%/skin/icontrolbar/mode_hd.png"
+            style="controlbar_btn_style"
+            onclick="js(egal.switch(modeHD));"
+            visible="true"
+            keep="true"
+           	align="bottom"
+           	y="0"
+            />
+            
+     <layer name="controlbarbtn_resolution_mode_4K"
+            url="%FIRSTXML%/skin/icontrolbar/mode_4k.png"
+            onclick="js(egal.switch(mode4k));"
+            style="controlbar_btn_style"
+            visible="true"
+            keep="true"
+           	align="bottom"
+           	y="-40"
+            />
+ </layer>
+ 
+ <action name="show_resolution_menu">
+ 	tween(layer[mapicon].alpha,0,0.5,default,set(layer[mapicon].visible,false));
+ 	set(layer[menu_resolution_mode].y,100);
+ 	delayedcall(0.3,set(layer[menu_resolution_mode].visible,true);tween(layer[menu_resolution_mode].alpha,1,0.5);tween(layer[menu_resolution_mode].y,50,0.5););
+ </action>
+ 
+ <action name="hide_resolution_menu"> 
+ 	tween(layer[menu_resolution_mode].y,100,0.5);
+ 	tween(layer[menu_resolution_mode].alpha,0,0.5,default,set(layer[menu_resolution_mode].visible,false));
+ 	delayedcall(0.5,
+ 		set(layer[mapicon].visible,true);
+ 		tween(layer[mapicon].alpha,1,0.5);
+ 	);
+ </action>
+ 
+ <action name="update_resolution_menu">		
+		if (layer[menu_resolution_mode].visible, 
+			hide_resolution_menu();
+		,
+			show_resolution_menu();
+		);
+ </action>
+
+  <!-- ******************************************** -->
+  <!-- Background hide menu graphics on click outside this -->
+ <!-- ******************************************** -->    
+	<layer name="background_size"
+         keep="true"
+         url="%FIRSTXML%/skin/bg_menu.png" 
+         align="center"
+         width="100%"
+         height="100%"
+         zorder="0"
+         handcursor="false"
+         enabled="true"
+         visible="false"
+         alpha="0.0"
+         
+         onclick="closegraphics_background();hidebackground_size();"
+	/>
+	
+	<events name="background_sizeevents" 
+    keep="true" />
+
+  <action name="showbackground_size">
+  	set(layer[background_size].visible, true);
+  	tween(layer[background_size].alpha,0.4,0.3,default);
+  </action>
+  <action name="hidebackground_size">
+  	tween(layer[background_size].alpha,0,0.3,default,set(layer[background_size].visible, false));  	
+  </action>
+  
+  <action name="closegraphics_background">
+	close_map();
+  	controlbarcloseHelp();
+  </action>
+ <!-- ================================================================================================
+	/////////////////////////////////////////////////////////////////////////////////////////////////////
+	************************************** SOUND control - Kiem soat nam thanh ***************************
+	************************************* SU DUNG HAM: playBackgroundSound_location(%1) **************************
+	********************************TRONG DO %1: DUONG DAN SO VOI FLASH EMBED ***************************
+	/////////////////////////////////////////////////////////////////////////////////////////////////////
+	==================================================================================================
+-->
+
+<plugin name="autoguideinterface" preload="true" url="%FIRSTXML%/skin/plugins/soundinterface.swf" alturl="%FIRSTXML%/skin/plugins/soundinterface.js" keep="true"/>
+
+<plugin name="backgroundinterface" preload="true" url="%FIRSTXML%/skin/plugins/soundinterface.swf" alturl="%FIRSTXML%/skin/plugins/soundinterface.js" volume="0.5" keep="true"/>
+
+<action name="playBackgroundSound">
+	set(tour_soundson, true);
+	events.dispatch(playtoursoundsevent);
+	set(plugin[data].soundOn, true);
+	play_background_sound(get(plugin[data].background_soundURL),0,forcesounds));
+	
+</action>
+
+<action name="stopBackgroundSound">
+	set(tour_soundson, false);
+	events.dispatch(stoptoursoundsevent);
+	set(plugin[data].soundOn, false); 
+	stop_background_sound();
+</action>
+
+
+<action name="playAutoguideSound">
+	set(tour_autoguide_soundson, true);
+	events.dispatch(playtourautoguidesoundsevent);
+	set(plugin[data].sound_autoguide_On, true); 
+	play_autoguild_sound(get(plugin[data].soundURL),0,forcesounds);
+</action>
+
+<action name="stopAutoguideSound">
+	set(tour_autoguide_soundson, false);
+	events.dispatch(stoptourautoguidesoundsevent);
+	set(plugin[data].sound_autoguide_On, false); 
+	stop_autoguide_sound();
+</action>
+
+<action name="playAutoguideSound_location">
+	if(%1 != null, set(plugin[data].soundURL,%1));
+	playAutoguideSound();
+</action>
+<!--
+************** Background sound ***********************************************************
+-->
+<action name="play_background_sound">
+	if(
+		%1 == none, 
+			set(plugin[backgroundinterface].background,%1,0); 
+		, if(
+			plugin[backgroundinterface].background == %1, 
+				if (
+					%3 == forcesounds, 
+						playsound(backgroundsound,%1,%2,0); ) 
+					, 
+						playsound(backgroundsound,%1,%2); 
+						set(plugin[backgroundinterface].background,%1,0
+					);
+			);
+	);
+</action>
+<action name="stop_background_sound">stopsound(backgroundsound);delete(backgroundsound);</action>
+<!--
+************** Sound Auto guild sound ***********************************************************
+-->
+<action name="play_autoguild_sound">
+	if(get(plugin[data].autoplay),
+		if(
+			%1 == none,
+				set(plugin[autoguideinterface].background,%1,1,nextOnFinishSound()); 
+			, if(
+				plugin[autoguideinterface].background == %1,
+					if (
+						%3 == forcesounds, 
+							playsound(autoguidesound,%1,1,nextOnFinishSound()); 
+						);
+				, 
+					playsound(autoguidesound,%1,1,nextOnFinishSound()); 
+					set(plugin[autoguideinterface].background,%1);
+				) 
+		)
+		
+		,
+		
+		if(
+			%1 == none,
+				set(plugin[autoguideinterface].background,%1,0); 
+			, if(
+				plugin[autoguideinterface].background == %1,
+					if (
+						%3 == forcesounds, 
+							playsound(autoguidesound,%1,%2); 
+						);
+				, 
+					playsound(autoguidesound,%1,%2); 
+					set(plugin[autoguideinterface].background,%1);
+				) 
+		);
+	);
+	
+</action>
+<action name="stop_autoguide_sound">stopsound(autoguidesound);delete(autoguidesound);</action>
+	
+<action name="checkkey">
+	 if(keycode == 70, switch(fullscreen));
+</action>
+
+<action name="nextOnFinishSound">
+	<!--
+	if(get(plugin[data].autoplay),
+		js(egal.nextPano());
+	); -->
+</action>
+	
+  
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
+  
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
+  
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  <!-- Function control show/close graphics menu on skins -by diedp -->
+  
+  <action name="close_graphics">
+  	tween(layer[%1].alpha, 0, 0.3,default,set(layer[%1].visible,false));
+  </action>
+  
+   <action name="show_graphics">
+   	if(layer[%1].visible == false,
+  		if(%1== map_exhibition,	showbackground_size();closegraphics_background(););
+  		if(%1== menu_exhibition, showbackground_size();closegraphics_background(););
+  		if(%1== menu_exhibition_en, showbackground_size();closegraphics_background(););
+  		if(%1== menu_share,
+  			if(layer[toprightbg].y == 200,
+  				hidemenuphongtruyenthong();
+  				hidebackground_size();
+  			);
+  		);
+  		
+   		set(layer[%1].visible,true);
+  		tween(layer[%1].alpha, 1, 0.3);
+  	,
+  		tween(layer[%1].alpha, 0, 0.3,default,set(layer[%1].visible,false));
+  		hidebackground_size();
+  	);
+  </action>
+  
+  
+<!--================================================================================================
+	/////////////////////////////////////////////////////////////////////////////////////////////////////
+	************** Khai bao text style ******* **********************************************************
+	/////////////////////////////////////////////////////////////////////////////////////////////////////
+	==================================================================================================-->
+	
+	
+<textstyle name="locationstyle" font="Arial" bold="true" fontsize="12" border="false" background="false" textcolor="0xffffff" effect="glow(0x000000,0.7,4,2);dropshadow(2,45,0x000000,1,1);" edge="top"  yoffset="23"/>
+
+<textstyle name="buttonstyle" font="Arial" bold="true" fontsize="12" border="false" background="false" textcolor="0xffffff" effect="glow(0x000000,0.7,4,2);dropshadow(2,45,0x000000,1,1);" edge="top"  yoffset="-33"/>
+
+
+<action name="setData">
+		createarray(lang);
+		
+		set(lang[vi].controlbarbtn_display_help, "Hướng dẫn");
+		set(lang[vi].controlbarbtn_close_help, "Tắt hướng dẫn");
+		set(lang[vi].controlbarbtn_resolution_mode,"Độ phân giải");
+		set(lang[vi].controlbarbtn_resolution_mode_sd,"Độ nét tối ưu");
+		set(lang[vi].controlbarbtn_resolution_mode_hd,"Độ nét cao");
+		set(lang[vi].controlbarbtn_resolution_mode_4k,"Độ nét 4K");
+		set(lang[vi].controlbarbtn_sound_on, "Tắt âm thanh");
+		set(lang[vi].controlbarbtn_sound_off, "Bật âm thanh");
+		set(lang[vi].controlbarbtn_left, "Quay trái");
+		set(lang[vi].controlbarbtn_right, "Quay phải");
+		set(lang[vi].controlbarbtn_up, "Quay lên");
+		set(lang[vi].controlbarbtn_down, "Quay xuống");
+		set(lang[vi].controlbarbtn_in, "Phóng to");
+		set(lang[vi].controlbarbtn_out, "Thu nhỏ");
+		set(lang[vi].controlbarbtn_openfs, "Xem toàn màn hình");
+		set(lang[vi].controlbarbtn_closefs, "Xem bình thường");
+		set(lang[vi].controlbarbtn_autorotate_on, "Bật tự động xoay");
+		set(lang[vi].controlbarbtn_autorotate_off, "Tắt tự động xoay");
+		set(lang[vi].controlbarbtn_autoguide_on, "Tắt thuyết minh");
+		set(lang[vi].controlbarbtn_autoguide_off, "Bật thuyết minh");
+		set(lang[vi].controlbarbtn_control,"Điều hướng");
+		set(lang[vi].controlbarbtn_autoplay,"Tắt tự động tham quan");
+		set(lang[vi].controlbarbtn_autoplay_off,"Tự động tham quan");
+		set(lang[vi].hotspot, "Ẩn biểu tượng");
+		set(lang[vi].hotspot_off, "Hiện biểu tượng");
+		set(lang[vi].light, "Chế độ sáng");
+		set(lang[vi].light_off, "Chế độ tối");
+		set(lang[vi].mapicon, "Sơ đồ tham quan bảo tàng");
+		set(lang[vi].share, "Chia sẻ");
+		set(lang[vi].prev, "Điểm trước");
+		set(lang[vi].next, "Điểm kế tiếp");
+		
+		set(lang[vi].location_information,"Thông tin khu vực");
+		set(lang[vi].location_object,"Hiện vật trưng bày");
+		set(lang[vi].location_video,"Phim tư liệu");
+		set(lang[vi].location_photo,"Ảnh tư liệu");
+		
+		set(lang[vi].share_facebook,"Chia sẻ trên Facebook");
+		set(lang[vi].share_zing,"Chia sẻ trên Zing me");
+		set(lang[vi].share_twitter,"Chia sẻ trên Twitter");
+		set(lang[vi].share_google,"Chia sẻ trên Google Plus");
+		set(lang[vi].share_govn,"Chia sẻ trên Go.vn");
+		set(lang[vi].share_mail,"Chia sẻ qua thư điện tử");
+		
+		
+		set(lang[en].controlbarbtn_display_help, "Help");		
+		set(lang[en].controlbarbtn_resolution_mode,"Resolution mode");
+		set(lang[en].controlbarbtn_resolution_mode_sd,"SD Mode");
+		set(lang[en].controlbarbtn_resolution_mode_hd,"HD Mode");
+		set(lang[en].controlbarbtn_resolution_mode_4k,"4K Mode");
+		set(lang[en].controlbarbtn_close_help, "Close Help");	
+		set(lang[en].controlbarbtn_sound_on, "Volume off");
+		set(lang[en].controlbarbtn_sound_off, "Volume on");
+		set(lang[en].controlbarbtn_left, "Move left");
+		set(lang[en].controlbarbtn_right, "Move right");
+		set(lang[en].controlbarbtn_up, "Move up");
+		set(lang[en].controlbarbtn_down, "Move down");
+		set(lang[en].controlbarbtn_in, "Zoom in");
+		set(lang[en].controlbarbtn_out, "Zoom out");
+		set(lang[en].controlbarbtn_openfs, "View fullscreen");
+		set(lang[en].controlbarbtn_closefs, "View normalscreen");
+		set(lang[en].controlbarbtn_autorotate_on, "Auto rotation");
+		set(lang[en].controlbarbtn_autorotate_off, "Auto rotation off");
+		set(lang[en].controlbarbtn_autoguide_on, "Autoguide off");
+		set(lang[en].controlbarbtn_autoguide_off, "Autoguide on");
+		set(lang[en].controlbarbtn_control,"Direction");
+		set(lang[en].controlbarbtn_autoplay,"Autoplay");
+		set(lang[en].controlbarbtn_autoplay_off,"Autoplay off");
+		set(lang[en].hotspot, "Invisible Hotspot");
+		set(lang[en].hotspot_off, "Show hotspot ");
+		set(lang[en].light, "Light on");
+		set(lang[en].light_off, "Light off");		
+		set(lang[en].mapicon, "Museum Exhibition Map");
+		set(lang[en].share, "Sharing");
+		set(lang[en].prev, "Previous position");
+		set(lang[en].next, "Next position");
+		
+		set(lang[en].location_information,"Location information");
+		set(lang[en].location_object,"Location collection items");
+		set(lang[en].location_video,"Video Gallery");
+		set(lang[en].location_photo,"Photo Gallery");
+		
+		set(lang[en].share_facebook,"Sharing on Facebook");
+		set(lang[en].share_zing,"Sharing on Zing me");
+		set(lang[en].share_twitter,"Sharing on Twitter");
+		set(lang[en].share_google,"Sharing on Google Plus");
+		set(lang[en].share_govn,"Sharing on Go.vn");
+		set(lang[en].share_mail,"Sharing on E-mail");
+		
+		
+		set(tour_autoguide_soundson, false);	
+		set(autoplay,0);
+		
+		set(autorotate.speed,5);
+		set(autorotate.tofov,60);
+</action>
+
+<action name="set_title">	
+	if(plugin[data].language == vi,
+			set(title,get(lang[vi].%1));
+			,
+			set(title,get(lang[en].%1));
+	);
+</action>
+
+<action name="sethotspotTitle">set(hotspotTitle,%1);</action>
+
+
+<action name="gotoURL">
+	openurl(%1,_blank);
+</action>
+
+<action name="escPress">
+	if ( keycode == 27 ) closegraphics_background(); 
+</action>
+
+<!--================================================================================================
+	/////////////////////////////////////////////////////////////////////////////////////////////////////
+	************** ******* **********************************************************
+	/////////////////////////////////////////////////////////////////////////////////////////////////////
+	==================================================================================================-->
+
+  <events onloadcomplete="setData();js(egal.start());" keep="true"/>
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+	
+	<events onkeydown="if ( keycode == 27, closegraphics_background(); hidebackground_size(); );" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+  
+</krpano>

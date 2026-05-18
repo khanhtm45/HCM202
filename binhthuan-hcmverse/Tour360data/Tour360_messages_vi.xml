@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="vi_project_title"><![CDATA[Bảo tàng Hồ Chí Minh - Chi nhánh tỉnh Bình Thuận]]></data>
+  <data name="vi_project_author_name"><![CDATA[Megapixel Co.,Ltd]]></data>
+  <data name="vi_project_author_url"><![CDATA[http://megapixel.vn]]></data>
+
+
+
+  <data name="vi_pano10_title"><![CDATA[Toàn cảnh Bảo tàng]]></data>
+  <data name="vi_spotpoint589_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint841_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Nhà trưng bày]]></data>
+
+
+  <data name="vi_pano12_title"><![CDATA[Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint1093_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Cổng trường]]></data>
+  <data name="vi_spotpoint1096_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Cây khế]]></data>
+  <data name="vi_spotpoint1097_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1098_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpoint1101_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Nhà trưng bày]]></data>
+  <data name="vi_spotpoint1102_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Bảo tàng]]></data>
+  <data name="vi_spotpoint1360_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1361_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1363_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Giếng nước]]></data>
+  <data name="vi_spotpoint1364_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Sân trường]]></data>
+
+
+  <data name="vi_pano17_title"><![CDATA[Cổng trường]]></data>
+  <data name="vi_spotpoint1615_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpoint1616_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint1617_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà trưng bày]]></data>
+  <data name="vi_spotpoint1618_tooltip"><![CDATA[[div class=hotspottooltip][/div]Tượng Bác Hồ với thiếu nhi]]></data>
+
+  <data name="vi_panogroup64_title"><![CDATA[Sân trường]]></data>
+
+  <data name="vi_pano19_title"><![CDATA[Sân trường]]></data>
+  <data name="vi_spotpoint1619_tooltip"><![CDATA[[div class=hotspottooltip][/div]Cổng trường]]></data>
+  <data name="vi_spotpoint1620_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpoint1621_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_pano37_title"><![CDATA[Sân trường]]></data>
+  <data name="vi_spotpoint1984_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint1985_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpoint1986_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpoint1993_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1994_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpolygon3528_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3528javascriptcalljsfunctioncall"><![CDATA[SI("56")]]></data>
+  <data name="vi_spotpolygon3530_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3530javascriptcalljsfunctioncall"><![CDATA[SI("55")]]></data>
+  <data name="vi_pano38_title"><![CDATA[Sân trường]]></data>
+  <data name="vi_spotpoint1987_tooltip"><![CDATA[[div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1988_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpoint1989_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint1990_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_pano39_title"><![CDATA[Sân trường]]></data>
+  <data name="vi_spotpoint1991_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpoint1992_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpolygon3531_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3531javascriptcalljsfunctioncall"><![CDATA[SI("54")]]></data>
+  <data name="vi_pano41_title"><![CDATA[Sân trường]]></data>
+  <data name="vi_spotpoint1995_tooltip"><![CDATA[[div class=hotspottooltip][/div]Giếng nước]]></data>
+  <data name="vi_spotpoint1996_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpoint1997_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1998_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+
+  <data name="vi_panogroup47_title"><![CDATA[Lớp học]]></data>
+
+  <data name="vi_pano20_title"><![CDATA[Lớp học]]></data>
+  <data name="vi_spotpoint1648_tooltip"><![CDATA[[div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1649_tooltip"><![CDATA[[div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1657_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpolygon3535_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3535javascriptcalljsfunctioncall"><![CDATA[SI("72")]]></data>
+  <data name="vi_pano21_title"><![CDATA[Lớp học]]></data>
+  <data name="vi_spotpoint1650_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1651_tooltip"><![CDATA[[div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1652_tooltip"><![CDATA[[div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1653_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpolygon3549_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3549javascriptcalljsfunctioncall"><![CDATA[SI("71")]]></data>
+  <data name="vi_spotpolygon3550_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3550javascriptcalljsfunctioncall"><![CDATA[SI("70")]]></data>
+  <data name="vi_pano22_title"><![CDATA[Lớp học]]></data>
+  <data name="vi_spotpoint1654_tooltip"><![CDATA[[div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1655_tooltip"><![CDATA[[div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1656_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpolygon3536_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3536javascriptcalljsfunctioncall"><![CDATA[SI("72")]]></data>
+  <data name="vi_spotpolygon4297_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon4297javascriptcalljsfunctioncall"><![CDATA[SI("70")]]></data>
+
+  <data name="vi_panogroup59_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+
+  <data name="vi_pano32_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1658_tooltip"><![CDATA[[div class=hotspottooltip][/div]Lớp học]]></data>
+  <data name="vi_spotpoint1659_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1660_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_pano33_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1661_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1662_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpolygon4291_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon4291javascriptcalljsfunctioncall"><![CDATA[SI("60")]]></data>
+  <data name="vi_pano34_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1663_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1664_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1665_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpolygon4292_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon4292javascriptcalljsfunctioncall"><![CDATA[SI("60")]]></data>
+  <data name="vi_pano35_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1666_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpolygon4293_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon4293javascriptcalljsfunctioncall"><![CDATA[SI("60")]]></data>
+  <data name="vi_pano36_title"><![CDATA[Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1667_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1669_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpolygon4294_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon4294javascriptcalljsfunctioncall"><![CDATA[SI("73")]]></data>
+  <data name="vi_spotpolygon4295_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon4295javascriptcalljsfunctioncall"><![CDATA[SI("74")]]></data>
+  <data name="vi_spotpolygon4296_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon4296javascriptcalljsfunctioncall"><![CDATA[SI("75")]]></data>
+
+  <data name="vi_panogroup55_title"><![CDATA[Nhà Ngư]]></data>
+
+  <data name="vi_pano28_title"><![CDATA[Nhà Ngư]]></data>
+  <data name="vi_spotpoint1638_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpoint1639_tooltip"><![CDATA[[div class=hotspottooltip][/div]Cây khế]]></data>
+  <data name="vi_spotpoint1640_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_pano29_title"><![CDATA[Nhà Ngư]]></data>
+  <data name="vi_spotpoint1641_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpoint1642_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpoint1645_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpolygon3545_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3545javascriptcalljsfunctioncall"><![CDATA[SI("58")]]></data>
+  <data name="vi_pano30_title"><![CDATA[Nhà Ngư]]></data>
+  <data name="vi_spotpoint1643_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpoint1644_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpolygon3546_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3546javascriptcalljsfunctioncall"><![CDATA[SI("59")]]></data>
+  <data name="vi_pano31_title"><![CDATA[Nhà Ngư]]></data>
+  <data name="vi_spotpoint1646_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpoint1647_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpolygon3547_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3547javascriptcalljsfunctioncall"><![CDATA[SI("78")]]></data>
+  <data name="vi_spotpolygon3548_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3548javascriptcalljsfunctioncall"><![CDATA[SI("79")]]></data>
+
+  <data name="vi_panogroup50_title"><![CDATA[Ngọa Du Sào]]></data>
+
+  <data name="vi_pano23_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1622_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint1623_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1624_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpoint1668_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà thờ Nguyễn Thông]]></data>
+  <data name="vi_spotpoint1999_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpolygon3537_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3537javascriptcalljsfunctioncall"><![CDATA[SI("57")]]></data>
+  <data name="vi_pano24_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1625_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1626_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1628_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpolygon3538_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3538javascriptcalljsfunctioncall"><![CDATA[SI("68")]]></data>
+  <data name="vi_spotpolygon3543_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3543javascriptcalljsfunctioncall"><![CDATA[SI("66")]]></data>
+  <data name="vi_pano25_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1629_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpolygon3544_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3544javascriptcalljsfunctioncall"><![CDATA[SI("67")]]></data>
+  <data name="vi_pano26_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1630_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1631_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+  <data name="vi_spotpolygon3539_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3539javascriptcalljsfunctioncall"><![CDATA[SI("75")]]></data>
+  <data name="vi_spotpolygon3540_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3540javascriptcalljsfunctioncall"><![CDATA[SI("69")]]></data>
+  <data name="vi_spotpolygon3541_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3541javascriptcalljsfunctioncall"><![CDATA[SI("64")]]></data>
+  <data name="vi_spotpolygon3542_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3542javascriptcalljsfunctioncall"><![CDATA[SI("65")]]></data>
+  <data name="vi_pano27_title"><![CDATA[Ngọa Du Sào]]></data>
+  <data name="vi_spotpoint1632_tooltip"><![CDATA[[div class=hotspottooltip][/div]Ngọa Du Sào]]></data>
+
+
+  <data name="vi_pano16_title"><![CDATA[Cây khế]]></data>
+  <data name="vi_spotpoint1635_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint1636_tooltip"><![CDATA[[div class=hotspottooltip][/div]Giếng nước]]></data>
+  <data name="vi_spotpoint1637_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà Ngư]]></data>
+  <data name="vi_spotpolygon3533_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3533javascriptcalljsfunctioncall"><![CDATA[SI("63")]]></data>
+
+
+  <data name="vi_pano18_title"><![CDATA[Giếng nước]]></data>
+  <data name="vi_spotpoint1633_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint1634_tooltip"><![CDATA[[div class=hotspottooltip][/div]Cây khế]]></data>
+  <data name="vi_spotpoint2000_tooltip"><![CDATA[[div class=hotspottooltip][/div]Sân trường]]></data>
+  <data name="vi_spotpolygon3532_tooltip"><![CDATA[Xem hình ảnh]]></data>
+  <data name="vi_spotpolygon3532javascriptcalljsfunctioncall"><![CDATA[SI("62")]]></data>
+
+
+  <data name="vi_pano14_title"><![CDATA[Toàn cảnh Nhà trưng bày]]></data>
+  <data name="vi_spotpoint2001_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Trường Dục Thanh]]></data>
+  <data name="vi_spotpoint2002_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Bảo tàng]]></data>
+  <data name="vi_spotpoint2003_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Tượng Bác Hồ với thiếu nhi]]></data>
+  <data name="vi_spotpoint2004_tooltip"><![CDATA[[div class=location][/div][div class=hotspottooltip][/div]Nhà trưng bày]]></data>
+
+
+  <data name="vi_pano206_title"><![CDATA[Tượng Bác Hồ với thiếu nhi]]></data>
+  <data name="vi_spotpoint2005_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Nhà trưng bày]]></data>
+  <data name="vi_spotpoint2006_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà trưng bày]]></data>
+
+  <data name="vi_panogroup283_title"><![CDATA[Nhà trưng bày]]></data>
+
+  <data name="vi_pano200_title"><![CDATA[Nhà trưng bày]]></data>
+  <data name="vi_spotpoint2007_tooltip"><![CDATA[[div class=hotspottooltip][/div]Toàn cảnh Nhà trưng bày]]></data>
+  <data name="vi_spotpoint2008_tooltip"><![CDATA[[div class=hotspottooltip][/div]Tượng Bác Hồ với thiếu nhi]]></data>
+  <data name="vi_spotpoint2009_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà trưng bày]]></data>
+  <data name="vi_pano202_title"><![CDATA[Nhà trưng bày]]></data>
+  <data name="vi_spotpoint2010_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà trưng bày]]></data>
+  <data name="vi_spotpoint2011_tooltip"><![CDATA[[div class=hotspottooltip][/div]Gian long trọng]]></data>
+
+  <data name="vi_panogroup281_title"><![CDATA[Gian long trọng]]></data>
+
+  <data name="vi_pano198_title"><![CDATA[Gian long trọng]]></data>
+  <data name="vi_spotpoint2012_tooltip"><![CDATA[[div class=hotspottooltip][/div]Nhà trưng bày]]></data>
+  <data name="vi_spotpoint2013_tooltip"><![CDATA[[div class=hotspottooltip][/div]Gian long trọng]]></data>
+  <data name="vi_spotpoint2014_tooltip"><![CDATA[[div class=hotspottooltip][/div]Phòng truyền thông]]></data>
+  <data name="vi_spotpoint2015_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề I]]></data>
+  <data name="vi_pano199_title"><![CDATA[Gian long trọng]]></data>
+  <data name="vi_spotpoint2016_tooltip"><![CDATA[[div class=hotspottooltip][/div]Gian long trọng]]></data>
+
+  <data name="vi_panogroup207_title"><![CDATA[Chủ đề I]]></data>
+
+  <data name="vi_pano124_title"><![CDATA[Chủ đề I]]></data>
+  <data name="vi_spotpoint2022_tooltip"><![CDATA[[div class=hotspottooltip][/div]Gian long trọng]]></data>
+  <data name="vi_spotpoint2023_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano125_title"><![CDATA[Chủ đề I]]></data>
+  <data name="vi_spotpoint2024_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2025_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano126_title"><![CDATA[Chủ đề I]]></data>
+  <data name="vi_spotpoint2026_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2027_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano127_title"><![CDATA[Chủ đề I]]></data>
+  <data name="vi_spotpoint2028_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2029_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano128_title"><![CDATA[Chủ đề I]]></data>
+  <data name="vi_spotpoint2030_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2031_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano129_title"><![CDATA[Chủ đề I]]></data>
+  <data name="vi_spotpoint2032_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2033_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano130_title"><![CDATA[Chủ đề I]]></data>
+  <data name="vi_spotpoint2034_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề II]]></data>
+  <data name="vi_spotpoint2035_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+
+  <data name="vi_panogroup214_title"><![CDATA[Chủ đề II]]></data>
+
+  <data name="vi_pano131_title"><![CDATA[Chủ đề II]]></data>
+  <data name="vi_spotpoint2036_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2037_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề I]]></data>
+  <data name="vi_pano132_title"><![CDATA[Chủ đề II]]></data>
+  <data name="vi_spotpoint2038_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề III]]></data>
+  <data name="vi_spotpoint2039_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+
+  <data name="vi_panogroup216_title"><![CDATA[Chủ đề III]]></data>
+
+  <data name="vi_pano133_title"><![CDATA[Chủ đề III]]></data>
+  <data name="vi_spotpoint2040_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2041_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề II]]></data>
+  <data name="vi_pano135_title"><![CDATA[Chủ đề III]]></data>
+  <data name="vi_spotpoint2044_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề IV]]></data>
+  <data name="vi_spotpoint2045_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano134_title"><![CDATA[Chủ đề III]]></data>
+  <data name="vi_spotpoint2042_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề IV]]></data>
+  <data name="vi_spotpoint2043_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+
+  <data name="vi_panogroup219_title"><![CDATA[Chủ đề IV]]></data>
+
+  <data name="vi_pano136_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="vi_spotpoint2046_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề III]]></data>
+  <data name="vi_spotpoint2047_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano137_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="vi_spotpoint2048_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2049_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano138_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="vi_spotpoint2050_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2051_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano142_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="vi_spotpoint2052_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2053_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano141_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="vi_spotpoint2054_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2055_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_pano140_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="vi_spotpoint2056_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2057_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano139_title"><![CDATA[Chủ đề IV]]></data>
+  <data name="vi_spotpoint2058_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2059_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề V]]></data>
+
+  <data name="vi_panogroup226_title"><![CDATA[Chủ đề V]]></data>
+
+  <data name="vi_pano143_title"><![CDATA[Chủ đề V]]></data>
+  <data name="vi_spotpoint2501_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề IV]]></data>
+  <data name="vi_spotpoint2502_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano144_title"><![CDATA[Chủ đề V]]></data>
+  <data name="vi_spotpoint2503_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2504_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano145_title"><![CDATA[Chủ đề V]]></data>
+  <data name="vi_spotpoint2505_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2506_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano146_title"><![CDATA[Chủ đề V]]></data>
+  <data name="vi_spotpoint2507_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2508_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano147_title"><![CDATA[Chủ đề V]]></data>
+  <data name="vi_spotpoint2509_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2510_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano148_title"><![CDATA[Chủ đề V]]></data>
+  <data name="vi_spotpoint2511_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2512_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano149_title"><![CDATA[Chủ đề V]]></data>
+  <data name="vi_spotpoint2513_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2514_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano150_title"><![CDATA[Chủ đề V]]></data>
+  <data name="vi_spotpoint2515_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2516_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề VI]]></data>
+
+  <data name="vi_panogroup234_title"><![CDATA[Chủ đề VI]]></data>
+
+  <data name="vi_pano151_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2517_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề V]]></data>
+  <data name="vi_spotpoint2518_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano152_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2519_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2520_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano153_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2521_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2522_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano154_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2523_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2524_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano155_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2525_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2526_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano156_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2527_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2528_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano157_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2529_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2530_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano158_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2531_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2532_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano159_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2533_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2534_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano160_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2535_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2536_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano161_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2537_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2538_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano162_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2539_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2549_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano167_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2550_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2551_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano163_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2541_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2542_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano164_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2543_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2544_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano165_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2545_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2546_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano166_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2547_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2548_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano168_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2552_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2553_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano169_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2554_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2555_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano170_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2556_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2557_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano171_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2558_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_spotpoint2559_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano172_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2560_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2561_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano173_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2562_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2563_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano174_title"><![CDATA[Chủ đề VI]]></data>
+  <data name="vi_spotpoint2564_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2565_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề VII]]></data>
+
+  <data name="vi_panogroup258_title"><![CDATA[Chủ đề VII]]></data>
+
+  <data name="vi_pano175_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2795_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề VI]]></data>
+  <data name="vi_spotpoint2796_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano176_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2797_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2798_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano177_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2799_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2800_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano178_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2801_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2802_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano179_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2803_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2804_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano181_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2805_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2806_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano514_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2807_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2808_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano182_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2809_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2810_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano183_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2811_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2812_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano184_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2813_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2814_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano186_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2817_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2818_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano185_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2815_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2816_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano187_title"><![CDATA[Chủ đề VII]]></data>
+  <data name="vi_spotpoint2819_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint2820_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề VIII]]></data>
+
+  <data name="vi_panogroup271_title"><![CDATA[Chủ đề VIII]]></data>
+
+  <data name="vi_pano188_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3505_tooltip"><![CDATA[[div class=hotspottooltip][/div]Chủ đề VII]]></data>
+  <data name="vi_spotpoint3506_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano189_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3507_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3508_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano190_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3509_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3510_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano191_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3511_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3512_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano192_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3513_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3514_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano193_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3515_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3516_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano194_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3517_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3518_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano195_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3519_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3520_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano196_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3521_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3522_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano3523_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3525_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+  <data name="vi_spotpoint3526_tooltip"><![CDATA[[div class=hotspottooltip][/div]Xem tiếp]]></data>
+  <data name="vi_pano197_title"><![CDATA[Chủ đề VIII]]></data>
+  <data name="vi_spotpoint3527_tooltip"><![CDATA[[div class=hotspottooltip][/div]Quay lại]]></data>
+
+  <data name="vi_panogroup286_title"><![CDATA[Phòng truyền thông]]></data>
+
+  <data name="vi_pano205_title"><![CDATA[Phòng truyền thông]]></data>
+  <data name="vi_spotpoint2017_tooltip"><![CDATA[[div class=hotspottooltip][/div]Phòng truyền thông]]></data>
+  <data name="vi_spotpoint2019_tooltip"><![CDATA[[div class=hotspottooltip][/div]Gian long trọng]]></data>
+  <data name="vi_pano204_title"><![CDATA[Phòng truyền thông]]></data>
+  <data name="vi_spotpoint2018_tooltip"><![CDATA[[div class=hotspottooltip][/div]Phòng truyền thông]]></data>
+
+
+
+
+
+
+  <data name="vi_panotourmapskey"><![CDATA[AIzaSyAdD7JQlLHrlswfkFH4aER0rk7sed-YELg]]></data>
+  <data name="vi_contextmenuopenFsLabel"><![CDATA[Xem toàn màn hình]]></data>
+  <data name="vi_contextmenucloseFsLabel"><![CDATA[Thoát toàn màn hình]]></data>
+  <data name="vi_contextmenuopenVrLabel"><![CDATA[Xem trên kính thực tế ảo]]></data>
+  <data name="vi_contextmenunormallabel"><![CDATA[Normal View]]></data>
+  <data name="vi_contextmenufisheyelabel"><![CDATA[Fisheye View]]></data>
+  <data name="vi_contextmenuarchitecturallabel"><![CDATA[Architectural View]]></data>
+  <data name="vi_contextmenulittleplanetlabel"><![CDATA[Little Planet View]]></data>
+  <data name="vi_contextmenufisheyeballlabel"><![CDATA[Fisheye Ball View]]></data>
+
+
+  <data name="vi_vr_setup_hmd0"><![CDATA[SELECT YOUR HMD]]></data>
+  <data name="vi_vr_setup_advanced"><![CDATA[ADVANCED SETTINGS]]></data>
+  <data name="vi_vr_setup_title"><![CDATA[WEB VR SETTINGS]]></data>
+  <data name="vi_vr_setup_dvn1"><![CDATA[Device:]]></data>
+  <data name="vi_vr_setup_siz1"><![CDATA[Screen size:]]></data>
+  <data name="vi_vr_setup_ipd1"><![CDATA[IPD:]]></data>
+  <data name="vi_vr_setup_hmd1"><![CDATA[HMD:]]></data>
+  <data name="vi_vr_setup_hmd3"><![CDATA[Customize]]></data>
+  <data name="vi_vr_setup_cal"><![CDATA[Calibrate gyroscope]]></data>
+  <data name="vi_vr_setup_sav"><![CDATA[SAVE]]></data>
+  <data name="vi_vr_setup_rst"><![CDATA[RESET]]></data>
+  <data name="vi_vr_setup_simple"><![CDATA[SIMPLE]]></data>
+  <data name="vi_vr_setup_cls"><![CDATA[CLOSE]]></data>
+  <data name="vi_vr_setup_m31"><![CDATA[HMD SETTINGS]]></data>
+  <data name="vi_vr_setup_fov1"><![CDATA[FOV:]]></data>
+  <data name="vi_vr_setup_dst1"><![CDATA[Distortion:]]></data>
+  <data name="vi_vr_setup_d2tx"><![CDATA[Distortion 2:]]></data>
+  <data name="vi_vr_setup_vig1"><![CDATA[Vignette:]]></data>
+  <data name="vi_vr_setup_cac1"><![CDATA[Chromatic aberration:]]></data>
+  <data name="vi_vr_setup_olp1"><![CDATA[Overlap:]]></data>
+  <data name="vi_vr_setup_m35"><![CDATA[RETURN]]></data>
+  <data name="vi_vr_setup_cb1"><![CDATA[GYROSCOPE]]></data>
+  <data name="vi_vr_setup_cb2"><![CDATA[Place the device on a flat and[br]stable surface and tab CALIBRATE[br]to correct a gyroscope drifting.]]></data>
+  <data name="vi_vr_setup_cb3"><![CDATA[CALIBRATE]]></data>
+  <data name="vi_vr_setup_cb4"><![CDATA[RESET]]></data>
+  <data name="vi_vr_setup_cb5"><![CDATA[RETURN]]></data>
+  <data name="vi_vr_setup_cb6"><![CDATA[Calibrating...]]></data>
+  <data name="vi_vr_setup_cb7"><![CDATA[Successful calibration]]></data>
+  <data name="vi_vr_setup_cb8"><![CDATA[Calibration failed]]></data>
+  <data name="vi_vr_setup_unavailable"><![CDATA[VR mode[br]is unavailable on your device]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>

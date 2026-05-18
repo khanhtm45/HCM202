@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+  <!-- Global variables used by actions and plugins -->
+  <krpano
+        tour_soundson="true"
+        tour_soundsvolume="91"
+        tour_autotourenabled="false"
+        tour_autorotateenabled="false"
+        tour_controlmodemousetype="drag"
+        tour_controlmodetouchtype="drag"
+        tour_fullscreen="false"
+        tour_displaymap="false"
+        tour_displaythumbnails="true"
+        tour_displayfloorplan="false"
+        tour_displayinfo="false"
+        tour_displayspots="true"
+        tour_displaycontrols="true"
+        tour_language="vi" />
+  <krpano tour_gyroscopedevices="true" devices="no-desktop.and.html5" />
+  <krpano tour_vrdevices="true" devices="html5" />
+  <krpano videos_sounds_path="%FIRSTXML%" devices="html5" />
+  <krpano videos_sounds_path="%VIEWER%" devices="flash" />
+  <krpano projection_current_params="view.fisheyefovlink=0.5&amp;view.architectural=0.0&amp;view.pannini=0.0&amp;view.fisheye=0.0&amp;view.stereographic=false" />
+
+
+  <display autofullscreen="false" devices="android" />
+
+
+  <krpano vrtourdevice.desktop="desktop" vrtourdevice.tablet="tablet" vrtourdevice.mobile="mobile" />
+  <krpano vrtourdevicescale.desktop="1.0" vrtourdevicescale.tablet="1.0" vrtourdevicescale.mobile="1.0" />
+  <action name="vrtourcurrentscale" autorun="preinit">
+    mul(stagescale,get(vrtourdevicescale));
+  </action>
+
+  <!-- Control Mode Management -->
+  <action name="setControlModeDragTo">setControlMode(drag);</action>
+  <action name="setControlModeMoveTo">setControlMode(moveto);</action>
+  <action name="setControlMode">
+    if (device.desktop,
+      set(control.mouse, %1);
+      set(tour_controlmodemousetype, %1);
+    ,
+      set(control.touch, %1);
+      set(tour_controlmodetouchtype, %1);
+    );
+    events.dispatch(oncontrolmodechanged);
+  </action>
+
+
+  <!-- Tour Messages -->
+  <action name="getmessage">
+    txtadd(real_message_id, get(tour_language), "_", %2);
+    set(%1, get(data[get(real_message_id)].content));
+  </action>
+
+  <!-- Hide / Show Hotspots -->
+  <action name="hideHotspots">
+    set(tour_displayspots, false);
+    set(nb_spots, get(hotspot.count));
+    if (nb_spots != 0, hidepanospotsaction(); );
+    events.dispatch(hotspots_visibility_changed);
+  </action>
+  <action name="showHotspots">
+    set(tour_displayspots, true);
+    set(nb_spots, get(hotspot.count));
+    if (nb_spots != 0, showpanospotsaction(); );
+    events.dispatch(hotspots_visibility_changed);
+  </action>
+
+  <events name="hideShowHotspotsOnNewPanoEvent" onPanoStart="hideShowHotspotsOnNewPanoAction" keep="true"/>
+  <action name="hideShowHotspotsOnNewPanoAction">
+    set(nb_spots, get(hotspot.count));
+    if (nb_spots != 0,
+      if (tour_displayspots, showpanospotsaction(); , hidepanospotsaction(); );
+    );
+  </action>
+
+
+
+  <action name="startbehavioursxmlcompleteaction">
+    events.dispatch(onPanoStart);
+  </action>
+
+
+
+
+
+  <events name="startTourForJsEvents" onTourStart="startTourForJsEventsAction();" keep="true" />
+  <action name="startTourForJsEventsAction">
+    js(eventTourStarted());
+  </action>
+
+
+
+
+  <krpano panovideospotsstate="false" />
+  <krpano panolivepanospotsstate="false" />
+  <events name="panoVideosSpotsStateEvent" onTourStart="set(panovideospotsstate, true);set(panolivepanospotsstate, true);" keep="true" />
+
+  <krpano ptblendmode="BLEND(1.0, easeInCubic)" />
+  <action name="mainloadsceneStartup">
+    loadscene(%1, get(projection_current_params), NOPREVIEW|MERGE);
+  </action>
+  <action name="mainloadscene">
+    if (xml.scene != %1,
+      events.dispatch(onleavingscene, true);
+      interruptAnimation();
+
+      for(set(scenei,0), scenei LT scene.count, inc(scenei),if(scene[get(scenei)].name == %1,
+      
+
+
+      loadscene(%1, get(projection_current_params), NOPREVIEW|MERGE|KEEPVIEW|KEEPMOVING, get(ptblendmode));
+
+
+
+      ););
+
+    );
+  </action>
+
+  <!-- Load Previous Scene -->
+  <action name="loadPreviousScene">
+    copy(sceneprevnexti, scene[get(xml.scene)].index);
+    dec(sceneprevnexti);
+    if (sceneprevnexti LT 0, sub(sceneprevnexti, scene.count, 1););
+    mainloadscene(get(scene[get(sceneprevnexti)].name));
+  </action>
+
+  <!-- Load Next Scene -->
+  <action name="loadNextScene">
+    copy(sceneprevnexti, scene[get(xml.scene)].index);
+    inc(sceneprevnexti);
+    if (sceneprevnexti GE scene.count, set(sceneprevnexti, 0););
+    mainloadscene(get(scene[get(sceneprevnexti)].name));
+  </action>
+
+
+  <!-- AUTOROTATION -->
+  <autorotate enabled="false"/>
+  <krpano tour_autorotation_pausecounter="0"/>
+  <krpano tour_autorotation_pauseplugin="0"/>
+  <krpano tour_autorotation_openatstartplugin="0"/>
+  <action name="startautorotation">
+    if(tour_autorotation_pausecounter LE 0,
+      set(tour_autorotateenabled, true );
+
+      invalidatescreen();
+      set(autorotate.enabled, true);
+      set(tour_autorotation_pausecounter, 0);
+      events.dispatch(onstartautorotation);
+
+      if(tour_autotourenabled,
+        resetautotourvariables();
+      );
+    );
+  </action>
+  <action name="stopautorotation">
+    set(tour_autorotateenabled, false);
+    set(autorotate.enabled, false);
+    events.dispatch(onstopautorotation);
+
+    if(tour_autotourenabled,
+      stopautotourtimer();
+    );
+  </action>
+  <action name="pauseautorotation">
+    if(%1 == forceplugin,
+      inc(tour_autorotation_pauseplugin);
+    );
+    inc(tour_autorotation_pausecounter);
+    if(tour_autorotateenabled,
+      set(autorotate.enabled, false);
+      events.dispatch(onpauseautorotation);
+
+      if(tour_autotourenabled AND useautotourdelay == false,
+        stopautotourtimer();
+      );
+    );
+  </action>
+  <action name="resumeautorotation">
+    if(%1 == forceplugin,
+      if (tour_autorotation_pauseplugin GT 0,
+        dec(tour_autorotation_pauseplugin);
+      );
+    );
+    if (tour_autorotation_pausecounter GE 0,
+      if(%1 != forceresume,
+        if ((tour_autorotation_pausecounter GT 0) AND (tour_autorotation_pausecounter GT tour_autorotation_pauseplugin),
+         dec(tour_autorotation_pausecounter);
+        );
+      );
+    );
+    if(tour_autorotateenabled,
+      if(tour_autorotation_pausecounter == 0,
+        if(%1 != forceresume,
+          set(autorotate.enabled, true);
+          events.dispatch(onresumeautorotation);
+
+          if(tour_autotourenabled,
+            resetautotourvariables();
+          );
+        );
+      );
+    ,
+      if(%1 != forceresume,
+        if(%1 != forceplugin,
+          if(%1 != forcehotspot,
+            startautorotation();
+          );
+        ,
+
+          set(forceAutorotationFromPluginUnload, false);
+          if(action['autorotationatstart'],
+            set(forceAutorotationFromPluginUnload, true);
+          );
+          if(action['autotouratstart'],
+            set(forceAutorotationFromPluginUnload, true);
+          );
+          if(forceAutorotationFromPluginUnload,
+            if(tour_autorotation_openatstartplugin == 1,
+              if((tour_autorotation_pauseplugin LE 0) AND (tour_autorotation_pausecounter LE 0),
+                startautorotation();
+              );
+            );
+          );
+        );
+      );
+    );
+  </action>
+  <events name="autorotation_events" onnewpano="if(tour_autorotation_pauseplugin LE 0,resumeautorotation(forceresume););" ongyroscopeon="pauseautorotation(forceplugin);" ongyroscopeoff="resumeautorotation(forceplugin);" keep="true"/>
+
+
+  <!-- AUTOTOUR -->
+
+  <krpano useautotourdelay="false" autotourdelay="5" autotourHorizontalStartValue="0" />
+  <action name="startautotour">
+    set(tour_autotourenabled, true);
+startautorotation();
+
+
+    events.dispatch(onstartautotour);
+
+
+  </action>
+  <action name="resetautotourvariables">
+    stopautotourtimer();
+    if (scene[get(xml.scene)].planar,
+      set(autotourdelay, 10);
+      delayedcall(autotour_call_id, get(autotourdelay), autotourtimer);
+    ,
+      set(autotourHorizontalStartValue, get(view.hlookat));
+      if ((panoview.hmin == -180) AND (panoview.hmax == 180),
+        delayedcallAutotourFull360();
+      ,
+        set(previousStep, 0);
+        set(panoramaHorizontalSize, 0);
+        set(totalPartialSize, 0);
+        set(firstBorderSize, 0);
+        set(secondBorderSize, 0);
+        set(firstStep, 0);
+        set(firstStepTest, 0);
+        set(firstStepKeep, 0);
+        set(borderCounter, 0);
+        sub(panoramaHorizontalSize, get(panoview.hmax), get(panoview.hmin));
+        Math.abs(panoramaHorizontalSize);
+        delayedcallAutotourPartial();
+      );
+    );
+  </action>
+  <action name="delayedcallAutotourPartial">
+    sub(tempPosition, get(view.hlookat), get(autotourHorizontalStartValue));
+    Math.ceil(tempPosition);
+    Math.abs(tempPosition);
+    if(borderCounter == 0 AND tempPosition LT previousStep,
+
+      inc(borderCounter);
+      Math.abs(firstStep, get(previousStep));
+      sub(firstStepTest, get(previousStep), get(firstStep));
+      set(firstStepKeep, get(firstStepTest));
+      Math.abs(firstBorderSize, get(previousStep));
+      add(totalPartialSize, get(firstBorderSize));
+    );
+    if(borderCounter GE 1,
+      if(firstBorderSize != 0,
+        sub(firstStepTest, get(previousStep), get(firstStep));
+        Math.abs(firstStepTest, get(firstStepTest));
+        if(firstStepTest LT firstStepKeep,
+
+          add(totalPartialSize, get(firstBorderSize));
+          set(firstBorderSize, 0);
+        );
+        set(firstStepKeep, get(firstStepTest));
+      ,
+        if(tempPosition LT previousStep,
+
+          inc(borderCounter);
+          Math.abs(secondBorderSize, get(previousStep));
+          add(totalPartialSize, get(secondBorderSize));
+        );
+      );
+    );
+    set(previousStep, get(tempPosition));
+    if(borderCounter GE 2 AND totalPartialSize GT panoramaHorizontalSize,
+      delete(previousStep, panoramaHorizontalSize, totalPartialSize, firstBorderSize, secondBorderSize, firstStep, firstStepTest, firstStepKeep, borderCounter);
+      autotourtimer();
+    ,
+      delayedcall(autotour_call_id, 0.5, delayedcallAutotourPartial);
+    );
+  </action>
+  <action name="delayedcallAutotourFull360">
+    sub(tempPosition, get(view.hlookat), get(autotourHorizontalStartValue));
+    mod(tempPositionMod, get(tempPosition), 360);
+    Math.ceil(tempPosition);
+    Math.ceil(tempPositionMod);
+    if(tempPositionMod == tempPosition,
+      delayedcall(autotour_call_id, 0.5, delayedcallAutotourFull360);
+    ,
+      autotourtimer();
+    );
+  </action>
+  <action name="stopautotour">
+    set(tour_autotourenabled, false);
+    stopautotourtimer();
+stopautorotation();
+
+
+    events.dispatch(onstopautotour);
+  </action>
+  <action name="autotourtimer">
+    if(tour_autotourenabled,
+      if(tour_autorotateenabled,
+        if(autorotate.enabled,
+          stopautotour();loadNextScene();
+
+          startautotour();
+        );
+      );
+    );
+  </action>
+  <action name="stopautotourtimer">
+    stopdelayedcall(autotour_call_id);
+  </action>
+  <events name="autotourevents" 
+    onnewpano="autotouronnewpanoaction();" 
+    onmouseup="autotouronuseraction(true);" 
+    onmousedown="autotouronuseraction(false);" 
+    onkeyup="autotouronuseraction(true);" 
+    keep="true" />
+  <action name="autotouronnewpanoaction">
+    if(tour_autotourenabled, resetautotourvariables(););
+  </action>
+  <action name="autotouronuseraction">
+    if(tour_autotourenabled, if(%1, resetautotourvariables();, stopautotourtimer();););
+  </action>
+
+
+
+  <krpano tour_deeplinkingvars=""/>
+  <action name="computeDeepLinkingURL">
+    txtadd(tour_deeplinkingvars, "s=", get(xml.scene));
+    set(viewhlookat, get(view.hlookat));roundval(viewhlookat, 4);
+    mod(viewhlookat, 360);
+    if (viewhlookat GT 180,
+      sub(viewhlookat, 360);
+     ,
+      if (viewhlookat LT -180, add(viewhlookat, 360));
+    );
+    set(viewvlookat, get(view.vlookat));roundval(viewvlookat, 4);
+    set(viewfov, get(view.fov));roundval(viewfov, 4);
+    txtadd(tour_deeplinkingvars, get(tour_deeplinkingvars), "&amp;h=", get(viewhlookat));
+    txtadd(tour_deeplinkingvars, get(tour_deeplinkingvars), "&amp;v=", get(viewvlookat));
+    txtadd(tour_deeplinkingvars, get(tour_deeplinkingvars), "&amp;f=", get(viewfov));
+    if (%1 !== null,if (%1, txtadd(tour_deeplinkingvars, get(tour_deeplinkingvars), "&amp;skipintro");););
+    if (%2 !== null,if (%2, txtadd(tour_deeplinkingvars, get(tour_deeplinkingvars), "&amp;norotation");););
+
+  </action>
+
+
+  <!-- Spot animation management -->
+  <action name="animate">
+    if (tour_stopsequence == false,
+      if (stopspotsequence == false,
+        txtadd(delayedname, %1, 'delay');
+        if(hotspot[%1].loaded,
+          inc(hotspot[%1].frame,1,get(hotspot[%1].lastframe),0);
+          mul(hotspot[%1].ypos,get(hotspot[%1].frame),get(hotspot[%1].frameheight));
+          txtadd(hotspot[%1].crop,'0|',get(hotspot[%1].ypos),'|',get(hotspot[%1].framewidth),'|',get(hotspot[%1].frameheight));
+        );
+        delayedcall(get(delayedname),%2,animate(%1,%2));
+      );
+    );
+  </action>
+  <action name="startspotanimation">
+    set(tour_stopsequence, false);
+    set(stopspotsequence , false);
+    animate(get(name), %1);
+  </action>
+  <action name="stopspotanimation">
+    set(hotspot[%1].stopspotsequence, true);
+    txtadd(delayedname, %1, 'delay');
+    stopdelayedcall(get(delayedname));
+  </action>
+  <action name="interruptAnimation">
+    if(tour_stopsequence == false,
+      set(tour_stopsequence, true);
+
+    );
+  </action>
+
+  <!-- Disable the default fullscreen mode as it does a fullscreen only on the viewer not "on the tour" -->
+  <contextmenu fullscreen="false" versioninfo="false" />
+
+  <!-- Tooltips management -->
+<!-- Tooltip Management -->
+
+<krpano tooltipCurrentTextfieldLayer="panotourTooltipDefaultText" coretooltipmess=""/>
+
+
+
+<action name="hideTooltip">
+<!-- Not required for VR -->
+</action>
+
+<action name="showPermanentTooltip">
+	if (tooltip !== null,
+		getmessage(currentTooltipText, get(tooltip));
+		ifnot (currentTooltipText == "",
+			txtadd(permanentTooltipForSpot, get(tooltip), '_permanent');
+			set(activateUsePermanentTooltip, false);
+			if(%1 == "std",
+				if(device.desktop,
+					set(activateUsePermanentTooltip, true);
+				);
+			,
+				if(%1 == "touch",
+					if(device.tablet OR device.mobile,
+						set(activateUsePermanentTooltip, true);
+					);
+				,
+					set(activateUsePermanentTooltip, true);
+				);
+			);
+			if(activateUsePermanentTooltip,
+				addhotspot(get(permanentTooltipForSpot));
+				set(hotspot[get(permanentTooltipForSpot)].ath, get(hotspot[get(name)].ath));
+     			set(hotspot[get(permanentTooltipForSpot)].atv, get(hotspot[get(name)].atv));
+     			set(hotspot[get(permanentTooltipForSpot)].oy, calc(hotspot[get(name)].height / 2));
+
+     			set(hotspot[get(permanentTooltipForSpot)].edge,top);
+				set(hotspot[get(permanentTooltipForSpot)].type,text);
+				set(hotspot[get(permanentTooltipForSpot)].bg,false);
+				set(hotspot[get(permanentTooltipForSpot)].bgborder,0);
+				set(hotspot[get(permanentTooltipForSpot)].txtshadow,'1.0 1.0 4.0 0x000000 1');
+				set(hotspot[get(permanentTooltipForSpot)].css,'color:#ffffff;font-family:Arial;font-weight:bold;font-size:14px;text-align:center;');
+				set(hotspot[get(permanentTooltipForSpot)].interactivecontent, false);
+				set(hotspot[get(permanentTooltipForSpot)].zorder,3);
+				set(hotspot[get(permanentTooltipForSpot)].padding,2);
+
+				set(hotspot[get(permanentTooltipForSpot)].distorted,true);
+				set(hotspot[get(permanentTooltipForSpot)].depth,1000);
+				set(hotspot[get(permanentTooltipForSpot)].tag,"tooltip");
+
+				set(hotspot[get(permanentTooltipForSpot)].enabled,false);
+				set(hotspot[get(permanentTooltipForSpot)].capture,false);
+				set(hotspot[get(permanentTooltipForSpot)].visible, true);
+
+				set(tooltipHtmlText, get(currentTooltipText));
+				escape(tooltipHtmlText);
+				set(hotspot[get(permanentTooltipForSpot)].html, get(tooltipHtmlText));
+			);
+		);
+	);
+</action>
+
+<action name="updatePermanentTooltip">
+	for(set(hsi, 0), hsi LT hotspot.count, inc(hsi),
+		if(hotspot[get(hsi)].tooltip !== NULL AND hotspot[get(hsi)].tooltip != "",
+			txtadd(permTooltipName, get(hotspot[get(hsi)].tooltip), '_permanent');
+			if(permTooltipName,
+				getmessage(changeTooltipTxt, get(hotspot[get(hsi)].tooltip));
+				escape(changeTooltipTxt);
+				set(hotspot[get(permTooltipName)].html, get(changeTooltipTxt));
+			);
+		);
+	);
+</action>
+
+<events name="permanentTooltipEvents" keep="true" changetourlanguage="updatePermanentTooltip()" />
+
+
+
+<!-- Default HTML5 tooltip style -->
+
+<hotspot name="panotourTooltipDefaultText"
+	keep="true"
+	enabled="false"
+	capture="false"
+	type="text"
+	align="center"
+	bg="false"
+	bgborder="0"
+	txtshadow="1.0 1.0 4.0 0x000000 1"
+	css="color:#ffffff;font-family:Arial;font-weight:bold;font-size:14px;text-align:left;"
+	edge="top"
+	zorder="4"
+	distorted="true"
+	depth="1000"
+	renderer="webgl"
+	oversampling="1.0"
+	mipmapping="false"
+	interactivecontent="false"
+	wordwrap="true"
+	padding="2"
+	visible="false"
+	html=""
+/>
+
+
+
+
+	<!-- Based on webvr.xml - krpano 1.20 -->
+
+	<!-- load the WebVR plugin and assign it to a global 'webvr' variable -->
+	<plugin name="webvr" devices="html5" keep="true"
+	        url="%FIRSTXML%/graphics/webvr.js"
+	        mobilevr_support="true"
+	        mobilevr_touch_support="true"
+	        mobilevr_fake_support="false"
+	        mobilevr_profile.normal="90|60|42|0|0|0"
+	        mobilevr_profile.mobile="80|60|42|35|0.441|0.156"
+	        mobilevr_wakelock="true"
+	        fullscreen_mirroring="false"
+	        mouse_pointerlock="true"
+	        vr_cursor_onover="if(handcursor, tween(hotspot[vr_cursor].scale,0.4,0.1); vr_auto_click(get(vr_timeout)); );"
+	        vr_cursor_onout="tween(hotspot[vr_cursor].scale,0.3,0.1);"
+	        onavailable="webvr_onavailable();"
+	        onunavailable="webvr_onunavailable();"
+	        onunknowndevice="webvr_onunknowndevice();"
+	        onvrcontrollers="webvr_onvrcontrollers();"
+	        onentervr="webvr_onentervr();"
+	        onexitvr="webvr_onexitvr();"
+	        />
+
+
+	<action name="vr_tour_start">
+		ifnot (tour_firststartactiondone,
+			events.dispatch(onTourStart);
+			set(tour_firststartactiondone, true);
+		);
+	</action>
+
+
+	<!-- the VR cursor hotspot -->
+	<style name="vr_cursor_style" 
+		url="%FIRSTXML%/graphics/webvr_cursor.png"
+		crop="0|0|80|80"
+		visible="false"
+		enabled="false"
+		distorted="true"
+		scale="0.3"
+		depth="120"
+		/>
+	
+	<action name="webvr_load_vr_cursor_hs" scope="local">
+		addhotspot('vr_cursor', hs);
+		hs.loadstyle(vr_cursor_style);
+		set(hs.keep, true);
+		set(webvr.vr_cursor, 'hotspot[vr_cursor]');
+	</action>
+	
+	<action name="webvr_load_vr_controller_hs" scope="private:VRCONTROLLERS" args="controllerstyle">
+		removehotspot('vr_controller_l');
+		removehotspot('vr_controller_r');
+		addhotspot('vr_controller_l', vr_ctrl_l);
+		addhotspot('vr_controller_r', vr_ctrl_r);
+		set(vr_ctrl_l.keep, true);
+		set(vr_ctrl_r.keep, true);
+		vr_ctrl_l.loadstyle(calc(controllerstyle ? controllerstyle : 'vrcontroller_light_and_point'));
+		vr_ctrl_r.loadstyle(calc(controllerstyle ? controllerstyle : 'vrcontroller_light_and_point'));
+
+		<!-- optional: vibrate the controllers on hovering:
+		vr_ctrl_l.addevent('onover', pulse(1.0, 0.25) );
+		vr_ctrl_r.addevent('onover', pulse(1.0, 0.25) ); -->
+		vr_ctrl_l.addevent('onvrcontrollerbutton', 'if(vrbuttonindex == 3 AND vrbuttonstate == "up", vrsetup_open(); );' );
+		vr_ctrl_r.addevent('onvrcontrollerbutton', 'if(vrbuttonindex == 3 AND vrbuttonstate == "up", vrsetup_open(); );' );
+		
+		set(global.webvr.vr_controller, 'vr_controller_l,vr_controller_r');
+		set(global.have_vr_controllers, true);
+		
+		if(global.webvr.isvrbrowser AND global.webvr.vrcontrollers[0].buttons.length LE 2,
+			<!-- when there are only two buttons on the VR controller (e.g. Oculus Go) use an extra hotspot for the VR-setup -->
+			addhotspot('webvr_vrsetup', vr_setup_hs);
+			vr_setup_hs.loadstyle('webvr_button_style');
+			set(vr_setup_hs, keep=true, ath=0, atv=90, depth=160, zorder=999, torigin=view, html='VR SETUP', oversampling=3, scale=0.2, onclick='vrsetup_open();', onloaded='renderloop( copy(ath,view.hlookat); );');
+		);
+	</action>
+	
+	<action name="webvr_onvrcontrollers" scope="private:VRCONTROLLERS">
+		if(!global.have_vr_controllers, webvr_load_vr_controller_hs(); );
+	</action>
+		
+	<style name="vrcontroller_laser" 
+			url="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAEACAYAAADSoXR2AAAACXBIWXMAAC4jAAAuIwF4pT92AAAACXRFWHRDb21tZW50AACJKo0GAAABZklEQVR4nO3Sy07CQBSAYV4DXszLo4ICvo2CAivuWMfkNHHhpU1mpE2+xb+bOefLtIOqqgbRMHWTGqeeU9vULlPbmDmOHcN67+ALYJS6TU1SL3Fxn6ldzJzEjtF3gPoFSgO6+wIAw38E+Ad8gm6+wNUBPsHVXwAAAAAAAAAAAAAAAACgc4Bcy+saAx5SiwKARcwGAAAAAAAAAAAAAAAA+BPwmFoWACxjdivAIVMAAAAAAAAAAAAAAACtANOCgGnnAXdx6DUuHTO1j5nT2NEPwCEj4AAAAAAAAAAAAAAAANA7wFtcPGXqGDMBAAAAAAAAAAAAAAAAGgNWBQCr3gE+L54zdeoVYFYQMAMAAAAAAAAAAAAAAGgLuGSqMeA+NY/D54yAc8ycxw4AAAAAAAAAAAAAAACAXwFPcTjX8rpVzAZoBFgXAKwBAAAAAAAAAAAAAADaADYFAJteAt4zBQAAAAAAAPAj4APHOHMQhGm2+QAAAABJRU5ErkJgggAA"
+			distorted="true"
+			enabled="false"
+			visible="false"
+			width="0.5" height="1000" edge="bottom" oref="1" oy="0"
+			torigin="world" tx="0" ty="0" tz="0" depth="0"
+			zorder="99999"
+			depthbuffer="true"
+			onloaded="asyncloop(loaded, 
+				calc(height, (target AND target.hitd GT 0 ? target.hitd : 1000) / display.hotspotworldscale); 
+				);"
+			/>
+			
+	<style name="vrcontroller_light_and_point" 
+			url="data:image/png;base64,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"
+			distorted="true"
+			enabled="false"
+			visible="false"
+			width="0.5" height="18" edge="bottom" oref="1" oy="0"
+			torigin="world" tx="0" ty="0" tz="0" depth="0"
+			zorder="99999"
+			depthbuffer="true"
+			onloaded="vrcontroller_target_point();"
+			/>
+	
+	<style name="vrcontroller_handcursor_and_point" 
+			url="data:image/png;base64,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"
+			distorted="true"
+			enabled="false"
+			visible="false"
+			width="10" height="10" edge="center" oref="1" oy="-1"
+			torigin="world" tx="0" ty="0" tz="0" depth="0"
+			zorder="99999"
+			depthbuffer="true"
+			onloaded="vrcontroller_target_point();"
+			/>
+	
+	<action name="vrcontroller_target_point" scope="localonly">
+		addhotspot(auto, hs);
+		set(hs, keep=true, type=text, bgcolor=0xFFFFFF, bgalpha=1.0, width=10, height=10, bgroundedge=5, bgborder='1 0x000000 1.0', oversampling=2,
+			scale=0.4, torigin=world, depth=0, distorted=false, zoom=true, zorder=99998, enabled=false
+		  );
+		renderloop(
+			if(!caller.loaded,
+				removehotspot(get(hs.name));
+				stoprenderloop();
+			  ,
+				if(global.display.havedepthmap,
+					<!-- use the laser for depthmap panos -->
+					removehotspot(get(hs.name));
+					stoprenderloop();
+					webvr_load_vr_controller_hs('vrcontroller_laser');
+				  ,
+					calc(hs.bgcolor, caller.pressed ? 0x049AFF : (caller.hovering ? 0x00FF00 : 0xFFFFFF));
+					calc(distance, (caller.target AND caller.target.hitd GT 0 ? caller.target.hitd : 1000));
+					calc(hs.scale, 0.4 * (distance GT 1000 ? distance / 1000 : (distance LT 200 ? 0.25 : (0.25 + (distance - 200)/800 * 0.75))));
+					calc(hs.tx, caller.tx + caller.dx * distance);
+					calc(hs.ty, caller.ty + caller.dy * distance);
+					calc(hs.tz, caller.tz + caller.dz * distance);
+				);
+			);
+		);
+	</action>
+
+	<!-- vr_auto_click() - call this action in the onover event of a
+	     hotspot to trigger automatically a click after some time.  -->
+	<action name="vr_auto_click" scope="local" args="vr_aclk_timeout">
+		if(webvr.isenabled,
+			if(vr_aclk_timeout == null, set(vr_aclk_timeout, 2000));
+			copy(vr_aclk_t1, timertick);
+			set(vr_aclk_waiting, true);
+			copy(webvr.vr_aclk_hotspot, caller.name);
+			set(hotspot[vr_cursor].crop,'0|0|80|80');
+
+			asyncloop(vr_aclk_waiting AND webvr.vr_aclk_hotspot == caller.name,
+				sub(dt, timertick, vr_aclk_t1);
+
+				if(!caller.hovering,
+					set(vr_aclk_waiting, false);
+					set(hotspot[vr_cursor].crop,'0|0|80|80');
+				  ,
+					div(f, dt, vr_aclk_timeout);
+					mul(f, 16);
+					roundval(f);
+					Math.min(f, 16);
+					mul(f, 80);
+
+					txtadd(hotspot[vr_cursor].crop,get(f),'|0|80|80');
+
+					<!-- wait another 100ms delay after finishing the animation before doing the click -->
+					sub(dt, 100);
+					if(dt GT vr_aclk_timeout,
+						set(vr_aclk_waiting,false);
+						set(hotspot[vr_cursor].crop,'0|0|80|80');
+						<!-- call onclick -->
+						callwith(caller, scope(global, ondown();onup();onclick(); ); );
+
+						hotspot[vr_cursor].onout();
+					);
+				);
+			);
+		);
+	</action>
+
+	<!-- by pressing SPACE the headset could be re-centered -->
+	<events name="webvr_events" devices="html5" keep="true"
+	        onmousedown="if(webvr AND webvr.isenabled, webvr_showbuttons() );"
+	        />
+
+	<!-- when WebVR support is available show an EnterVR button -->
+	<action name="webvr_onavailable">
+		if(nofullspherepanoavailable,
+			webvr_onunavailable();
+		,
+			webvr.loadsettings();
+			if(layer[webvr_enterbutton], delayedcall(0.5, tween(layer[webvr_enterbutton].alpha,1); ); );
+		);
+	</action>
+	
+
+	<action name="webvr_onunavailable">
+
+		delayedcall(5.0, js(accessStdVr(get(xml.scene),get(videoscenestarttime))););
+
+		set(events[webvr_events].name, null);
+		removehotspot(vr_cursor);
+		removeplugin(webvr);
+		delete(webvr);
+		set(display.hotspotrenderer,'');
+
+		addlayer(webvr_button_unavailable);
+		getmessage(vr_setup_ct_message, "vr_setup_unavailable");
+		set(layer[webvr_button_unavailable],
+				type='text',
+				keep=true,
+				align='bottom',
+				y=80,
+				bg=false,
+				css='color:#FFFFFF;text-align:center;',
+				html=get(vr_setup_ct_message)
+			);
+	</action>
+
+	<action name="webvr_onunknowndevice">
+		if(webvr.isfake AND device.desktop AND webvr.havesettings == false,
+			<!-- set the 'no distortion' headset for fake desktop usage -->
+			set(webvr.mobilevr_lens_overlap, 1.0);
+			set(webvr.mobilevr_lens_fov, 96.0);
+			set(webvr.mobilevr_lens_dist, 0.0);
+			set(webvr.mobilevr_lens_dist2, '1|0|0|0');
+			set(webvr.mobilevr_lens_ca, 0.0);
+			set(webvr.mobilevr_lens_vign, 100);
+		  );
+	</action>
+
+	<action name="webvr_onentervr">
+		vr_tour_start();
+
+		if(layer[webvr_enterbutton], tween(layer[webvr_enterbutton].alpha,0,0); );
+
+		webvr_showbuttons();
+
+
+		if(webvr.isfake, webvr_show_fakemode_info(true); );
+		
+		webvr_load_vr_cursor_hs();
+	</action>
+
+
+	<action name="webvr_onexitvr">
+		removehotspot('vr_cursor');
+		removehotspot('vr_controller_l');
+		removehotspot('vr_controller_r');
+		set(have_vr_controllers, false);
+		
+		stopdelayedcall(vr_button_fadeout);
+
+		if(layer[webvr_enterbutton], tween(layer[webvr_enterbutton].alpha,1); );
+		tween(layer[webvr_exitbutton].alpha,0);
+		tween(layer[webvr_setupbutton].alpha,0);
+		
+		webvr_show_fakemode_info(false);
+
+
+
+
+		js(accessStdVr(get(xml.scene),get(videoscenestarttime)));
+	</action>
+
+
+	
+	<action name="webvr_show_fakemode_info" scope="local" args="show">
+		if(show == true,
+			addlayer(webvr_fakemode_info);
+			set(layer[webvr_fakemode_info],
+				type='text',
+				keep=true,
+				align='bottom',
+				y=80,
+				bg=false,
+				css='color:#FFFFFF;text-align:center;',
+				html='[i][u]Simulated WebVR Mode![/u][br]For real WebVR with headset tracking use a [a href="http://webvr.info" target="_blank" style="color:#FFFFFF;"]WebVR-capable[/a] browser or a mobile device and a VR headset.[/i]'
+			);
+		  ,
+			removelayer(webvr_fakemode_info);
+		);
+	</action>
+	
+	<!-- ensure the same scaling on mobiles (regardless if mobilescale is 0.5 or 1.0) -->
+	<krpano webvr_setup_scale="calc:(1.0 + 1.0*(device.mobile AND stagescale LT 1.0)) / (1.0 + 1.0*device.mobile)"
+	        webvr_button_scale.normal="1.0"
+	        webvr_button_scale.mobile="1.6"
+	        />
+	
+	<!-- the EnterVR/ExitVR and SetupVR buttons -->
+
+	<layer name="webvr_enterbutton" keep="true"
+		url="%FIRSTXML%/graphics/webvr_toggle.png"
+		crop="0|0|100|63"
+		width="100"
+		height="63"
+		onclick="webvr.enterVR();"
+		align="top"
+		y="24"
+		alpha="0.0"
+		enabled="true"
+		/>
+
+	<layer name="webvr_setupbutton" keep="true"
+		url="%FIRSTXML%/graphics/webvr_settings.png"
+		width="64"
+		height="64"
+		onclick="vrsetup_open();"
+		alpha="0.0"
+		align="bottom" y="24"
+		enabled="false"
+		/>
+
+	<layer name="webvr_exitbutton" keep="true"
+		url="%FIRSTXML%/graphics/webvr_toggle.png" 
+		crop="0|63|100|63"
+		width="100"
+		height="63"
+		onclick="webvr.exitVR();"
+		align="top"
+		y="24"
+		alpha="0.0"
+		enabled="false"
+		/>
+
+	<action name="webvr_showbuttons">
+		stopdelayedcall(vr_button_fadeout);
+		set(layer[webvr_enterbutton].enabled, false);
+		set(layer[webvr_exitbutton].enabled, true);
+		set(layer[webvr_setupbutton].enabled, true);
+		tween(layer[webvr_exitbutton].alpha|layer[webvr_setupbutton].alpha, 1.0|1.0, 0.25);
+		delayedcall(vr_button_fadeout, 3.0, tween(layer[webvr_exitbutton].alpha|layer[webvr_setupbutton].alpha, 0.0|0.0, 1.0); );
+	</action>
+
+	<!-- VR SETUP -->
+	
+	<mobilevr_presets>
+		<headset name="cbv1" caption="Cardboard V1"  profile="80|60|42|35|0.441|0.156" />
+		<headset name="cbv2" caption="Cardboard V2"  profile="120|64|39|35|0.34|0.55" />
+		<headset name="dydm" caption="Daydream"      profile="104|60|41|35|0.42|0.51" />
+		<headset name="nodt" caption="No Distortion" profile="90|60|42|0|0|0" />
+	</mobilevr_presets>
+
+	<action name="vrsetup_open">
+		if(!vrsetup_open_js, vrsetup_init(); );
+		vrsetup_open_js();
+	</action>
+		
+	<action name="vrsetup_init" type="Javascript"><![CDATA[
+		
+		var webvr = krpano.webvr;
+		var padding = 20;
+		
+		function vrsetup_dlg_create(type)
+		{
+			var dlg = {type:type, bg:null, y:0, scale:1, elements:[]};
+		
+			if (type == 'layer')
+			{
+				dlg.bg = krpano.addlayer();
+				dlg.bg.keep = true;
+				dlg.bg.type = 'container';
+				dlg.bg.align = 'center';
+			}
+			else	// 'hotspot'
+			{
+				dlg.scale = 0.15;
+				dlg.bg = krpano.addhotspot();
+				dlg.bg.keep = true;
+				dlg.bg.type = 'text';
+				dlg.bg.distorted = true;
+				dlg.bg.ath = krpano.view.hlookat;
+				dlg.bg.atv = 0;
+				dlg.bg.depth = 150;
+				dlg.bg.torigin = 'world';
+				dlg.bg.tx = krpano.view.tx;
+				dlg.bg.ty = krpano.view.ty;
+				dlg.bg.tz = krpano.view.tz;
+			}
+			
+			dlg.bg.bgcolor = 0x000000;
+			dlg.bg.bgalpha = 0.5;
+			dlg.bg.bgcapture = true;
+			dlg.bg.handcursor = false;
+			dlg.bg.capture = false;
+			dlg.bg.zorder = 100;
+			dlg.bg.visible = false;
+			
+			dlg.y = 0;
+			
+			return dlg;
+		}
+		
+		function vrsetup_dlg_addline(dlg, linetext, customcss, onclick)
+		{
+			var txt;
+			
+			if (dlg.type == 'layer')
+			{
+				txt = krpano.addlayer();
+				txt.keep = true;
+				txt.type = 'text';
+				txt.align = 'center';
+				txt.zorder = 101;
+			}
+			else	// 'hotspot'
+			{
+				txt = krpano.addhotspot();
+				txt.keep = true;
+				txt.type = 'text';
+				txt.distorted = true;
+				txt.zorder = 101;
+				txt.ath = dlg.bg.ath;
+				txt.atv = dlg.bg.atv;
+				txt.depth = dlg.bg.depth - 1;
+				txt.oversampling = 2;
+				txt.scale = dlg.scale;
+				txt.torigin = dlg.bg.torigin;
+				txt.tx = dlg.bg.tx;
+				txt.ty = dlg.bg.ty;
+				txt.tz = dlg.bg.tz;
+			}
+			
+			txt.onautosized = function()
+			{
+				txt.havesize = true;
+			}
+			
+			txt.edge = 'top';
+			txt.visible = false;
+			txt.bg = false;
+			txt.html = "" + linetext;
+			txt.css = 'font-size:32px;font-weight:bold;color:#FFFFFF; line-height:90%;' + (customcss || '');
+			
+			if (onclick)
+			{
+				txt.onclick = onclick;
+			}
+			else
+			{
+				txt.enabled = false;
+			}
+			
+			dlg.elements.push( txt );
+			
+			return txt;
+		}
+		
+		function vrsetup_dlg_addctrl(dlg, changedelay, callback)
+		{
+			var txt = vrsetup_dlg_addline(dlg, callback(0) );
+			
+			var inc;
+			var dec;
+			
+			if(dlg.type == 'layer')
+			{
+				inc = krpano.addlayer();
+				inc.keep = true;
+				inc.type = 'text';
+				inc.align = 'center';
+				inc.zorder = 101;
+				
+				dec = krpano.addlayer();
+				dec.keep = true;
+				dec.type = 'text';
+				dec.align = 'center';
+				dec.zorder = 101;
+			}
+			else	// 'hotspot'
+			{
+				inc = krpano.addhotspot();
+				inc.keep = true;
+				inc.type = 'text';
+				inc.distorted = true;
+				inc.zorder = 101;
+				inc.ath = dlg.bg.ath;
+				inc.atv = dlg.bg.atv;
+				inc.depth = dlg.bg.depth - 1;
+				inc.oversampling = 2;
+				inc.scale = dlg.scale;
+				inc.torigin = dlg.bg.torigin;
+				inc.tx = dlg.bg.tx;
+				inc.ty = dlg.bg.ty;
+				inc.tz = dlg.bg.tz;
+				
+				dec = krpano.addhotspot();
+				dec.keep = true;
+				dec.type = 'text';
+				dec.distorted = true;
+				dec.zorder = 101;
+				dec.ath = dlg.bg.ath;
+				dec.atv = dlg.bg.atv;
+				dec.depth = dlg.bg.depth - 1;
+				dec.oversampling = 2;
+				dec.scale = dlg.scale;
+				dec.torigin = dlg.bg.torigin;
+				dec.tx = dlg.bg.tx;
+				dec.ty = dlg.bg.ty;
+				dec.tz = dlg.bg.tz;
+			}
+			
+			inc.edge = 'top';
+			inc.visible = false;
+			inc.bg = false;
+			inc.html = '&#62;';
+			inc.css = 'font-size:32px;font-weight:bold;color:#FFFFFF; line-height:90%;';
+			inc.padding = '0 10';
+					
+			dec.edge = 'top';
+			dec.visible = false;
+			dec.bg = false;
+			dec.html = '&#60;';
+			dec.css = 'font-size:32px;font-weight:bold;color:#FFFFFF; line-height:90%;';
+			dec.padding = '0 10';
+			
+			inc.vr_timeout = changedelay * 1000;
+			dec.vr_timeout = changedelay * 1000;
+			inc.ondown = function(){ txt.html = ""+callback(+1); inc.enabled = false; setTimeout(function(){ inc.enabled = true; },0); };
+			dec.ondown = function(){ txt.html = ""+callback(-1); dec.enabled = false; setTimeout(function(){ dec.enabled = true; },0); };
+			
+			txt.ctrlchilds = [inc,dec];
+			
+			txt.updateControl = function()
+			{
+				txt.html = callback(0);
+			}
+			
+			return txt;
+		}
+		
+		function vrsetup_dlg_addspace(dlg, customspace)
+		{
+			dlg.elements.push(customspace|| padding);
+		}
+		
+		function vrsetup_dlg_finish(dlg)
+		{
+			var i, w=0, h=0;
+			var waitforsizes=false;
+			
+			for (i=0; i < dlg.elements.length; i++)
+			{
+				var e = dlg.elements[i];
+				if ( isNaN(e) )
+				{
+					if ( e.havesize )
+					{
+						w = Math.max( w, e.width * 1);
+						h += e.height * 1;
+					}
+					else
+					{
+						waitforsizes = true;
+						break;
+					}
+				}
+				else
+				{
+					h += e;
+				}
+			}
+			
+			if (waitforsizes)
+			{
+				setTimeout( function(){ vrsetup_dlg_finish(dlg); }, 16 ); 
+			}
+			else
+			{
+				var y = 0;
+				
+				dlg.bg.width = Math.ceil((w + padding*2)*dlg.scale);
+				dlg.bg.height = Math.ceil((h + padding*2)*dlg.scale);
+					
+				for (i=0; i < dlg.elements.length; i++)
+				{
+					var e = dlg.elements[i];
+					if ( isNaN(e) )
+					{
+						e.oy = Math.round((-h/2 + y) * dlg.scale);
+						e.visible = true;
+						
+						y += e.height * 1;
+						
+						if (e.ctrlchilds )
+						{
+							for (var j=0; j < e.ctrlchilds.length; j++)
+							{
+								var sube = e.ctrlchilds[j];
+								sube.ox = Math.round(((j&1)-0.5) * (-w) * dlg.scale);
+								sube.oy = e.oy;
+								sube.visible = true;
+							}
+						}
+					}
+					else
+					{
+						y += e;
+					}
+				}
+				
+				dlg.bg.visible = true;
+			}
+		}
+		
+		function vrsetup_dlg_remove(dlg)
+		{
+			var removefu = dlg.type == 'layer' ? krpano.removelayer : krpano.removehotspot;
+			
+			var i,j;
+			for (i=0; i < dlg.elements.length; i++)
+			{
+				var e = dlg.elements[i];
+				if ( isNaN(e) )
+				{
+					if (e.ctrlchilds )
+					{
+						for (j=0; j < e.ctrlchilds.length; j++)
+						{
+							var sube = e.ctrlchilds[j];
+							removefu(sube.name);
+						}
+					}
+					
+					removefu(e.name);
+				}
+			}
+			
+			removefu(dlg.bg.name);
+		}
+		
+		
+		function vrsetup_webvr_dialog()
+		{
+			// WebVR API rendering
+			var dlg = vrsetup_dlg_create('hotspot');
+			vrsetup_dlg_addline(dlg, 'WebVR Setup');
+			vrsetup_dlg_addspace(dlg);
+			
+			vrsetup_dlg_addline(dlg, 'Oversampling:', 'font-size:16px;')
+			var ctrl_ss = vrsetup_dlg_addctrl(dlg, 1.0, function(change)
+			{
+				var p = webvr.oversampling;
+				
+				if (change < 0) { p = Math.max(0.2, Number(p) - 0.1); webvr.oversampling = p;  } else 
+				if (change > 0) { p = Math.min(4.0, Number(p) + 0.1); webvr.oversampling = p;  }
+				
+				krpano.actions.delayedcall(0, function()
+				{
+					var gl = krpano.webGL.context;
+					var gl_width  = gl.drawingBufferWidth  | 0;
+					var gl_height = gl.drawingBufferHeight | 0;
+					
+					renderres.html = gl_width + "x" + gl_height;
+				});
+				
+				return p.toFixed(1);
+			});
+			vrsetup_dlg_addspace(dlg,8);
+			vrsetup_dlg_addline(dlg, 'Rendering Resolution:', 'font-size:16px;');
+			var renderres = vrsetup_dlg_addline(dlg, '');
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'CLOSE', '', vrsetup_close);
+			vrsetup_dlg_finish(dlg);
+			
+			return dlg;
+		}
+		
+		function vrsetup_mobilevr_dialog()
+		{
+			// MobileVR / Cardboard rendering
+			var dlg = vrsetup_dlg_create(0 ? 'hotspot' : 'layer');
+			vrsetup_dlg_addline(dlg, 'MobileVR SETUP');
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'Screensize (inch):', 'font-size:16px;')
+			vrsetup_dlg_addctrl(dlg, 1.0, function(change){ var ss = Number(webvr.mobilevr_screensize); if (isNaN(ss)) ss = 5.0; if (change < 0) { ss = Math.max(4.0, ss - 0.1); webvr.mobilevr_screensize = ss; } else if (change > 0) { ss = Math.min(10.0, ss + 0.1); webvr.mobilevr_screensize = ss; } return ss.toFixed(1); });
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'VR Headset Preset:', 'font-size:16px;')
+			var ctrl_ps = vrsetup_dlg_addctrl(dlg, 1.0, function(change)
+			{
+				var preset_index = -1;
+				var i;
+				
+				var profile = webvr.mobilevr_profile;
+				var presets = krpano.get("mobilevr_presets.headset");
+				if (presets)
+				{
+					presets = presets.getArray();
+					
+					for (i=0; i < presets.length; i++)
+					{
+						if ( profile == presets[i].profile )
+						{
+							preset_index = i;
+							break;
+						}
+					}
+					
+					if (change < 0)
+					{
+						preset_index--;
+						if (preset_index < 0)
+							preset_index = presets.length - 1;
+								
+						webvr.mobilevr_profile = presets[preset_index].profile;
+					}
+					else if (change > 0)
+					{
+						preset_index++;
+						if (preset_index >= presets.length)
+							preset_index = 0;
+						
+						webvr.mobilevr_profile = presets[preset_index].profile;
+					}
+				}
+					
+				if (preset_index >= 0)
+				{
+					return presets[preset_index].caption;
+				}
+				
+				return 'Custom';
+			});
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'Customize Headset', 'font-size:25px;', function()
+			{
+				vrsetup_dlg_remove(dlg); 
+				dlg=null; 
+				
+				vrsetup_dialog = vrsetup_mobilevr_interactive_dialog();
+				
+			});
+			vrsetup_dlg_addline(dlg, '(Interactive Adjustment in VR)', 'font-size:12px;');
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'CLOSE', '', vrsetup_close);
+			vrsetup_dlg_finish(dlg);
+			
+			return dlg;
+		}
+		
+		function vrsetup_mobilevr_interactive_dialog()
+		{
+			// MobileVR / Cardboard rendering
+			var ctrl_preset, ctrl_fov, ctrl_ild, ctrl_stl, ctrl_ttl, ctrl_k1, ctrl_k2, ctrl_os;
+			
+			var dlg = vrsetup_dlg_create('hotspot');
+			vrsetup_dlg_addline(dlg, 'MobileVR SETUP');
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'Preset:', 'font-size:16px;')
+			
+			ctrl_preset = vrsetup_dlg_addctrl(dlg, 1.0, function(change)
+			{
+				var preset_index = -1;
+				var i;
+				
+				var profile = webvr.mobilevr_profile;
+				var presets = krpano.get("mobilevr_presets.headset");
+				if (presets)
+				{
+					presets = presets.getArray();
+					
+					for (i=0; i < presets.length; i++)
+					{
+						if ( profile == presets[i].profile )
+						{
+							preset_index = i;
+							break;
+						}
+					}
+					
+					if (change < 0)
+					{
+						preset_index--;
+						if (preset_index < 0)
+							preset_index = presets.length - 1;
+								
+						webvr.mobilevr_profile = presets[preset_index].profile;
+					}
+					else if (change > 0)
+					{
+						preset_index++;
+						if (preset_index >= presets.length)
+							preset_index = 0;
+						
+						webvr.mobilevr_profile = presets[preset_index].profile;
+					}
+					
+					if (change != 0)
+					{
+						ctrl_fov.updateControl();
+						ctrl_ild.updateControl();
+						ctrl_stl.updateControl();
+						if (ctrl_ttl) ctrl_ttl.updateControl();
+						ctrl_k1.updateControl();
+						ctrl_k2.updateControl();
+					}
+				}
+			
+				if (preset_index >= 0)
+				{
+					return presets[preset_index].caption;
+				}
+				
+				return 'Custom';
+			});
+			
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'Lens-Field-of-View:', 'font-size:16px;');
+			ctrl_fov = vrsetup_dlg_addctrl(dlg, 0.25, function(change){ var p = webvr.mobilevr_profile.split("|"); if (change < 0) { p[0] = Number(p[0]) - 1.0; webvr.mobilevr_profile = p.join("|"); } else if (change > 0) { p[0] = Number(p[0]) + 1.0; webvr.mobilevr_profile = p.join("|"); } if (change != 0) ctrl_preset.updateControl(); return Number(p[0]).toFixed(0); });
+			vrsetup_dlg_addspace(dlg, 8);
+			vrsetup_dlg_addline(dlg, 'Inter-Lens-Distance (mm):', 'font-size:16px;');
+			ctrl_ild = vrsetup_dlg_addctrl(dlg, 0.25, function(change){ var p = webvr.mobilevr_profile.split("|"); if (change < 0) { p[1] = Number(p[1]) - 1.0; webvr.mobilevr_profile = p.join("|"); } else if (change > 0) { p[1] = Number(p[1]) + 1.0; webvr.mobilevr_profile = p.join("|"); } if (change != 0) ctrl_preset.updateControl(); return Number(p[1]).toFixed(0); });
+			vrsetup_dlg_addspace(dlg, 8);
+			vrsetup_dlg_addline(dlg, 'Screen-to-Lens-Distance (mm):', 'font-size:16px;');
+			ctrl_stl = vrsetup_dlg_addctrl(dlg, 0.25, function(change){ var p = webvr.mobilevr_profile.split("|"); if (change < 0) { p[2] = Number(p[2]) - 1.0; webvr.mobilevr_profile = p.join("|"); } else if (change > 0) { p[2] = Number(p[2]) + 1.0; webvr.mobilevr_profile = p.join("|"); } if (change != 0) ctrl_preset.updateControl(); return Number(p[2]).toFixed(0); });
+			vrsetup_dlg_addspace(dlg, 8);
+			if (!webvr.isfake)
+			{
+				vrsetup_dlg_addline(dlg, 'Tray-to-Lens-Center-Distance: (mm):', 'font-size:16px;');
+				ctrl_ttl = vrsetup_dlg_addctrl(dlg, 0.25, function(change){ var p = webvr.mobilevr_profile.split("|"); if (change < 0) { p[3] = Number(p[3]) - 1.0; webvr.mobilevr_profile = p.join("|"); } else if (change > 0) { p[3] = Number(p[3]) + 1.0; webvr.mobilevr_profile = p.join("|"); } if (change != 0) ctrl_preset.updateControl(); return Number(p[3]).toFixed(0); });
+				vrsetup_dlg_addspace(dlg, 8);
+			}
+			vrsetup_dlg_addline(dlg, 'Lens-Distortion Coefficients:', 'font-size:16px;');
+			ctrl_k1 = vrsetup_dlg_addctrl(dlg, 0.1, function(change){ var p = webvr.mobilevr_profile.split("|"); if (change < 0) { p[4] = Number(p[4]) - 0.01; webvr.mobilevr_profile = p.join("|"); } else if (change > 0) { p[4] = Number(p[4]) + 0.01; webvr.mobilevr_profile = p.join("|"); } if (change != 0) ctrl_preset.updateControl(); return Number(p[4]).toFixed(3); });
+			ctrl_k2 = vrsetup_dlg_addctrl(dlg, 0.1, function(change){ var p = webvr.mobilevr_profile.split("|"); if (change < 0) { p[5] = Number(p[5]) - 0.01; webvr.mobilevr_profile = p.join("|"); } else if (change > 0) { p[5] = Number(p[5]) + 0.01; webvr.mobilevr_profile = p.join("|"); } if (change != 0) ctrl_preset.updateControl(); return Number(p[5]).toFixed(3); });
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'Oversampling:', 'font-size:16px;');
+			ctrl_os = vrsetup_dlg_addctrl(dlg, 0.25, function(change){ var p = webvr.oversampling; if (change < 0) { p = Math.max(0.2, Number(p) - 0.1); webvr.oversampling = p;  } else if (change > 0) { p = Math.min(4.0, Number(p) + 0.1); webvr.oversampling = p;  } return p.toFixed(1); });
+			vrsetup_dlg_addspace(dlg);
+			vrsetup_dlg_addline(dlg, 'CLOSE', '', vrsetup_close);
+			vrsetup_dlg_finish(dlg);
+			
+			return dlg;
+		}
+		
+		var vrsetup_dialog = null;
+		var vrsetup_events = null;
+		
+		function vrsetup_close()
+		{
+			if (vrsetup_dialog)
+			{
+				webvr.savesettings();
+			
+				vrsetup_dlg_remove(vrsetup_dialog); 
+				vrsetup_dialog = null;
+			}
+		
+			if (vrsetup_events)
+			{
+				krpano.events.removeItem(vrsetup_events.name);
+				vrsetup_events = null;
+			}
+		}
+		
+		krpano.vrsetup_close = function()
+		{
+			vrsetup_close();
+		}
+		
+		krpano.vrsetup_open_js = function()
+		{
+			if (vrsetup_dialog != null)
+			{
+				// already open...
+				return;
+			}
+				
+			if (webvr.iswebvr)
+			{
+				vrsetup_dialog = vrsetup_webvr_dialog();
+			}
+			else
+			{
+				vrsetup_dialog = vrsetup_mobilevr_dialog();
+			}
+			
+			vrsetup_events = krpano.events.createItem("auto");
+			vrsetup_events.keep = true;
+			
+			vrsetup_events.webvr_onexitvr = function()
+			{
+				vrsetup_close();
+			}
+		}
+		
+	]]></action>
+
+	<!-- A list of devices and their screensize -->
+	<mobilevr_device_database>
+		<device name="iPhone 5/5S/SE" screen="320x568x2" size="4.0" bevel="3" />
+		<device name="iPhone 6/6S/7/8" screen="375x667x2" size="4.7" />
+		<device name="iPhone 6/6S/7/8 Plus" screen="414x736" size="5.5" />
+		<device name="iPhone 6/6S/7/8 Plus (zoomed)" screen="375x667x3" size="5.5" />
+		<device name="iPhone X/XS/11Pro" screen="375x812x3" size="5.85|5.33" />
+		<device name="iPhone XS/11Pro Max" screen="414x896x3" size="6.46|5.95" />
+		<device name="iPhone XR/11" screen="414x896x2" size="6.06|5.58" />
+		<device name="Samsung S6" ua="sm-g930" size="5.1" />
+		<device name="Samsung S6 Edge" ua="sm-g925" size="5.1" />
+		<device name="Samsung S6 Edge Plus" ua="sm-g928" size="5.7" />
+		<device name="Samsung S7" ua="sm-g930" size="5.1" />
+		<device name="Samsung S7 Edge" ua="sm-g935" size="5.5" />
+		<device name="Samsung S8" ua="sm-g950" size="5.8" />
+		<device name="Samsung S8+" ua="sm-g955" size="6.2" />
+		<device name="Samsung S9" ua="sm-g960" size="5.8" />
+		<device name="Samsung S9+" ua="sm-g965" size="6.2" />
+		<device name="Samsung S10e" ua="sm-g970" size="5.8" />
+		<device name="Samsung S10" ua="sm-g973" size="6.1" />
+		<device name="Samsung S10+" ua="sm-g975" size="6.4" />
+		<device name="Samsung S10 5G" ua="sm-g977" size="6.7" />
+		<device name="Samsung Note 7" ua="sm-n930" size="5.7" />
+		<device name="Samsung Note 8" ua="sm-n950" size="6.3" />
+		<device name="Samsung Note 9" ua="sm-n960" size="6.4" />
+		<device name="Samsung Note 10" ua="sm-n970" size="6.3" />
+		<device name="Samsung Note 10 5G" ua="sm-n971" size="6.3" />
+		<device name="Samsung Note 10+" ua="sm-n975" size="6.8" />
+		<device name="Samsung Note 10+ 5G" ua="sm-n976" size="6.8" />
+		<device name="Huawei P10 Lite" ua="HUAWEIWAS-TL10" size="5.2" />
+		<device name="Huawei P20 Lite" ua="HUAWEIANE-LX1" size="5.84" />
+	</mobilevr_device_database>
+
+
+  <!-- Keyboard management
+  * use the keyboard +/- keys to zoom in/out
+  * use the keyboard CTRL+0 keys to reset the default panorama view
+  -->
+  <control keycodesin="107,187" keycodesout="109,189" />
+  <krpano tour_ctrlPressed="false"/>
+  <events name="keycontrolZoomEvents" onkeydown="onKDZ" onkeyup="onKUZ" keep="true"/>
+  <action name="onKDZ">if(keycode==17,set(tour_ctrlPressed,true);,if(tour_ctrlPressed==true,if(keycode==96,hideTooltip();lookto(get(panoview.h),get(panoview.v),get(panoview.fov)););););</action>
+  <action name="onKUZ">if(keycode==17,set(tour_ctrlPressed,false););</action>
+
+  <!-- Indicate if a scene is seen or not - dispatch an event if the state is changed -->
+  <events name="sceneSeenEvents" onnewpano="changeSeenState" keep="true"/>
+  <krpano tour_nbseenscenes="0"/>
+  <action name="changeSeenState">
+    ifnot (scene[get(xml.scene)].seen,
+      set(scene[get(xml.scene)].seen, true);
+      events.dispatch(onSeenStateChanged);
+
+      inc(tour_nbseenscenes);
+      if (tour_nbseenscenes == scene.count,
+        events.dispatch(onallsceneseen);
+      );
+    );
+  </action>
+
+
+  <cursors standard="default" dragging="grab" moving="move" />
+
+
+
+	<contextmenu versioninfo="true" />
+
+</krpano>

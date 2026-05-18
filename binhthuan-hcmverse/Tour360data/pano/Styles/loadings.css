@@ -1,0 +1,153 @@
+.after-before {
+  position: absolute;
+  content: '';
+}
+
+.img-default {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.float-default {
+  float: left;
+  width: 100%;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 99999;
+}
+
+.wrapper {
+  position: absolute;
+  width: 360px;
+  height: 3px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.loading_logo {
+  position: absolute;
+  width: 360px;
+  height: 160px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: -106px;
+  color: #B80000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.loading_logo .welcome {
+  float: left;
+  width: 100%;
+  font-size: 24px;
+}
+
+.loading_logo .title {
+  float: left;
+  width: 100%;
+  font-size: 34px;
+  font-weight: bold;
+  margin: 38px 0 20px 0;
+}
+
+.loading_logo .sub_title {
+  float: left;
+  width: 100%;
+  font-size: 24px;
+}
+
+.loader {
+  margin-top: 36px;
+  height: 100%;
+  /* width: 180px; */
+  display: flex;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.loader div {
+  flex: 1;
+  background: #B80000;
+  height: 2px;
+  -webkit-animation: go 0.8s infinite alternate ease;
+  animation: go 0.8s infinite alternate ease;
+  box-shadow: 0 0 18px #FFD24D;
+}
+
+.loader div:nth-child(1) {
+  -webkit-animation-delay: -0.72s;
+  animation-delay: -0.72s;
+}
+
+.loader div:nth-child(2) {
+  -webkit-animation-delay: -0.64s;
+  animation-delay: -0.64s;
+}
+
+.loader div:nth-child(3) {
+  -webkit-animation-delay: -0.56s;
+  animation-delay: -0.56s;
+}
+
+.loader div:nth-child(4) {
+  -webkit-animation-delay: -0.48s;
+  animation-delay: -0.48s;
+}
+
+.loader div:nth-child(5) {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.loader div:nth-child(6) {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader div:nth-child(7) {
+  -webkit-animation-delay: -0.24s;
+  animation-delay: -0.24s;
+}
+
+.loader div:nth-child(8) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader div:nth-child(9) {
+  -webkit-animation-delay: -0.08s;
+  animation-delay: -0.08s;
+}
+
+.loader div:nth-child(10) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes go {
+  100% {
+    background: transparent;
+    flex: 10;
+    box-shadow: 0 0 0 transparent;
+  }
+}
+
+@keyframes go {
+  100% {
+    background: transparent;
+    flex: 10;
+    box-shadow: 0 0 0 transparent;
+  }
+}

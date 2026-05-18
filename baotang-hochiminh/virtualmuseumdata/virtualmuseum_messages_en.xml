@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<krpano>
+
+<!-- ************************ -->
+<!--         Messages         -->
+<!-- ************************ -->
+
+  <data name="en_project_title"><![CDATA[New Project]]></data>
+
+
+
+  <data name="en_pano185_title"><![CDATA[20_1]]></data>
+  <data name="en_spotpoint187javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_1)]]></data>
+
+
+  <data name="en_pano9_title"><![CDATA[9_1]]></data>
+  <data name="en_spotpoint23javascriptcalljsfunctioncall"><![CDATA[egal.goPano(0_2)]]></data>
+  <data name="en_spotpoint188javascriptcalljsfunctioncall"><![CDATA[egal.goPano(20_1)]]></data>
+
+
+  <data name="en_pano11_title"><![CDATA[0_2]]></data>
+  <data name="en_spotpoint24javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_1)]]></data>
+  <data name="en_spotpoint25javascriptcalljsfunctioncall"><![CDATA[egal.goPano(9_1)]]></data>
+
+
+  <data name="en_pano13_title"><![CDATA[1_1]]></data>
+  <data name="en_spotpoint26javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_2)]]></data>
+  <data name="en_spotpoint27javascriptcalljsfunctioncall"><![CDATA[egal.goPano(10_1)]]></data>
+  <data name="en_spotpoint28javascriptcalljsfunctioncall"><![CDATA[egal.goPano(0_2)]]></data>
+
+
+  <data name="en_pano15_title"><![CDATA[2_2]]></data>
+  <data name="en_spotpoint31javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_3)]]></data>
+  <data name="en_spotpoint32javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_1)]]></data>
+
+
+  <data name="en_pano17_title"><![CDATA[10_1]]></data>
+  <data name="en_spotpoint36javascriptcalljsfunctioncall"><![CDATA[egal.goPano(1_1)]]></data>
+  <data name="en_spotpoint42javascriptcalljsfunctioncall"><![CDATA[egal.goPano(11_2)]]></data>
+
+
+  <data name="en_pano19_title"><![CDATA[2_3]]></data>
+  <data name="en_spotpoint33javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_2)]]></data>
+  <data name="en_spotpoint34javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_1)]]></data>
+
+
+  <data name="en_pano21_title"><![CDATA[2_1]]></data>
+  <data name="en_spotpoint35javascriptcalljsfunctioncall"><![CDATA[egal.goPano(2_3)]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</krpano>

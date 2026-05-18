@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<!--[if !IE]><!-->
+	<script type="text/javascript" src="../lib/jquery-2.1.1.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="../lib/jquery-1.11.1.min.js"></script>
+    <![endif]-->
+    <!--[if gt IE 8]>
+    <script type="text/javascript" src="../lib/jquery-2.1.1.min.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="Js/jquery.nicescroll.min.js"></script>
+	<!--<script type="text/javascript" src="Js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Styles/jquery.mCustomScrollbar.css"/>-->
+    <link type="text/css" href="Styles/info.css" rel="stylesheet" />
+    <script type="text/javascript">
+		$(document).ready(function () {
+			NiceScroll();		
+			$('.info_bg').width($(window).width());
+		});
+    	 /*(function($){
+			$(window).load(function(){
+				$(".info_content_bg").mCustomScrollbar();
+			});
+		})(jQuery);*/
+		function NiceScroll(){
+			$(".info_content_bg").niceScroll({
+				cursorborder: "none",
+				cursorborderradius: "0",
+				cursorwidth: "4px",
+				cursorcolor: "#B80000",
+				cursoropacitymin: 0.8,
+				cursoropacitymax: 1,
+				background: "rgba(184,0,0,0.3)",
+				scrollspeed: 60,
+				mousescrollstep: 80,
+				autohidemode: true,
+				zindex: "9999999"	
+			});
+		}
+    </script>
+</head>
+    <body>               
+        <div class="info_bg">
+            <div class="info_header">
+            	<a class="info_logo"><img src="Images/logo.png" /></a>
+                <div class="info_title">
+                	<div class="sub_title">Bảo tàng Hồ Chí Minh</div>
+                    <div class="main_title">Chi nhánh Bình Thuận</div>					
+                </div>
+            </div>
+            <div class="info_content_bg" data-mcs-theme="dark-thick">
+				<div class="info_content_item">
+					<strong>Bảo tàng Hồ Chí Minh - Chi nhánh Bình Thuận</strong> khánh thành ngày 19-5-1986, nhân kỷ niệm 96 năm ngày sinh Chủ tịch Hồ Chí Minh.
+					<br /><br />
+Bảo tàng nằm tại thị xã Phan Thiết, bên dòng sông Cà Ty, là một tổng thể các công trình lịch sử, văn hóa gồm: khu di tích trường Dục Thanh, nơi Nguyễn Tất Thành (Chủ tịch Hồ Chí Minh) đã dạy học từ tháng 9/1910 đến tháng 2/1911; nhà trưng bày về Chủ tịch Hồ Chí Minh và tượng đài về Người.
+<br /><br />
+Khu di tích Dục Thanh được Bộ Văn hoá Thông tin công nhận là Di tích Lịch sử văn hóa theo quyết định số 235 QĐ/ BT ngày 12- 4-1986.
+<br /><br />
+Nhà trưng bày được xây dựng bên cạnh khu di tích với kiến trúc mới, giới thiệu những nét chính trong cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh; tình cảm của Chủ tịch Hồ Chí Minh với nhân dân Bình Thuận, lòng kính yêu và sự biết ơn của nhân dân Bình Thuận với Người, quyết tâm phấn đấu đi theo con đường Người đã lựa chọn.
+<br /><br />
+Tượng đài Chủ tịch Hồ Chí Minh với các cháu thiếu nhi các dân tộc trong tỉnh được xây dựng trước Nhà trưng bày. <strong>Bảo tàng Hồ Chí Minh - Chi nhánh Bình Thuận</strong> là công trình lịch sử văn hóa lớn của tỉnh Bình Thuận, nơi giáo dục truyền thống cách mạng của nhân dân các dân tộc Bình Thuận.
+<br /><br />
+Bảo tàng mở cửa các ngày trong tuần (trừ thứ Hai).
+<br />
+Địa chỉ: Số 39 Trưng Nhị, thành phố Phan Thiết, tỉnh Bình Thuận.           
+            <!--<div class="info_content_item">
+                	
+            </div>-->
+        </div>
+    </body>
+</html>

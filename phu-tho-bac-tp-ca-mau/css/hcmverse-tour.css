@@ -1,0 +1,254 @@
+/**
+ * HCMVERSE — tour 360° Phú Thọ Bắc (palette trang chủ).
+ */
+:root {
+  --hcm-bg: #05051a;
+  --hcm-cyan: #00d2ff;
+  --hcm-cyan-bright: #00e5ff;
+  --hcm-purple-bright: #bf00ff;
+  --hcm-text: #ffffff;
+  --hcm-muted: #9aa8b8;
+  --hcm-chrome-h: 52px;
+  --hcm-safe-top: env(safe-area-inset-top, 0px);
+  --hcm-safe-right: env(safe-area-inset-right, 0px);
+  --hcm-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --hcm-safe-left: env(safe-area-inset-left, 0px);
+}
+
+html,
+body {
+  font-family: "Montserrat", "Segoe UI", system-ui, sans-serif !important;
+  background-color: var(--hcm-bg) !important;
+  color: var(--hcm-text) !important;
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
+#pano {
+  box-sizing: border-box;
+  padding-top: calc(var(--hcm-chrome-h) + var(--hcm-safe-top));
+  height: 100% !important;
+  height: 100dvh !important;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0, 210, 255, 0.08), transparent 60%),
+    var(--hcm-bg);
+}
+
+/* Logo skin krpano: render bằng div + background-image (không phải <img>) */
+#pano div[style*="skin_phone/logo"],
+#pano div[style*="skin_phone\\logo"],
+#pano div[style*="logo.png"],
+#pano img[src*="skin_phone/logo"],
+#pano img[src*="logo.png"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#btn-custom-pano {
+  color: #fff !important;
+  background: linear-gradient(90deg, rgba(0, 210, 255, 0.9), rgba(191, 0, 255, 0.85)) !important;
+  border: 1px solid rgba(0, 210, 255, 0.45) !important;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.35) !important;
+  right: max(14px, var(--hcm-safe-right));
+  bottom: calc(14px + var(--hcm-safe-bottom));
+  min-height: 44px;
+  padding: 10px 16px !important;
+  font-size: clamp(0.7rem, 3vw, 0.82rem) !important;
+  max-width: calc(100vw - 24px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#btn-custom-pano:hover {
+  box-shadow: 0 0 28px rgba(191, 0, 255, 0.4) !important;
+  filter: brightness(1.08);
+}
+
+#hcmverse-chrome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483646;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  min-height: var(--hcm-chrome-h);
+  padding: calc(0.45rem + var(--hcm-safe-top)) max(0.65rem, var(--hcm-safe-right)) 0.45rem
+    max(0.65rem, var(--hcm-safe-left));
+  pointer-events: none;
+  background: rgba(5, 5, 26, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 210, 255, 0.15);
+}
+
+#hcmverse-chrome a {
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hcmverse-chrome__home {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--hcm-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  min-height: 44px;
+}
+
+.hcmverse-chrome__home:hover {
+  color: var(--hcm-cyan-bright);
+}
+
+.hcmverse-chrome__logo {
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--hcm-cyan), var(--hcm-purple-bright));
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.35);
+}
+
+.hcmverse-chrome__logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 42%;
+  border: 2px solid var(--hcm-bg);
+}
+
+.hcmverse-chrome__wordmark {
+  font-family: "Orbitron", system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.hcmverse-chrome__wordmark .hcm {
+  color: var(--hcm-cyan);
+}
+
+.hcmverse-chrome__wordmark .verse {
+  color: var(--hcm-purple-bright);
+}
+
+.hcmverse-chrome__back {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--hcm-cyan);
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  border-radius: 999px;
+  background: rgba(0, 210, 255, 0.08);
+  flex-shrink: 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.hcmverse-chrome__back:hover {
+  border-color: var(--hcm-cyan-bright);
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.25);
+}
+
+.hcmverse-chrome__tour-title {
+  pointer-events: none;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: clamp(0.58rem, 2.8vw, 0.65rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--hcm-muted);
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --hcm-chrome-h: 48px;
+  }
+
+  #hcmverse-chrome {
+    gap: 0.35rem;
+  }
+
+  .hcmverse-chrome__logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hcmverse-chrome__wordmark {
+    font-size: 0.68rem;
+  }
+
+  .hcmverse-chrome__back {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --hcm-chrome-h: 44px;
+  }
+
+  .hcmverse-chrome__home .hcmverse-chrome__wordmark {
+    display: none;
+  }
+
+  .hcmverse-chrome__tour-title {
+    display: none;
+  }
+
+  .hcmverse-chrome__back {
+    font-size: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .hcmverse-chrome__back::before {
+    content: "←";
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  #btn-custom-pano {
+    left: max(8px, var(--hcm-safe-left));
+    right: max(8px, var(--hcm-safe-right));
+    width: auto;
+    max-width: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .hcmverse-chrome__home {
+    gap: 0;
+  }
+}

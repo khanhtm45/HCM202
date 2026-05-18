@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configure name="viettel">
+  <conf name="urlroot" value=""/>
+  <conf name="url" value=""/>
+  <conf name="languageDefault" value="vi"/>
+  <conf name="start_exhibition_key_id" value="0"/>
+  <conf name="modeDefault" value="modesd"/>
+</configure>

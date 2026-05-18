@@ -1,0 +1,10 @@
+{
+  "trailingSlash": true,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "phu-tho-bac-tp-ca-mau", "destination": "/phu-tho-bac-tp-ca-mau/index.html" },
+    { "source": "hcmverse", "destination": "/hcmverse/index.html" },
+    { "source": "hcmverse_hcm202", "destination": "/hcmverse_hcm202/index.html" },
+    { "source": "baotang-hochiminh", "destination": "/baotang-hochiminh/index.html" }
+  ]
+}

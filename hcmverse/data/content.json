@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "title": "HCMVERSE",
+    "subtitle": "Bảo tàng số Tư tưởng Hồ Chí Minh",
+    "tagline": "Mô hình giáo dục hiện đại — 3D, Metaverse, AI, multimedia & gamification",
+    "curriculum": "Môn Tư tưởng Hồ Chí Minh — Immersive Learning",
+    "mediaNote": "Ảnh: Wikimedia Commons (CC). Video: YouTube (cần mạng). Thuyết minh: giọng AI trình duyệt."
+  },
+  "avatars": [
+    { "id": "sv-a", "name": "Sinh viên A", "icon": "🎓", "desc": "Khám phá & ghi chú" },
+    { "id": "sv-b", "name": "Sinh viên B", "icon": "📚", "desc": "Timeline & quiz" },
+    { "id": "guide", "name": "Hướng dẫn viên", "icon": "🧭", "desc": "Dẫn tour lớp học" },
+    { "id": "researcher", "name": "Nghiên cứu", "icon": "🔍", "desc": "Hiện vật & tư liệu" }
+  ],
+  "zones": [
+    {
+      "id": "timeline",
+      "title": "Khu 1 — Timeline lịch sử",
+      "icon": "⏳",
+      "summary": "Đường hầm thời gian 3D — hành trình cách mạng qua từng cột mốc.",
+      "intro": "Tái hiện hành trình hoạt động cách mạng của Chủ tịch Hồ Chí Minh theo từng giai đoạn lịch sử quan trọng. Di chuyển trong không gian “đường hầm thời gian” và khám phá từng mốc bằng hình ảnh, video và thuyết minh AI."
+    },
+    {
+      "id": "artifacts",
+      "title": "Khu 2 — Hiện vật tương tác",
+      "icon": "🏺",
+      "summary": "Mô hình 3D — xoay 360°, zoom, thuyết minh như bảo tàng thật.",
+      "intro": "Mô phỏng hiện vật lịch sử gắn với cuộc đời và hoạt động cách mạng của Hồ Chí Minh. Chạm, xoay, phóng to và nghe câu chuyện từng hiện vật."
+    },
+    {
+      "id": "thought",
+      "title": "Khu 3 — Không gian tư tưởng",
+      "icon": "💡",
+      "summary": "Đạo đức, giáo dục, thanh niên, đại đoàn kết — multimedia hiện đại.",
+      "intro": "Không gian trung tâm truyền tải giá trị tư tưởng Hồ Chí Minh qua infographic, video và tình huống thực tế — dễ liên hệ với sinh viên."
+    },
+    {
+      "id": "quiz",
+      "title": "Khu 4 — Quiz & Gamification",
+      "icon": "🏅",
+      "summary": "Mini quiz, XP, huy hiệu và bảng xếp hạng sau hành trình tham quan.",
+      "intro": "Củng cố kiến thức qua thử thách tương tác — vừa học vừa chơi, ghi nhớ lâu hơn lý thuyết thuần."
+    }
+  ],
+  "timeline": [
+    {
+      "year": "1911",
+      "title": "Bác ra đi tìm đường cứu nước",
+      "tagline": "Từ Bến Nhà Rồng — khởi đầu hành trình giải phóng dân tộc",
+      "desc": "Nguyễn Tất Thành rời Tổ quốc tìm con đường cứu nước mới — mốc then chốt trong giáo trình Tư tưởng Hồ Chí Minh về tinh thần yêu nước và trách nhiệm với dân tộc.",
+      "media": {
+        "type": "image",
+        "local": "assets/images/timeline-1911.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Ph%E1%BB%A5c_d%E1%BB%B1ng_ng%C3%B5_C%C3%B4ng-poanh_t%E1%BA%A1i_B%E1%BA%BFn_Nh%C3%A0_r%E1%BB%93ng.jpg/1280px-Ph%E1%BB%A5c_d%E1%BB%B1ng_ng%C3%B5_C%C3%B4ng-poanh_t%E1%BA%A1i_B%E1%BA%BFn_Nh%C3%A0_r%E1%BB%93ng.jpg",
+        "caption": "Bến Nhà Rồng — gắn với hành trình 1911",
+        "credit": "Wikimedia Commons · CC BY-SA 4.0"
+      }
+    },
+    {
+      "year": "1930",
+      "title": "Thành lập Đảng Cộng sản Việt Nam",
+      "tagline": "Định hướng lực lượng lãnh đạo cách mạng Việt Nam",
+      "desc": "Tư tưởng về Đảng cầm quyền gắn với nhân dân, xây dựng khối đại đoàn kết toàn dân tộc — nền tảng lý luận quan trọng trong môn học.",
+      "media": {
+        "type": "image",
+        "local": "assets/images/timeline-1930.png",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Indochinese_communist_party.svg/1280px-Indochinese_communist_party.svg.png",
+        "caption": "Biểu tượng lịch sử Đảng Cộng sản Đông Dương",
+        "credit": "Wikimedia Commons"
+      }
+    },
+    {
+      "year": "1945",
+      "title": "Đọc Tuyên ngôn Độc lập",
+      "tagline": "2/9/1945 — Quảng trường Ba Đình",
+      "desc": "Khai sinh nước Việt Nam Dân chủ Cộng hòa, khẳng định quyền tự quyết của dân tộc — sự kiện mang tính biểu tượng cao trong lịch sử hiện đại.",
+      "media": {
+        "type": "video",
+        "youtube": "34GKvR8nZus",
+        "caption": "Toàn văn Tuyên ngôn Độc lập — tư liệu giáo dục",
+        "credit": "YouTube · NDfilm"
+      },
+      "mediaImage": {
+        "type": "image",
+        "local": "assets/images/timeline-1945.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Ba_Dinh_Square_September_2nd%2C_1945.jpg/1280px-Ba_Dinh_Square_September_2nd%2C_1945.jpg",
+        "caption": "Quảng trường Ba Đình, 2/9/1945",
+        "credit": "Wikimedia Commons"
+      }
+    },
+    {
+      "year": "1969",
+      "title": "Di chúc và tư tưởng để lại cho dân tộc",
+      "tagline": "Di sản đạo đức, văn hóa, nhân văn",
+      "desc": "Di chúc thể hiện tấm lòng vì Đảng, vì dân; tư tưởng, đạo đức, phong cách Hồ Chí Minh trở thành kim chỉ nam cho các thế hệ — nội dung cốt lõi môn Tư tưởng Hồ Chí Minh.",
+      "media": {
+        "type": "image",
+        "local": "assets/images/timeline-1969.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Hanoi%2C_Vietnam%2C_Ho_Chi_Minh_Mausoleum_on_Ba_Dinh_Square.jpg/1280px-Hanoi%2C_Vietnam%2C_Ho_Chi_Minh_Mausoleum_on_Ba_Dinh_Square.jpg",
+        "caption": "Quảng trường Ba Đình — Lăng Chủ tịch Hồ Chí Minh",
+        "credit": "Wikimedia Commons · CC BY 4.0"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "typewriter",
+      "name": "Máy đánh chữ",
+      "period": "Thời kỳ hoạt động cách mạng",
+      "desc": "Công cụ soạn thảo văn kiện — minh chứng phong cách làm việc khoa học, kiên trì của người lãnh tụ.",
+      "narration": "Chủ tịch Hồ Chí Minh coi trọng văn bản, luận cứ rõ ràng. Máy đánh chữ gợi nhớ hình ảnh người lãnh tụ vừa giản dị vừa chu đáo.",
+      "color": "#1a3a5c",
+      "image": {
+        "type": "image",
+        "local": "assets/images/artifact-typewriter.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Olympia_Simplex.jpg/500px-Olympia_Simplex.jpg",
+        "caption": "Máy đánh chữ Olympia Simplex (minh họa)",
+        "credit": "Wikimedia Commons · CC BY-SA"
+      }
+    },
+    {
+      "id": "book",
+      "name": "Sách & tài liệu",
+      "period": "Học tập suốt đời",
+      "desc": "Tư tưởng hình thành qua học tập, nghiên cứu thực tiễn cách mạng — học đi đôi với hành.",
+      "narration": "Người học không ngừng — tinh thần giáo dục suốt đời là bài học then chốt cho sinh viên.",
+      "color": "#1a4d2e",
+      "image": {
+        "type": "image",
+        "local": "assets/images/artifact-book.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ho_Chi_Minh_City_Peoples_Committee_%28City_Hall%29.jpg/1280px-Ho_Chi_Minh_City_Peoples_Committee_%28City_Hall%29.jpg",
+        "caption": "Tượng Bác Hồ đọc sách cùng thiếu nhi",
+        "credit": "Wikimedia Commons"
+      }
+    },
+    {
+      "id": "letter",
+      "name": "Thư tay & văn kiện",
+      "period": "1945–1969",
+      "desc": "Thư gửi đồng bào, cán bộ — tình cảm sâu nặng và phong cách gần gũi.",
+      "narration": "Mỗi bức thư là bài học đạo đức: sống giản dị, yêu thương con người, trách nhiệm với Tổ quốc.",
+      "color": "#4a3728",
+      "image": {
+        "type": "image",
+        "local": "assets/images/artifact-letter.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Ba_Dinh_Square_September_2nd%2C_1945.jpg/1280px-Ba_Dinh_Square_September_2nd%2C_1945.jpg",
+        "caption": "Tư liệu lịch sử 2/9/1945",
+        "credit": "Wikimedia Commons"
+      }
+    },
+    {
+      "id": "map",
+      "name": "Bản đồ",
+      "period": "Hành trình cứu nước",
+      "desc": "Bản đồ và hành trình địa lý gắn với hoạt động cách mạng, đoàn kết dân tộc.",
+      "narration": "Tư tưởng đoàn kết dân tộc và quốc tế được hình dung qua bối cảnh địa lý — từ quê hương đến thế giới.",
+      "color": "#2c5282",
+      "image": {
+        "type": "image",
+        "local": "assets/images/thought-unity.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ba_Dinh_Square_panorama.jpg/1280px-Ba_Dinh_Square_panorama.jpg",
+        "caption": "Không gian lịch sử — minh họa bản đồ & bối cảnh",
+        "credit": "Wikimedia Commons · CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "photo",
+      "name": "Ảnh tư liệu lịch sử",
+      "period": "Toàn bộ hành trình",
+      "desc": "Hình ảnh lưu giữ khoảnh khắc lịch sử — kết nối timeline Khu 1.",
+      "narration": "Hình ảnh giúp sinh viên hình dung bối cảnh, không chỉ học thuộc định nghĩa.",
+      "color": "#2c3e50",
+      "image": {
+        "type": "image",
+        "local": "assets/images/artifact-photo.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ho_Chi_Minh_City%2C_Ho_Chi_Minh_Statue%2C_2020-01_CN-01.jpg/1280px-Ho_Chi_Minh_City%2C_Ho_Chi_Minh_Statue%2C_2020-01_CN-01.jpg",
+        "caption": "Tượng Chủ tịch Hồ Chí Minh",
+        "credit": "Wikimedia Commons · CC BY-SA 4.0"
+      }
+    }
+  ],
+  "thoughtTopics": [
+    {
+      "id": "ethics",
+      "title": "Đạo đức Hồ Chí Minh",
+      "theme": "ethics",
+      "points": ["Cần, kiệm, liêm, chính", "Tinh thần trách nhiệm", "Lối sống giản dị"],
+      "story": "Câu chuyện tàu Côn Đảo: từ nếp sống tiết kiệm của Bác đến bài học trách nhiệm với tài sản công.",
+      "infographic": ["Cần — lao động, sáng tạo", "Kiệm — tiết kiệm, chống lãng phí", "Liêm — trong sạch", "Chính — công bằng, vô tư"],
+      "media": {
+        "type": "image",
+        "local": "assets/images/thought-ethics.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ho_Chi_Minh_City%2C_Ho_Chi_Minh_Statue%2C_2020-01_CN-01.jpg/1280px-Ho_Chi_Minh_City%2C_Ho_Chi_Minh_Statue%2C_2020-01_CN-01.jpg",
+        "caption": "Biểu tượng đạo đức, nhân văn",
+        "credit": "Wikimedia Commons"
+      },
+      "video": {
+        "type": "video",
+        "youtube": "RN1NAtXBss0",
+        "caption": "5 điều Bác Hồ dạy thiếu niên, nhi đồng",
+        "credit": "YouTube · tài liệu giáo dục"
+      }
+    },
+    {
+      "id": "education",
+      "title": "Giáo dục",
+      "theme": "education",
+      "points": ["Vai trò tri thức", "Tinh thần tự học", "Học đi đôi với hành"],
+      "story": "Bác khuyên thanh niên: học chữ, học nghề, học cách sống phục vụ nhân dân.",
+      "infographic": ["Tri thức → thực hành", "Tự học suốt đời", "Con người mới — có đức, có tài"],
+      "media": {
+        "type": "image",
+        "local": "assets/images/thought-education.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ho_Chi_Minh_City_Peoples_Committee_%28City_Hall%29.jpg/1280px-Ho_Chi_Minh_City_Peoples_Committee_%28City_Hall%29.jpg",
+        "caption": "Tượng Bác với thế hệ trẻ",
+        "credit": "Wikimedia Commons"
+      }
+    },
+    {
+      "id": "youth",
+      "title": "Thanh niên",
+      "theme": "youth",
+      "points": ["Vai trò xây dựng đất nước", "Tinh thần cống hiến", "Trách nhiệm xã hội"],
+      "story": "Thanh niên là chủ nhân tương lai — xung kích, sáng tạo, tình nguyện vì cộng đồng.",
+      "infographic": ["Đoàn kết Đoàn TN", "Xung kích sáng tạo", "Phục vụ nhân dân"],
+      "video": {
+        "type": "video",
+        "youtube": "34GKvR8nZus",
+        "caption": "Tinh thần yêu nước — tư liệu 2/9/1945",
+        "credit": "YouTube · NDfilm"
+      }
+    },
+    {
+      "id": "unity",
+      "title": "Đại đoàn kết dân tộc",
+      "theme": "unity",
+      "points": ["Tinh thần đoàn kết", "Sức mạnh cộng đồng", "Giá trị hòa hợp dân tộc"],
+      "story": "Đại đoàn kết toàn dân tộc là nguồn sức mạnh trong kháng chiến và xây dựng đất nước.",
+      "infographic": ["54 dân tộc — một Tổ quốc", "Đoàn kết quốc tế", "Độc lập gắn CNXH"],
+      "media": {
+        "type": "image",
+        "local": "assets/images/thought-unity.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ba_Dinh_Square_panorama.jpg/1280px-Ba_Dinh_Square_panorama.jpg",
+        "caption": "Quảng trường Ba Đình — biểu tượng đoàn kết",
+        "credit": "Wikimedia Commons · CC BY-SA 3.0"
+      }
+    }
+  ],
+  "gamification": {
+    "xpPerZone": 80,
+    "xpPerQuizCorrect": 25,
+    "xpQuizComplete": 100
+  },
+  "quiz": {
+    "passScore": 60,
+    "badges": [
+      { "min": 0, "max": 39, "name": "Người khám phá lịch sử", "icon": "🌱", "xpBonus": 0 },
+      { "min": 40, "max": 59, "name": "Bạn đồng hành lịch sử", "icon": "📖", "xpBonus": 50 },
+      { "min": 60, "max": 79, "name": "Chiến sĩ tư tưởng", "icon": "⭐", "xpBonus": 100 },
+      { "min": 80, "max": 100, "name": "Nhà sử học Gen Z", "icon": "🏆", "xpBonus": 200 },
+      { "min": 95, "max": 100, "name": "Sứ giả tư tưởng Hồ Chí Minh", "icon": "🎖️", "xpBonus": 300 }
+    ],
+    "questions": [
+      {
+        "q": "Hồ Chí Minh ra đi tìm đường cứu nước năm nào?",
+        "choices": ["1890", "1911", "1930", "1945"],
+        "answer": 1,
+        "explain": "Năm 1911 từ Bến Nhà Rồng — mốc then chốt Khu 1 Timeline."
+      },
+      {
+        "q": "Tư tưởng đoàn kết dân tộc có ý nghĩa gì?",
+        "choices": ["Chỉ đoàn kết trong Đảng", "Tập hợp sức mạnh toàn dân cho sự nghiệp cách mạng", "Tách biệt quốc tế", "Chỉ áp dụng thời chiến"],
+        "answer": 1,
+        "explain": "Khu 3 — Đại đoàn kết: sức mạnh cộng đồng là nền tảng xây dựng đất nước."
+      },
+      {
+        "q": "Tuyên ngôn Độc lập được đọc vào ngày nào?",
+        "choices": ["19/8/1945", "2/9/1945", "30/4/1975", "7/5/1954"],
+        "answer": 1,
+        "explain": "2/9/1945 tại Quảng trường Ba Đình."
+      },
+      {
+        "q": "Theo tư tưởng Hồ Chí Minh, thanh niên cần rèn luyện đức tính nào?",
+        "choices": ["Chỉ học chuyên môn", "Cần, kiệm, liêm, chính", "Chỉ quan tâm cá nhân", "Tránh hoạt động tập thể"],
+        "answer": 1,
+        "explain": "Khu 3 — Đạo đức Hồ Chí Minh."
+      },
+      {
+        "q": "Di chúc (1969) thể hiện điều gì?",
+        "choices": ["Chỉ hướng dẫn kinh tế", "Tấm lòng vì Đảng, vì dân và di sản tư tưởng cho thế hệ sau", "Kế hoạch quân sự", "Chỉ nội dung ngoại giao"],
+        "answer": 1,
+        "explain": "Mốc 1969 trong Khu 1 — giá trị đạo đức và tư tưởng để lại."
+      },
+      {
+        "q": "Tư tưởng giáo dục nhấn mạnh mối quan hệ nào?",
+        "choices": ["Học tách rời hành", "Học đi đôi với hành", "Chỉ thực hành", "Chỉ lý thuyết"],
+        "answer": 1,
+        "explain": "Khu 3 — Giáo dục: tri thức gắn phục vụ nhân dân."
+      }
+    ]
+  },
+  "externalTours": [
+    {
+      "title": "Tour 360° Khu tưởng niệm Phú Thọ Bắc",
+      "href": "../phu-tho-bac-tp-ca-mau/index.html"
+    },
+    {
+      "title": "Bản đồ 3D/360 TP.HCM",
+      "href": "../hcmverse_hcm202/index.html"
+    }
+  ]
+}
