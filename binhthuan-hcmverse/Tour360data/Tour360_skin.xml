@@ -467,7 +467,7 @@
 		<option name="animation_duration" value="300" type="int" />
 		<option name="close_on_click" value="false" type="bool" />
 		<option name="refresh_content" value="false" type="bool" />
-		<option name="open_callback" value="addKolorMap('panotourmaps', [['googlev3','AIzaSyAdD7JQlLHrlswfkFH4aER0rk7sed-YELg']], 'panotourmapsArea_mapDIV');" type="string" />
+		<option name="open_callback" value="addKolorMap('panotourmaps', [['googlev3','']], 'panotourmapsArea_mapDIV');" type="string" />
 		<option name="close_callback" value="invokeKrFunction('closeKolorAreaCallback_panotourmapsArea')" type="string" />
 		<option name="zorder" value="1" type="int" />
 		<option name="use_i18n" value="true" type="bool" />
