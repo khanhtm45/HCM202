@@ -34,7 +34,8 @@
     "repair:binhthuan:kolor": "node repair-binhthuan-kolor.mjs",
     "embed:binhthuan:css": "node embed-binhthuan-hcmverse-css.mjs",
     "start:binhthuan": "npx serve binhthuan-hcmverse -p 8770",
-    "push:chunked": "node scripts/git-push-chunked.mjs"
+    "push:chunked": "node scripts/git-push-chunked.mjs",
+    "push:chunked:finish": "node scripts/git-push-chunked.mjs --reshuffle-pending --jpg-batch=400"
   },
   "keywords": [],
   "author": "",

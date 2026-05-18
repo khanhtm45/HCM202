@@ -118,7 +118,26 @@ HCM202/
 └── scripts/                # Công cụ panorama
 ```
 
-File tạm / capture (`_*`, `map3d-capture-*`, `data_index.js`) đã loại khỏi repo — xem [.gitignore](.gitignore).
+## Push GitHub (repo lớn ~4GB)
+
+Push **chia lô** (tránh timeout một lần ~4GB):
+
+```bash
+npm run push:chunked
+# hoặc lô nhỏ hơn nếu bị 408/timeout:
+node scripts/git-push-chunked.mjs --jpg-batch=400
+# commit lớn bị 408:
+npm run push:chunked:finish
+```
+
+Script tạo nhánh `push-chunks`, push lần lượt: code → mp3 → jpg (mặc định 500 file/lô). Tiến độ lưu `.git-push-chunked-state.json` — **chạy lại cùng lệnh** nếu giữa chừng bị ngắt.
+
+Xong hết:
+
+```bash
+git branch -f main push-chunks && git checkout main
+```
+
 
 ## Nguồn production
 
