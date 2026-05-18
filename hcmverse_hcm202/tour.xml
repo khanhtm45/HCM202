@@ -24,7 +24,7 @@
 	<skin_settings maps="true"
 	               maps_type="google"
 	               maps_bing_api_key=""
-	               maps_google_api_key="AIzaSyATHfh3keqweo2zvhqOW4HN4WtLd3WeRwM"
+	               maps_google_api_key=""
 	               maps_zoombuttons="true"
 	               maps_loadonfirstuse="true"
 	               gyro="false"
