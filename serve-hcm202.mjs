@@ -22,6 +22,18 @@ const S3_ORIGIN = 'https://s3.hcm-1.cloud.cmctelecom.vn';
 const S3_REFERER = 'https://map3d.visithcmc.vn/';
 const MGMT_PREFIX = '/managements/';
 const CDN_ORIGIN = 'https://sanpham.starglobal3d.vn';
+const CDN_TOUR_ORIGIN = 'https://sanpham.starglobal3d.com';
+/** krpano / cached shim may request these at site root on localhost */
+const CDN_TOUR_PREFIXES = [
+  '/smart-city-3d/',
+  '/smart-tourism-3d/',
+  '/smart-facility-3d/',
+  '/smart-starglobal-3d/',
+];
+
+function cdnTourPrefix(pathname) {
+  return CDN_TOUR_PREFIXES.find((p) => pathname.startsWith(p)) ?? null;
+}
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -161,6 +173,18 @@ async function proxyUpstream(req, res, origin, pathname, search, { rewriteXml = 
   const cacheKey = `${origin}${pathname}${search}`;
   const method = req.method || 'GET';
 
+  if (method === 'OPTIONS') {
+    res.writeHead(204, {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers':
+        req.headers['access-control-request-headers'] || 'Content-Type, Authorization, X-Requested-With',
+      'Access-Control-Max-Age': '86400',
+    });
+    res.end();
+    return;
+  }
+
   if (method === 'GET' && cdnCacheable(pathname)) {
     const hit = getCdnCached(cacheKey);
     if (hit) {
@@ -177,10 +201,14 @@ async function proxyUpstream(req, res, origin, pathname, search, { rewriteXml = 
 
   const headers = { 'User-Agent': 'HCM202-local-proxy' };
   if (req.headers.range) headers.Range = req.headers.range;
+  if (req.headers['content-type']) headers['Content-Type'] = req.headers['content-type'];
+
+  const reqBody =
+    method !== 'GET' && method !== 'HEAD' ? await readBody(req) : undefined;
 
   let upstream;
   try {
-    upstream = await fetch(target, { headers, redirect: 'follow' });
+    upstream = await fetch(target, { method, headers, body: reqBody, redirect: 'follow' });
   } catch (e) {
     res.writeHead(502);
     res.end(`Proxy error: ${e.message}`);
@@ -364,6 +392,10 @@ const server = http.createServer(async (req, res) => {
     await proxyUpstream(req, res, CDN_ORIGIN, pathname, url.search, { rewriteXml: true });
     return;
   }
+  if (cdnTourPrefix(pathname)) {
+    await proxyUpstream(req, res, CDN_TOUR_ORIGIN, pathname, url.search, { rewriteXml: true });
+    return;
+  }
   await serveStatic(res, pathname);
 });
 
@@ -374,11 +406,17 @@ server.listen(PORT, () => {
   console.log(`  root: ${ROOT}`);
   console.log(`  S3 proxy: ${PROXY_PREFIX}*`);
   console.log(`  CDN proxy: ${MGMT_PREFIX}* → ${CDN_ORIGIN}`);
+  console.log(`  tour CDN:  ${CDN_TOUR_PREFIXES.map((p) => `${p}*`).join(', ')} → ${CDN_TOUR_ORIGIN}`);
   if (map3dOnly) {
     console.log(`  tour: http://localhost:${PORT}/`);
   } else {
-    console.log(`  hub:    http://localhost:${PORT}/`);
-    console.log(`  map3d:  http://localhost:${PORT}/hcmverse_hcm202/`);
-    console.log(`  baotang: http://localhost:${PORT}/baotang-hochiminh/`);
+    console.log(`  hub:         http://localhost:${PORT}/`);
+    console.log(`  hcmverse:    http://localhost:${PORT}/hcmverse/`);
+    console.log(`  map3d:       http://localhost:${PORT}/hcmverse_hcm202/`);
+    console.log(`  baotang:     http://localhost:${PORT}/baotang-hochiminh/`);
+    console.log(`  phuchutich:  http://localhost:${PORT}/phuchutich-egal/`);
+    console.log(`  binhthuan:   http://localhost:${PORT}/binhthuan-hcmverse/`);
+    console.log(`  phu-tho:     http://localhost:${PORT}/phu-tho-bac-tp-ca-mau/`);
+    console.log(`  (hoac: node start-all.mjs --open)`);
   }
 });

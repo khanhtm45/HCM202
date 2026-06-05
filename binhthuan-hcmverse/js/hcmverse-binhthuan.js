@@ -5,7 +5,7 @@
 (function () {
   if (!document.documentElement.classList.contains('hcmverse-active')) return;
 
-  const LOGO = '../assets/images/hero-museum.png';
+  const LOGO = 'assets/images/hero-museum.png';
   const state = {
     scenes: [],
     groups: [],

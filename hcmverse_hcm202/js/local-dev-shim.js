@@ -8,10 +8,40 @@
   const S3 = 'https://s3.hcm-1.cloud.cmctelecom.vn/';
   const S3_HOST = 's3.hcm-1.cloud.cmctelecom.vn';
   const PROXY = '/proxy-s3/';
+  const MGMT = '/managements/';
+  const CDN_MGMT_HOSTS = ['sanpham.starglobal3d.vn', 'sanpham.starglobal3d.com'];
   const S3_URL_RE = /https?:\/\/s3\.hcm-1\.cloud\.cmctelecom\.vn\//gi;
+
+  function toMgmtProxy(url) {
+    for (const host of CDN_MGMT_HOSTS) {
+      for (const scheme of ['https://', 'http://']) {
+        const prefix = `${scheme}${host}/managements/`;
+        if (url.startsWith(prefix)) return MGMT + url.slice(prefix.length);
+      }
+    }
+    return url;
+  }
+
+  function resolveLoadModelUrl(url) {
+    if (typeof url !== 'string' || !url.includes('loadModel.html')) return url;
+    try {
+      const u = new URL(url, location.origin);
+      const id = u.searchParams.get('id') || (typeof id_path !== 'undefined' ? id_path : '20250624');
+      const modelId = u.searchParams.get('model_id') || '';
+      return (
+        'https://sanpham.starglobal3d.vn/managements/admin/modules/management_model/html/loadModel.html' +
+        `?id=${encodeURIComponent(id)}&model_id=${encodeURIComponent(modelId)}`
+      );
+    } catch {
+      return url;
+    }
+  }
 
   function toProxy(url) {
     if (typeof url !== 'string') return url;
+    if (url.includes('loadModel.html')) return resolveLoadModelUrl(url);
+    const mgmt = toMgmtProxy(url);
+    if (mgmt !== url) return mgmt;
     if (url.startsWith(S3)) return PROXY + url.slice(S3.length);
     if (url.includes(S3_HOST)) {
       const i = url.indexOf(S3_HOST);
@@ -28,9 +58,19 @@
 
   function fixAssetUrl(url) {
     if (!url) return url;
+    if (typeof url === 'string' && url.includes('loadModel.html')) return resolveLoadModelUrl(url);
     const proxied = toProxy(url);
     if (proxied !== url) return proxied;
     if (url.includes('http')) return url;
+    if (typeof url === 'string') {
+      url = url.replace(/\/upload\/audio\/+\/upload\/audio\//g, '/upload/audio/');
+      if (url.startsWith('/upload/') || url.startsWith('upload/')) {
+        return (
+          'https://sanpham.starglobal3d.vn/smart-tourism-3d/sdl-tphcm/' +
+          url.replace(/^\//, '')
+        );
+      }
+    }
     const base = (
       typeof root_path2 !== 'undefined' ? root_path2 : `${location.origin}/`
     ).replace(/\/?$/, '/');
@@ -218,6 +258,27 @@
     return true;
   }
 
+  const EMPTY_SCENE_RELATION = { scene: { thumbnail: '', name: '' } };
+
+  function patchGroupViewServices() {
+    const svc = window.groupViewServices;
+    if (!svc?.getSceneRelation || svc.getSceneRelation._localPatched) {
+      return !!svc?.getSceneRelation?._localPatched;
+    }
+    const orig = svc.getSceneRelation.bind(svc);
+    svc.getSceneRelation = async function (...args) {
+      try {
+        const result = await orig(...args);
+        return result?.scene ? result : EMPTY_SCENE_RELATION;
+      } catch (e) {
+        console.warn('[local-dev] getSceneRelation:', e.message);
+        return EMPTY_SCENE_RELATION;
+      }
+    };
+    svc.getSceneRelation._localPatched = true;
+    return true;
+  }
+
   function patchGetUptoDateViewInfo() {
     if (typeof window.getUptoDateViewInfo !== 'function' || window.getUptoDateViewInfo._localPatched) {
       return !!window.getUptoDateViewInfo?._localPatched;
@@ -277,9 +338,10 @@
     patchPrintText();
     const utilOk = patchUtilGeneral();
     const audioOk = ensureAudioMaps();
+    const groupViewOk = patchGroupViewServices();
     const viewInfoOk = patchGetUptoDateViewInfo();
     const accordionOk = patchGroupViewAccordion();
-    if (utilOk && audioOk && viewInfoOk && accordionOk) clearInterval(tick);
+    if (utilOk && audioOk && groupViewOk && viewInfoOk && accordionOk) clearInterval(tick);
   }, 20);
 
   setTimeout(() => clearInterval(tick), 120000);

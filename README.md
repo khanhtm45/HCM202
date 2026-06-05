@@ -20,7 +20,18 @@ npm install
 npm start
 ```
 
-**Server chính:** `serve-hcm202.mjs` (cổng **8765**)
+**Chạy tất cả module (hub + 6 app) một lần:**
+
+```bash
+npm start
+# hoặc
+node start-all.mjs
+# Windows: double-click start-all.bat
+# Mở trình duyệt tự động:
+npm run start:open
+```
+
+**Server chính:** `serve-hcm202.mjs` (cổng **8765**) — phục vụ static cả project; `start-all.mjs` chỉ khởi động server và in đủ URL.
 
 - Phục vụ static toàn project
 - Proxy S3: `/proxy-s3/` (Referer `map3d.visithcmc.vn`)

@@ -68,6 +68,10 @@ function patchIndexHtml(html) {
     .replace(
       /<script src="https:\/\/sanpham\.starglobal3d\.com\/managements\/js\/tour\.js"><\/script>/,
       '<script src="https://sanpham.starglobal3d.com/managements/js/tour.js"></script>'
+    )
+    .replace(
+      /(<script src="https:\/\/cdn\.jsdelivr\.net\/npm\/axios@[^"]+"><\/script>)\s*\n\s*(<script src="https:\/\/sanpham\.starglobal3d\.(vn|com)\/managements\/user_FE\/theme\/api\/config_api\.js"><\/script>)/,
+      '$1\n            <script src="js/local-dev-axios-patch.js"></script>\n            $2'
     );
 }
 
