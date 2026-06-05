@@ -7,14 +7,25 @@
 import http from 'http';
 import { createReadStream } from 'fs';
 import { stat } from 'fs/promises';
-import { join, extname, normalize } from 'path';
+import { join, extname, normalize, resolve, relative } from 'path';
 import { fileURLToPath } from 'url';
 import { pipeline } from 'stream/promises';
 import { Readable } from 'stream';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const map3dOnly = process.argv[2] === 'map3d';
-const ROOT = map3dOnly ? join(__dirname, 'hcmverse_hcm202') : __dirname;
+const ROOT = resolve(map3dOnly ? join(__dirname, 'hcmverse_hcm202') : __dirname);
+
+function resolveStaticPath(pathname) {
+  const clean = (pathname || '/').split('?')[0];
+  const rel = clean.startsWith('/') ? clean.slice(1) : clean;
+  return resolve(ROOT, rel);
+}
+
+function isUnderRoot(filePath) {
+  const rel = relative(ROOT, resolve(filePath));
+  return rel === '' || (!rel.startsWith('..') && !rel.includes('..'));
+}
 const PORT = Number(process.env.PORT) || (map3dOnly ? 8767 : 8765);
 const API_ROOT = '/managements/user_FE/theme/api/analytic/post/';
 const PROXY_PREFIX = '/proxy-s3/';
@@ -337,11 +348,13 @@ async function proxyS3(req, res, pathname, search) {
 }
 
 async function serveStatic(res, pathname) {
-  let rel = pathname === '/' ? '/index.html' : pathname;
-  rel = rel.split('?')[0];
-  const filePath = normalize(join(ROOT, rel.replace(/^\//, '').replace(/\//g, '\\')));
+  let requestPath = pathname === '/' ? '/index.html' : pathname;
+  requestPath = requestPath.split('?')[0];
+  if (requestPath.endsWith('/')) requestPath += 'index.html';
 
-  if (!filePath.startsWith(ROOT)) {
+  const filePath = resolveStaticPath(requestPath);
+
+  if (!isUnderRoot(filePath)) {
     res.writeHead(403);
     res.end('Forbidden');
     return;
@@ -357,13 +370,14 @@ async function serveStatic(res, pathname) {
   }
 
   if (st.isDirectory()) {
-    return serveStatic(res, join(rel, 'index.html').replace(/\\/g, '/'));
+    const indexPath = requestPath.endsWith('/') ? `${requestPath}index.html` : `${requestPath}/index.html`;
+    return serveStatic(res, indexPath.startsWith('/') ? indexPath : `/${indexPath}`);
   }
 
   const ext = extname(filePath).toLowerCase();
   res.writeHead(200, {
     'Content-Type': MIME[ext] || 'application/octet-stream',
-    'Cache-Control': staticCacheControl(ext, rel),
+    'Cache-Control': staticCacheControl(ext, requestPath),
   });
   createReadStream(filePath).pipe(res);
 }
