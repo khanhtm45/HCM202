@@ -1,0 +1,41 @@
+# DigitalOcean App Platform — GitHub push → tự deploy lại
+# Tạo app: doctl apps create --spec .do/app.yaml
+# Hoặc: Control Panel → Apps → Create → Import từ repo + dùng file này
+#
+# LƯU Ý: Repo ~4GB (panorama). Chọn instance ≥ 2GB RAM; build có thể 10–20 phút.
+# Nếu build fail vì dung lượng → xem DEPLOY-DIGITALOCEAN.md (Droplet + Docker).
+
+name: hcmverse
+region: sgp
+
+ingress:
+  rules:
+    - component:
+        name: web
+      match:
+        path:
+          prefix: /
+
+services:
+  - name: web
+    dockerfile_path: Dockerfile
+    source_dir: /
+    github:
+      repo: khanhtm45/HCM202
+      branch: main
+      deploy_on_push: true
+    instance_count: 1
+    # Tối thiểu 2GB RAM cho repo lớn; có thể nâng professional-s (4GB) nếu build chậm
+    instance_size_slug: apps-s-1vcpu-2gb
+    http_port: 8080
+    health_check:
+      http_path: /
+      initial_delay_seconds: 30
+      period_seconds: 30
+      timeout_seconds: 10
+      success_threshold: 1
+      failure_threshold: 5
+    envs:
+      - key: NODE_ENV
+        value: production
+        scope: RUN_TIME

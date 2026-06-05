@@ -1,0 +1,12 @@
+node_modules
+.git
+.git-push-chunked-state.json
+asset-urls-full.txt
+asset-urls-captured.txt
+asset-urls-missing.txt
+extra-asset-urls.txt
+missing-404.json
+.cursor
+agent-tools
+terminals
+*.log

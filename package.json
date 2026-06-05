@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start:prod": "node serve-hcm202.mjs",
     "download": "node download.mjs && node download-model-textures.mjs",
     "verify": "node verify.mjs",
     "scan-404": "node scan-404.mjs",
@@ -44,7 +45,11 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {},
+  "devDependencies": {
     "playwright": "^1.60.0"
   }
 }

@@ -150,6 +150,14 @@ git branch -f main push-chunks && git checkout main
 ```
 
 
+## Deploy DigitalOcean (GitHub → auto redeploy)
+
+Push lên `main` → App Platform tự build lại. Hướng dẫn chi tiết: [DEPLOY-DIGITALOCEAN.md](DEPLOY-DIGITALOCEAN.md)
+
+```bash
+git push origin main   # DigitalOcean deploy_on_push: true
+```
+
 ## Nguồn production
 
 - Map 3D: https://map3d.visithcmc.vn/
