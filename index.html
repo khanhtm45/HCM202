@@ -377,6 +377,46 @@
       transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
     }
 
+    .exp-card--has-media {
+      padding: 0;
+    }
+
+    .exp-card__media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+      background: var(--bg-deep);
+    }
+
+    .exp-card__media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 38%;
+      transition: transform 0.35s ease;
+    }
+
+    .exp-card--has-media:hover .exp-card__media img {
+      transform: scale(1.04);
+    }
+
+    .exp-card__media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(5, 5, 26, 0.55) 100%);
+      pointer-events: none;
+    }
+
+    .exp-card__body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 1.25rem 1.5rem 1.75rem;
+    }
+
     .exp-card::before {
       content: "";
       position: absolute;
@@ -568,41 +608,71 @@
     <h2 class="section__title" id="exp-title">Chọn trải nghiệm</h2>
     <p class="section__desc">Ba lối vào: bảo tàng số HCMVerse, bản đồ 3D/360 TP.HCM, và tour khu di tích.</p>
     <div class="experiences">
-      <a class="exp-card exp-card--primary" href="/hcmverse/">
-        <span class="exp-card__badge">Giải trí</span>
-        <h3>HCMVerse — Bảo tàng số</h3>
-        <p>Không gian metaverse Tư tưởng Hồ Chí Minh: avatar, phòng triển lãm và nội dung tương tác.</p>
-        <span class="exp-card__cta">Vào trải nghiệm →</span>
+      <a class="exp-card exp-card--primary exp-card--has-media" href="/hcmverse/">
+        <div class="exp-card__media">
+          <img src="assets/images/hero-experience.png" alt="HCMVERSE — Ho Chi Minh Metaverse Museum, không gian bảo tàng số tương lai" width="1920" height="1080" loading="lazy" decoding="async">
+        </div>
+        <div class="exp-card__body">
+          <span class="exp-card__badge">Giải trí</span>
+          <h3>HCMVerse — Bảo tàng số</h3>
+          <p>Không gian metaverse giải trí.</p>
+          <span class="exp-card__cta">Vào trải nghiệm →</span>
+        </div>
       </a>
-      <a class="exp-card" href="/hcmverse_hcm202/">
-        <span class="exp-card__badge">Thành phố Hồ Chí Minh</span>
-        <h3>HCMVerse - Bản đồ 3D TP.HCM</h3>
-        <p>Map 3D và tour panorama trên không gian thành phố Hồ Chí Minh.</p>
-        <span class="exp-card__cta">Mở bản đồ →</span>
+      <a class="exp-card exp-card--has-media" href="/hcmverse_hcm202/">
+        <div class="exp-card__media">
+          <img src="assets/images/hcm-city-map.png" alt="Toàn cảnh TP.HCM — Landmark 81 và sông Sài Gòn lúc hoàng hôn" width="1200" height="800" loading="lazy" decoding="async">
+        </div>
+        <div class="exp-card__body">
+          <span class="exp-card__badge">Thành phố Hồ Chí Minh</span>
+          <h3>HCMVerse - Bản đồ 3D TP.HCM</h3>
+          <p>Map 3D và tour panorama trên không gian thành phố Hồ Chí Minh.</p>
+          <span class="exp-card__cta">Mở bản đồ →</span>
+        </div>
       </a>
-      <a class="exp-card" href="/phu-tho-bac-tp-ca-mau/">
-        <span class="exp-card__badge">Cà Mau</span>
-        <h3>HCMVerse - Tour Khu tưởng niệm</h3>
-        <p>Khu di tích Phủ thờ Bác Hồ tại xã Trí Phải, huyện Thới Bình tỉnh Cà Mau</p>
-        <span class="exp-card__cta">Vào tham quan bảo tàng 3D →</span>
+      <a class="exp-card exp-card--has-media" href="/phu-tho-bac-tp-ca-mau/">
+        <div class="exp-card__media">
+          <img src="assets/images/phu-tho-bac-ca-mau.png" alt="Cổng Tam quan Khu tưởng niệm Chủ tịch Hồ Chí Minh Phú Thọ Bắc, Cà Mau" width="1200" height="800" loading="lazy" decoding="async">
+        </div>
+        <div class="exp-card__body">
+          <span class="exp-card__badge">Cà Mau</span>
+          <h3>HCMVerse - Tour Khu tưởng niệm</h3>
+          <p>Khu di tích Phủ thờ Bác Hồ tại xã Trí Phải, huyện Thới Bình tỉnh Cà Mau</p>
+          <span class="exp-card__cta">Vào tham quan bảo tàng 3D →</span>
+        </div>
       </a>
-      <a class="exp-card" href="/baotang-hochiminh/">
-        <span class="exp-card__badge">Hà Nội</span>
-        <h3>HCMVerse - Tham quan 3D — Bảo tàng Hồ Chí Minh</h3>
-        <p>Bảo tàng Hồ Chí Minh chi nhánh Bình Thuận tọa lạc trong khu quần thể di tích lăng Ba Đình</p>
-        <span class="exp-card__cta">Vào tham quan bảo tàng 3D →</span>
+      <a class="exp-card exp-card--has-media" href="/baotang-hochiminh/">
+        <div class="exp-card__media">
+          <img src="assets/images/baotang-hochiminh.png" alt="Bảo tàng Hồ Chí Minh Hà Nội — kiến trúc hình bông sen trắng tại khu Lăng Ba Đình" width="1200" height="800" loading="lazy" decoding="async">
+        </div>
+        <div class="exp-card__body">
+          <span class="exp-card__badge">Hà Nội</span>
+          <h3>HCMVerse - Tham quan 3D — Bảo tàng Hồ Chí Minh</h3>
+          <p>Bảo tàng Hồ Chí Minh tại khu quần thể di tích Lăng Chủ tịch Hồ Chí Minh, quận Ba Đình, Hà Nội.</p>
+          <span class="exp-card__cta">Vào tham quan bảo tàng 3D →</span>
+        </div>
       </a>
-      <a class="exp-card" href="/phuchutich-egal/">
-        <span class="exp-card__badge">Hà Nội</span>
-        <h3>HCMVerse - Tham quan 3D — Phủ Chủ Tịch</h3>
-        <p>Khu di tích Chủ tịch Hồ Chí Minh tại Phủ Chủ tịch tại số 1 ngõ Bách Thảo, quận Ba Đình, Hà Nội.</p>
-        <span class="exp-card__cta">Vào tham quan bảo tàng 3D</span>
+      <a class="exp-card exp-card--has-media" href="/phuchutich-egal/">
+        <div class="exp-card__media">
+          <img src="assets/images/phuchutich-egal.png" alt="Phủ Chủ tịch Hà Nội — kiến trúc Pháp cổ kính trong khu di tích Hồ Chí Minh" width="1200" height="800" loading="lazy" decoding="async">
+        </div>
+        <div class="exp-card__body">
+          <span class="exp-card__badge">Hà Nội</span>
+          <h3>HCMVerse - Tham quan 3D — Phủ Chủ Tịch</h3>
+          <p>Khu di tích Chủ tịch Hồ Chí Minh tại Phủ Chủ tịch, số 1 ngõ Bách Thảo, quận Ba Đình, Hà Nội.</p>
+          <span class="exp-card__cta">Vào tham quan bảo tàng 3D</span>
+        </div>
       </a>
-      <a class="exp-card" href="/binhthuan-hcmverse/">
-        <span class="exp-card__badge">Bình Thuận</span>
-        <h3>HCMVerse - Tham quan 3D — Bình Thuận</h3>
-        <p>Bảo tàng Hồ Chí Minh chi nhánh Bình Thuận tọa lạc ngay trung tâm thành phố Phan Thiết.</p>
-        <span class="exp-card__cta">Vào tham quan bảo tàng 3D</span>
+      <a class="exp-card exp-card--has-media" href="/binhthuan-hcmverse/">
+        <div class="exp-card__media">
+          <img src="assets/images/binhthuan-hcmverse.png" alt="Bảo tàng Hồ Chí Minh chi nhánh Bình Thuận — tượng Bác Hồ với thiếu nhi tại Phan Thiết" width="1200" height="800" loading="lazy" decoding="async">
+        </div>
+        <div class="exp-card__body">
+          <span class="exp-card__badge">Bình Thuận</span>
+          <h3>HCMVerse - Tham quan 3D — Bình Thuận</h3>
+          <p>Bảo tàng Hồ Chí Minh chi nhánh Bình Thuận tọa lạc ngay trung tâm thành phố Phan Thiết.</p>
+          <span class="exp-card__cta">Vào tham quan bảo tàng 3D</span>
+        </div>
       </a>
     </div>
     <figure class="showcase">
