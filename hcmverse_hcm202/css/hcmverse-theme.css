@@ -140,6 +140,17 @@ body {
   color: var(--hcm-muted) !important;
 }
 
+/* Vietnamese only — ẩn chọn ngôn ngữ */
+#loading_text_choose_language,
+.loading_list_language,
+#loading_language_en,
+#settings_language,
+#instructionLangTitle,
+#instructionLanguage,
+#instructionLanguageIcon {
+  display: none !important;
+}
+
 .group_view_slider_child.group_active {
   background-color: var(--hcm-cyan) !important;
   color: var(--hcm-bg) !important;

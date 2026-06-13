@@ -45,9 +45,10 @@
 		//alert (root_path2);
 	</script>
 	<script src="js/local-dev-shim.js?v=3"></script>
+	<script src="starglobal/js/local-vn.js"></script>
 	<script>
 		var id_path = "20250624";
-		var language_selected = "vi";
+		var language_selected = "vn";
 		var thumb_storage = true;
 		var GCS_url = "/proxy-s3/starglobal-3d/smart-tourism-3d/thanh-pho-ho-chi-minh/panos/";
 		var css = "heritage";
@@ -57,6 +58,16 @@
         const queryParamsMap = new Map(Object.entries(queryParams));
         const urlParams = new URLSearchParams(window.location.search);
         const field = "smart-tourism-3d";
+        (function () {
+          if (typeof print_text === 'undefined') return;
+          var label = 'Bản đồ 3D / 360° TP.HCM';
+          var pathKey = location.pathname.split('/').filter(Boolean)[0];
+          print_text['smart-tourism-3d'] = print_text['smart-tourism-3d'] || label;
+          print_text['hcmverse_hcm202'] = print_text['hcmverse_hcm202'] || label;
+          if (pathKey) print_text[pathKey] = print_text[pathKey] || label;
+          print_text['LOADING_START_TOUR'] = print_text['LOADING_START_TOUR'] || 'Bắt đầu tham quan';
+          print_text['SETTINGS_LANGUAGE_SELECT'] = print_text['SETTINGS_LANGUAGE_SELECT'] || 'Chọn ngôn ngữ';
+        })();
 //console.log(urlParams.toString()); // In ra toàn bộ query string
 
         
@@ -146,7 +157,8 @@
 		
 	</div>
 	<script src="js/hcmverse-branding.js"></script>
-            <script src="js/gallery-artifact-fix.js?v=2"></script>
+	<script src="js/gallery-artifact-fix.js?v=2"></script>
+	<script src="js/vi-only.js"></script>
 	<script src="js/load-fast.js"></script>
 </body>
 </html>

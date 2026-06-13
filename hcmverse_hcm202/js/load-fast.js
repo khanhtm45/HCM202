@@ -4,6 +4,7 @@
  */
 (function () {
   const LANG_KEY = 'hcmverse_map_lang';
+  const LANG = 'vn';
   const urlFast = new URLSearchParams(location.search).get('fast') === '1';
 
   if (urlFast) sessionStorage.setItem('hcmverse_fast', '1');
@@ -45,20 +46,31 @@
     return false;
   }
 
+  function printTextReady() {
+    if (typeof print_text === 'undefined') return false;
+    const pathKey = window.location.pathname.split('/').filter(Boolean)[0];
+    const fieldKey = typeof field !== 'undefined' ? field : 'smart-tourism-3d';
+    return !!(print_text[pathKey] || print_text[fieldKey] || print_text['hcmverse_hcm202']);
+  }
+
   function patchChangeLanguage() {
     if (typeof window.changeLoadingLanguage !== 'function' || window.changeLoadingLanguage._loadFast) {
       return !!window.changeLoadingLanguage?._loadFast;
     }
-    const orig = window.changeLoadingLanguage;
-    window.changeLoadingLanguage = async function (event) {
-      await orig.call(this, event);
-      try {
-        const lang = event?.target?.parentNode?.id?.replace('loading_language_', '');
-        if (lang) localStorage.setItem(LANG_KEY, lang);
-      } catch (_) {}
-    };
+    window.changeLoadingLanguage = async function () {};
     window.changeLoadingLanguage._loadFast = true;
     return true;
+  }
+
+  function scheduleAutoEnter() {
+    const tryEnter = (attempt = 0) => {
+      if (printTextReady() && window.util?.general?.getElements) {
+        setTimeout(() => autoEnterTour(), 150);
+        return;
+      }
+      if (attempt < 50) setTimeout(() => tryEnter(attempt + 1), 100);
+    };
+    tryEnter();
   }
 
   function patchOpenLoadingModal() {
@@ -67,10 +79,13 @@
     }
     const orig = window.openLoadingModal;
     window.openLoadingModal = async function (...args) {
-      const saved = localStorage.getItem(LANG_KEY);
-      if (saved && window.util?.general?.setCurrentLanguage) {
+      try {
+        localStorage.setItem(LANG_KEY, LANG);
+      } catch (_) {}
+
+      if (window.util?.general?.setCurrentLanguage) {
         try {
-          await window.util.general.setCurrentLanguage(saved);
+          await window.util.general.setCurrentLanguage(LANG);
         } catch (_) {}
       }
 
@@ -79,11 +94,9 @@
       const skip =
         sessionStorage.getItem('hcmverse_fast') === '1' ||
         urlFast ||
-        (saved && window.util?.general?.getCurrentLanguage?.() === saved);
+        window.util?.general?.getCurrentLanguage?.() === LANG;
 
-      if (skip) {
-        setTimeout(() => autoEnterTour(), 120);
-      }
+      if (skip) scheduleAutoEnter();
     };
     window.openLoadingModal._loadFast = true;
     return true;

@@ -65,21 +65,18 @@
     }
 
     .brand-fpt {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--fpt);
-      text-transform: uppercase;
+      margin: 0;
+      line-height: 0;
+      flex-shrink: 0;
     }
 
-    .brand-fpt span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin-right: 6px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #f37021, #33a948 50%, #005daa);
-      vertical-align: middle;
+    .brand-fpt img {
+      display: block;
+      height: 46px;
+      width: auto;
+      max-width: min(220px, 46vw);
+      object-fit: contain;
+      object-position: left center;
     }
 
     .brand-mini {
@@ -505,7 +502,7 @@
 
     @media (max-width: 600px) {
       .site-header { padding: 0.75rem 1rem; }
-      .brand-fpt { font-size: 0.62rem; }
+      .brand-fpt img { height: 38px; max-width: 52vw; }
       .hero { padding-top: 5rem; }
       .hero__actions { flex-direction: column; align-items: stretch; }
       .btn { width: 100%; }
@@ -516,7 +513,9 @@
   <div class="bg-mesh" aria-hidden="true"></div>
 
   <header class="site-header">
-    <p class="brand-fpt"><span aria-hidden="true"></span>FPT University</p>
+    <p class="brand-fpt">
+      <img src="assets/images/logo_fpt.png" alt="FPT University" width="200" height="46" loading="eager">
+    </p>
     <p class="brand-mini"><span class="hcm">HCM</span><span class="verse">VERSE</span></p>
   </header>
 
@@ -570,35 +569,40 @@
     <p class="section__desc">Ba lối vào: bảo tàng số HCMVerse, bản đồ 3D/360 TP.HCM, và tour khu di tích.</p>
     <div class="experiences">
       <a class="exp-card exp-card--primary" href="/hcmverse/">
-        <span class="exp-card__badge">Chính</span>
+        <span class="exp-card__badge">Giải trí</span>
         <h3>HCMVerse — Bảo tàng số</h3>
         <p>Không gian metaverse Tư tưởng Hồ Chí Minh: avatar, phòng triển lãm và nội dung tương tác.</p>
-        <span class="exp-card__cta">Vào bảo tàng →</span>
+        <span class="exp-card__cta">Vào trải nghiệm →</span>
       </a>
       <a class="exp-card" href="/hcmverse_hcm202/">
+        <span class="exp-card__badge">Thành phố Hồ Chí Minh</span>
         <h3>HCMVerse - Bản đồ 3D TP.HCM</h3>
         <p>Map 3D và tour panorama trên không gian thành phố Hồ Chí Minh.</p>
         <span class="exp-card__cta">Mở bản đồ →</span>
       </a>
       <a class="exp-card" href="/phu-tho-bac-tp-ca-mau/">
+        <span class="exp-card__badge">Cà Mau</span>
         <h3>HCMVerse - Tour Khu tưởng niệm</h3>
-        <p>Panorama khu di tích Phú Thọ Bắc, TP. Cà Mau.</p>
-        <span class="exp-card__cta">Bắt đầu tour →</span>
+        <p>Khu di tích Phủ thờ Bác Hồ tại xã Trí Phải, huyện Thới Bình tỉnh Cà Mau</p>
+        <span class="exp-card__cta">Vào tham quan bảo tàng 3D →</span>
       </a>
       <a class="exp-card" href="/baotang-hochiminh/">
-        <h3>Bảo tàng 3D — Bảo tàng Hồ Chí Minh</h3>
-        <p>Tour 360° trong nhà bảo tàng (krpano).</p>
-        <span class="exp-card__cta">Vào bảo tàng 3D →</span>
+        <span class="exp-card__badge">Hà Nội</span>
+        <h3>HCMVerse - Tham quan 3D — Bảo tàng Hồ Chí Minh</h3>
+        <p>Bảo tàng Hồ Chí Minh chi nhánh Bình Thuận tọa lạc trong khu quần thể di tích lăng Ba Đình</p>
+        <span class="exp-card__cta">Vào tham quan bảo tàng 3D →</span>
       </a>
       <a class="exp-card" href="/phuchutich-egal/">
-        <h3>Tham quan 3D — Phủ Chủ Tịch</h3>
-        <p>Khu di tích Hồ Chí Minh tại Phủ Chủ Tịch (krpano).</p>
-        <span class="exp-card__cta">Vào tham quan 3D →</span>
+        <span class="exp-card__badge">Hà Nội</span>
+        <h3>HCMVerse - Tham quan 3D — Phủ Chủ Tịch</h3>
+        <p>Khu di tích Chủ tịch Hồ Chí Minh tại Phủ Chủ tịch tại số 1 ngõ Bách Thảo, quận Ba Đình, Hà Nội.</p>
+        <span class="exp-card__cta">Vào tham quan bảo tàng 3D</span>
       </a>
       <a class="exp-card" href="/binhthuan-hcmverse/">
-        <h3>Tham quan 3D — Bình Thuận</h3>
-        <p>Bảo tàng Hồ Chí Minh chi nhánh Bình Thuận.</p>
-        <span class="exp-card__cta">Vào tham quan 3D →</span>
+        <span class="exp-card__badge">Bình Thuận</span>
+        <h3>HCMVerse - Tham quan 3D — Bình Thuận</h3>
+        <p>Bảo tàng Hồ Chí Minh chi nhánh Bình Thuận tọa lạc ngay trung tâm thành phố Phan Thiết.</p>
+        <span class="exp-card__cta">Vào tham quan bảo tàng 3D</span>
       </a>
     </div>
     <figure class="showcase">

@@ -70,12 +70,83 @@
     if (field) field.textContent = 'BẢN ĐỒ 3D / 360° TP.HCM';
   }
 
+  const FIELD_LABEL = 'Bản đồ 3D / 360° TP.HCM';
+
   function patchPrintText() {
-    if (typeof print_text === 'undefined') return;
-    const line = 'Bản đồ 3D / 360° TP.HCM';
-    print_text['smart-tourism-3d'] = line;
-    print_text['hcmverse_hcm202'] = line;
+    if (typeof print_text === 'undefined') return false;
+    const pathKey = window.location.pathname.split('/').filter(Boolean)[0];
+    print_text['smart-tourism-3d'] = print_text['smart-tourism-3d'] || FIELD_LABEL;
+    print_text['hcmverse_hcm202'] = print_text['hcmverse_hcm202'] || FIELD_LABEL;
+    if (pathKey) print_text[pathKey] = print_text[pathKey] || FIELD_LABEL;
     print_text['LOADING_START_TOUR'] = print_text['LOADING_START_TOUR'] || 'Bắt đầu tham quan';
+    print_text['SETTINGS_LANGUAGE_SELECT'] =
+      print_text['SETTINGS_LANGUAGE_SELECT'] || 'Chọn ngôn ngữ';
+    return true;
+  }
+
+  function ensureAudioMaps() {
+    const ag = window.util?.audioGroup;
+    if (!ag) return false;
+    if (ag.allSceneUrls == null) ag.allSceneUrls = {};
+    if (ag.allGroupUrls == null) ag.allGroupUrls = {};
+    return true;
+  }
+
+  function patchGetUptoDateViewInfo() {
+    if (typeof window.getUptoDateViewInfo !== 'function' || window.getUptoDateViewInfo._hcmversePatched) {
+      return !!window.getUptoDateViewInfo?._hcmversePatched;
+    }
+    const orig = window.getUptoDateViewInfo;
+    window.getUptoDateViewInfo = async function () {
+      ensureAudioMaps();
+      const scene = window.util?.general?.getCurrentScene?.();
+      const map = window.util?.audioGroup?.allSceneUrls;
+      if (!map || (scene && map[scene] == null)) return;
+      try {
+        await orig();
+      } catch (e) {
+        console.warn('[hcmverse] getUptoDateViewInfo:', e.message);
+      }
+    };
+    window.getUptoDateViewInfo._hcmversePatched = true;
+    return true;
+  }
+
+  function patchHandleVoiceOnSceneChange() {
+    const ag = window.util?.audioGroup;
+    if (!ag?.handleVoiceOnSceneChange || ag.handleVoiceOnSceneChange._hcmversePatched) {
+      return !!ag?.handleVoiceOnSceneChange?._hcmversePatched;
+    }
+    const orig = ag.handleVoiceOnSceneChange.bind(ag);
+    ag.handleVoiceOnSceneChange = async function (...args) {
+      ensureAudioMaps();
+      if (!this.musicBackground || typeof this.musicBackground.playing !== 'function') return;
+      try {
+        await orig(...args);
+      } catch (e) {
+        console.warn('[hcmverse] handleVoiceOnSceneChange:', e.message);
+      }
+    };
+    ag.handleVoiceOnSceneChange._hcmversePatched = true;
+    return true;
+  }
+
+  function patchCloseLoadingModal() {
+    if (typeof window.closeLoadingModal !== 'function' || window.closeLoadingModal._hcmversePatched) {
+      return !!window.closeLoadingModal?._hcmversePatched;
+    }
+    const orig = window.closeLoadingModal;
+    window.closeLoadingModal = async function (...args) {
+      try {
+        await orig.apply(this, args);
+      } catch (e) {
+        console.warn('[hcmverse] closeLoadingModal:', e.message);
+        window.jQuery?.('#loading_container')?.modal?.('hide');
+        window.util?.home?.showAllIconsHome?.();
+      }
+    };
+    window.closeLoadingModal._hcmversePatched = true;
+    return true;
   }
 
   function patchOpenLoadingModal() {
@@ -84,11 +155,15 @@
     }
     const orig = window.openLoadingModal;
     window.openLoadingModal = async function (...args) {
+      patchPrintText();
       try {
         if (window.util?.general?.metaData) {
           window.util.general.metaData.logo = LOGO_FILE;
         }
         await orig.apply(this, args);
+      } catch (e) {
+        console.warn('[hcmverse] openLoadingModal:', e.message);
+        patchLoadingCopy();
       } finally {
         patchLoadingImages();
         patchLoadingCopy();
@@ -139,17 +214,23 @@
   }
 
   const setupTimer = setInterval(() => {
-    if (patchOpenLoadingModal()) {
-      onReady();
-      watchLogoOnce();
-      clearInterval(setupTimer);
-    }
+    patchPrintText();
+    ensureAudioMaps();
+    patchGetUptoDateViewInfo();
+    patchHandleVoiceOnSceneChange();
+    patchCloseLoadingModal();
+    patchOpenLoadingModal();
+    if (!document.getElementById('hcmverse-chrome')) onReady();
   }, 100);
   setTimeout(() => clearInterval(setupTimer), 60000);
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', onReady);
+    document.addEventListener('DOMContentLoaded', () => {
+      onReady();
+      watchLogoOnce();
+    });
   } else {
     onReady();
+    watchLogoOnce();
   }
 })();
