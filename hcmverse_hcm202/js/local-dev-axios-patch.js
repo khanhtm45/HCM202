@@ -1,9 +1,9 @@
 /**
- * Must load after axios, before config_api.js — rewrites CDN API baseURL to local /managements/ proxy.
+ * Must load after axios, before config_api.js — rewrites CDN API to same-origin /managements/ proxy.
  */
 (function () {
   const host = location.hostname;
-  if (host !== 'localhost' && host !== '127.0.0.1') return;
+  if (/^sanpham\.starglobal3d\.(vn|com)$/i.test(host)) return;
   if (typeof axios === 'undefined') return;
 
   const CDN_HOSTS = ['sanpham.starglobal3d.vn', 'sanpham.starglobal3d.com'];

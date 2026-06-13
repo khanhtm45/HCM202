@@ -100,8 +100,9 @@
     window.getUptoDateViewInfo = async function () {
       ensureAudioMaps();
       const scene = window.util?.general?.getCurrentScene?.();
+      if (!scene || scene === 'null') return;
       const map = window.util?.audioGroup?.allSceneUrls;
-      if (!map || (scene && map[scene] == null)) return;
+      if (!map || map[scene] == null) return;
       try {
         await orig();
       } catch (e) {

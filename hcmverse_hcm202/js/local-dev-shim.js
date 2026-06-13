@@ -1,9 +1,9 @@
 /**
- * Local dev: mọi request tới S3 → /proxy-s3/ (Referer qua serve-hcm202).
+ * Self-hosted deploy: S3 → /proxy-s3/, CDN managements → /managements/ (serve-hcm202).
  */
 (function () {
   const host = location.hostname;
-  if (host !== 'localhost' && host !== '127.0.0.1') return;
+  if (/^sanpham\.starglobal3d\.(vn|com)$/i.test(host)) return;
 
   const S3 = 'https://s3.hcm-1.cloud.cmctelecom.vn/';
   const S3_HOST = 's3.hcm-1.cloud.cmctelecom.vn';
@@ -287,8 +287,9 @@
     window.getUptoDateViewInfo = async function () {
       ensureAudioMaps();
       const scene = util?.general?.getCurrentScene?.();
+      if (!scene || scene === 'null') return;
       const map = util?.audioGroup?.allSceneUrls;
-      if (!map || (scene && map[scene] == null)) return;
+      if (!map || map[scene] == null) return;
       try {
         await orig();
       } catch (e) {

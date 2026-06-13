@@ -88,7 +88,12 @@
       if (attributes && typeof attributes === 'object') {
         for (const k of Object.keys(attributes)) {
           if (typeof attributes[k] === 'string') {
-            attributes[k] = resolveMediaUrl(attributes[k]);
+            const v = attributes[k];
+            if (!v || v === 'undefined') {
+              delete attributes[k];
+            } else {
+              attributes[k] = resolveMediaUrl(v);
+            }
           }
         }
       }
@@ -219,6 +224,7 @@
     if (origSet._galleryArtifactPatched) return true;
     Element.prototype.setAttribute = function (name, value) {
       if (name === 'src' && typeof value === 'string') {
+        if (!value || value === 'undefined') return;
         value = resolveMediaUrl(value);
       }
       return origSet.call(this, name, value);
