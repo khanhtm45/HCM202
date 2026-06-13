@@ -36,6 +36,7 @@
     "download:binhthuan:capture": "node download-binhthuan.mjs --capture",
     "repair:binhthuan:skin": "node repair-binhthuan-skin.mjs",
     "repair:binhthuan:kolor": "node repair-binhthuan-kolor.mjs",
+    "repair:phu-tho:voice": "node repair-phu-tho-voice.mjs",
     "embed:binhthuan:css": "node embed-binhthuan-hcmverse-css.mjs",
     "start:binhthuan": "npx serve binhthuan-hcmverse -p 8770",
     "push:chunked": "node scripts/git-push-chunked.mjs",

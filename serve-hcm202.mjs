@@ -5,7 +5,7 @@
  *   node serve-hcm202.mjs map3d   → http://localhost:8767  (hcmverse_hcm202 only)
  */
 import http from 'http';
-import { createReadStream } from 'fs';
+import { createReadStream, existsSync } from 'fs';
 import { stat } from 'fs/promises';
 import { join, extname, normalize, resolve, relative } from 'path';
 import { fileURLToPath } from 'url';
@@ -123,6 +123,24 @@ const APP_SLUGS = new Set([
   'phuchutich-egal',
   'binhthuan-hcmverse',
 ]);
+
+/** Alias paths that krpano / browser request but files live elsewhere. */
+function remapStaticPath(pathname) {
+  if (pathname === '/favicon.ico') {
+    return '/assets/images/hero-museum.png';
+  }
+
+  const voice = pathname.match(/^\/phu-tho-bac-tp-ca-mau\/data\/([^/]*)\.mp3$/);
+  if (voice) {
+    const id = voice[1];
+    if (!id) return null;
+    const flat = `/phu-tho-bac-tp-ca-mau/data/${id}.mp3`;
+    const nested = `/phu-tho-bac-tp-ca-mau/data/projects/denthobactpcamau/voice/vi/${id}.mp3`;
+    return existsSync(resolveStaticPath(flat)) ? flat : nested;
+  }
+
+  return pathname;
+}
 
 /** Pretty URLs: bỏ index.html, thêm slash cuối cho thư mục app. */
 function canonicalRedirect(pathname, search) {
@@ -348,6 +366,14 @@ async function proxyS3(req, res, pathname, search) {
 }
 
 async function serveStatic(res, pathname) {
+  const remapped = remapStaticPath(pathname);
+  if (remapped === null) {
+    res.writeHead(204);
+    res.end();
+    return;
+  }
+  pathname = remapped;
+
   let requestPath = pathname === '/' ? '/index.html' : pathname;
   requestPath = requestPath.split('?')[0];
   if (requestPath.endsWith('/')) requestPath += 'index.html';
